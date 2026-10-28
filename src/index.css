@@ -2,20 +2,15 @@
 
 @layer base {
   :root {
-    --font-serif: 'Fraunces', Georgia, serif;
-    --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Archivo', system-ui, -apple-system, sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
   }
 
   body {
     font-family: var(--font-sans);
-    background-color: #090d14;
-    color: #e2e8f0;
+    background-color: #FAFAF7;
+    color: #141412;
     line-height: 1.6;
-  }
-
-  h1, h2, h3, .font-display {
-    font-family: var(--font-serif);
   }
 
   code, pre, .font-mono {
@@ -23,20 +18,16 @@
   }
 }
 
-/* Subtle infinite marquee animation for Tech Stack */
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+/* Row hover effect like itstamhn.com */
+.clrow {
+  transition: all 0.15s ease;
 }
-
-.animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 28s linear infinite;
+.clrow:hover .clttl {
+  color: #2A48D0;
 }
-
-.animate-marquee:hover {
-  animation-play-state: paused;
+.clrow:hover .clarr {
+  transform: translateX(4px);
+  color: #2A48D0;
 }
 
 /* Custom scrollbars */
@@ -44,12 +35,12 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #090d14;
+  background: #FAFAF7;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #D5D3CB;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #B5B3AB;
 }
