@@ -35,12 +35,12 @@ export interface ProfileData {
 
 export const profileData: ProfileData = {
   name: "Genesis L. Auza",
-  title: "AI Automation Architect & Enterprise Data Engineer",
-  subtitle: "Specializing in autonomous N8N workflow systems, enterprise data pipelines (SQL/Python), and high-scale outbound email infrastructure (6,000+ mailboxes, 500k/mo).",
-  location: "Remote (Philippines / Global US/EU Overlap)",
+  title: "B2B Cold Outbound & GTM Email Specialist",
+  subtitle: "I build and operate high-scale outbound email engines (6,000+ mailboxes, 500k monthly volume) that book qualified B2B pipeline without burning domains—backed by technical AI scraping and automated CRM triage.",
+  location: "Remote (Philippines · US Eastern / Pacific Overlap)",
   email: "genesisauza9@gmail.com",
   phone: "+63 991 502 5407",
-  linkedin: "https://www.linkedin.com/in/genesis-auza",
+  linkedin: "https://www.linkedin.com/in/genesis-auza-a07873361/",
   headshotUrl: "/genesis-headshot.jpg",
   highlights: [
     {
@@ -54,14 +54,14 @@ export const profileData: ProfileData = {
       detail: "Warmed secondary inboxes under continuous health telemetry",
     },
     {
-      label: "Manual Effort Reduction",
-      value: "40%",
-      detail: "Documented across IQVIA & Premier Fitness pipelines",
+      label: "Deliverability SLA",
+      value: "< 2.8%",
+      detail: "Sub-5% hard bounce SLA consistently maintained",
     },
     {
-      label: "Deliverability SLA",
-      value: "< 5.0%",
-      detail: "Sub-5% hard bounce rate maintained at scale",
+      label: "Lead Scraping & AI",
+      value: "500+ Leads",
+      detail: "Autonomous Telegram/DeepSeek/Apify scraper to Google Sheets",
     },
   ],
   education: {
@@ -103,4 +103,3 @@ export const profileData: ProfileData = {
     "Design Thinking for Analytics (February 2022)",
   ],
 };
-

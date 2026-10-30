@@ -9,8 +9,7 @@ import {
   Briefcase,
   Mail,
   Phone,
-  MapPin,
-  ExternalLink
+  MapPin
 } from 'lucide-react';
 import { profileData } from '../data/profileData';
 
@@ -37,14 +36,15 @@ LinkedIn: ${profileData.linkedin} | Location: ${profileData.location}
 SUMMARY:
 ${profileData.subtitle}
 
-SKILLS:
-• AI & Workflow Automation: N8N (Design, implementation, custom scripting in JavaScript & Python), Webhooks, OpenAI API
-• Backend & Database Management: PowerBI, MySQL, HUE Impala, Azure, Excel, Access, SQL
-• API Integrations: REST, GraphQL, webhooks, Data scraping, mining
+CORE EXPERTISE:
+• Cold Outbound & Sending Fleets: 6,000+ mailboxes, 500k/mo sends, SPF/DKIM/DMARC, warmup ramp, sub-2.8% bounce rate
+• AI Lead Scraping & Enrichment: Apollo, Clay, Apify, Telegram Bot with DeepSeek & Whisper, Google Sheets sync
+• Pipeline & CRM Triage: GoHighLevel, HubSpot CRM, tag-to-deal automation, instant Slack alerts, same-day routing
+• Deliverability Diagnostics: Instantly.ai, Smartlead, MillionVerifier, Cloudflare DNS
 
 EXPERIENCE:
-1. Co-Founder | StylSensei (06/2025 – 06/2026)
-• Managed scalable cold outbound infrastructure across 6,000+ warmed secondary mailboxes, sending 500,000+ emails monthly while maintaining strict SPF, DKIM, DMARC authentication and sub-5% bounce rates.
+1. Co-Founder & Outbound Lead | StylSensei (06/2025 – 06/2026)
+• Managed scalable cold outbound infrastructure across 6,000+ warmed secondary mailboxes, sending 500,000+ emails monthly while maintaining strict SPF, DKIM, DMARC authentication and sub-2.8% bounce rates.
 • Ran the full sales cycle for agency acquisition: audited prospect systems, delivered customized proposals, and closed high-ticket B2B retainer clients.
 • Owned end-to-end reply management, objection handling, prospect qualification, booking high-intent discovery calls directly into client calendars and CRMs.
 
@@ -63,13 +63,8 @@ EDUCATION & TRAINING:
 • BS in Information and Technology (Major in Business & Data Analytics) - Bulacan State University (08/2018 - 07/2022)
 • Data Associate Scholar - Project Sparta (Development Academy of the Philippines) (08/2021 - 07/2022)
 
-ACHIEVEMENTS & CERTIFICATIONS:
+ACHIEVEMENTS:
 • Impact Award Nominee (Twice on Q4 and Q5) at IQVIA
-• Essential Excel Skills for Data Preparation and Analysis
-• SQL Programming for Business Users
-• Data Visualization Fundamentals
-• Analytics Applications in Finance and Risk
-• Design Thinking for Analytics
     `.trim();
 
     navigator.clipboard.writeText(text);
@@ -78,32 +73,32 @@ ACHIEVEMENTS & CERTIFICATIONS:
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-150">
-      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#FAFAF7] border border-[#E3E1DA] shadow-2xl p-6 sm:p-8 text-[#141412]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-150">
+      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#12151E] border border-white/10 shadow-2xl p-6 sm:p-8 text-[#F1F5F9]">
         
         {/* Modal Controls */}
-        <div className="sticky top-0 z-10 flex items-center justify-between pb-4 border-b border-[#E3E1DA] bg-[#FAFAF7]">
-          <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#2A48D0]">
+        <div className="sticky top-0 z-10 flex items-center justify-between pb-4 border-b border-white/10 bg-[#12151E]">
+          <span className="text-xs font-mono font-semibold uppercase tracking-wider text-indigo-400">
             Verified Candidate Resume
           </span>
           <div className="flex items-center gap-2 font-mono">
             <button
               onClick={handleCopyText}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#EBE9E1] text-[#141412] hover:bg-[#D5D3CB] text-xs font-medium transition cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-xs font-medium transition cursor-pointer text-slate-200"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{copied ? 'Copied' : 'Copy Text'}</span>
             </button>
             <button
               onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#EBE9E1] text-[#141412] hover:bg-[#D5D3CB] text-xs font-medium transition cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 text-xs font-medium transition cursor-pointer text-slate-200"
             >
               <Printer className="w-3.5 h-3.5" />
               <span>Print / PDF</span>
             </button>
             <button
               onClick={onClose}
-              className="p-1 rounded text-[#6B6960] hover:text-[#141412] transition cursor-pointer"
+              className="p-1 rounded text-slate-400 hover:text-white transition cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -114,32 +109,32 @@ ACHIEVEMENTS & CERTIFICATIONS:
         <div className="mt-6 space-y-6">
           
           {/* Header */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-[#E3E1DA]">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
             <div className="flex items-center gap-4">
               <img
                 src={profileData.headshotUrl}
                 alt={profileData.name}
-                className="w-14 h-14 rounded-full object-cover ring-1 ring-[#E3E1DA]"
+                className="w-14 h-14 rounded-full object-cover ring-2 ring-indigo-500/30"
               />
               <div>
-                <h2 className="text-xl font-bold text-[#141412] tracking-tight">{profileData.name}</h2>
-                <p className="text-xs font-mono text-[#2A48D0] font-semibold">{profileData.title}</p>
-                <p className="text-xs text-[#6B6960] mt-0.5">{profileData.location}</p>
+                <h2 className="text-xl font-bold text-white tracking-tight">{profileData.name}</h2>
+                <p className="text-xs font-mono text-indigo-400 font-semibold">{profileData.title}</p>
+                <p className="text-xs text-slate-400 mt-0.5">{profileData.location}</p>
               </div>
             </div>
 
-            <div className="text-xs font-mono text-[#55534B] space-y-1">
+            <div className="text-xs font-mono text-slate-400 space-y-1">
               <div>Email: {profileData.email}</div>
               <div>Phone: {profileData.phone}</div>
             </div>
           </div>
 
           {/* Honors */}
-          <div className="p-4 rounded-xl bg-[#EBE9E1]/60 border border-[#E3E1DA] space-y-2">
-            <span className="text-xs font-mono font-bold text-[#141412] uppercase tracking-wider block">
+          <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
+            <span className="text-xs font-mono font-bold text-white uppercase tracking-wider block">
               ★ Honors & Recognition
             </span>
-            <div className="text-xs text-[#55534B] space-y-1">
+            <div className="text-xs text-slate-300 space-y-1 font-light">
               <p>• <strong>Impact Award Nominee (Q4 & Q5)</strong> — IQVIA Enterprise Analytics</p>
               <p>• <strong>Project Sparta Data Associate Scholar</strong> — Development Academy of the Philippines</p>
             </div>
@@ -147,37 +142,37 @@ ACHIEVEMENTS & CERTIFICATIONS:
 
           {/* Experience */}
           <div className="space-y-4">
-            <span className="text-xs font-mono font-bold text-[#141412] uppercase tracking-wider block">
+            <span className="text-xs font-mono font-bold text-white uppercase tracking-wider block">
               Professional Experience
             </span>
 
-            <div className="space-y-4 text-xs">
-              <div className="space-y-1">
+            <div className="space-y-5 text-xs">
+              <div className="space-y-1.5 p-4 rounded-xl bg-black/30 border border-white/5">
                 <div className="flex justify-between font-mono">
-                  <strong className="text-sm font-bold text-[#141412]">StylSensei — Co-Founder & Outbound Lead</strong>
-                  <span className="text-[#6B6960]">06/2025 – 06/2026</span>
+                  <strong className="text-sm font-bold text-white">StylSensei — Co-Founder & Outbound Lead</strong>
+                  <span className="text-indigo-400">06/2025 – 06/2026</span>
                 </div>
-                <p className="text-[#55534B]">
-                  Managed outbound infrastructure across 6,000+ secondary mailboxes sending 500k+ emails monthly. Sub-5% bounce rate SLA, SPF/DKIM/DMARC alignment, AI reply triage, and closing high-ticket B2B retainers.
+                <p className="text-slate-300 font-light leading-relaxed">
+                  Managed outbound infrastructure across 6,000+ secondary mailboxes sending 500k+ emails monthly. Sub-2.8% bounce rate SLA, SPF/DKIM/DMARC alignment, AI reply triage, and closing high-ticket B2B retainer clients.
                 </p>
               </div>
 
-              <div className="space-y-1">
+              <div className="space-y-1.5 p-4 rounded-xl bg-black/30 border border-white/5">
                 <div className="flex justify-between font-mono">
-                  <strong className="text-sm font-bold text-[#141412]">Premier Fitness — AI Automation Developer</strong>
-                  <span className="text-[#6B6960]">02/2025 – 06/2025</span>
+                  <strong className="text-sm font-bold text-white">Premier Fitness — AI Automation Developer</strong>
+                  <span className="text-indigo-400">02/2025 – 06/2025</span>
                 </div>
-                <p className="text-[#55534B]">
+                <p className="text-slate-300 font-light leading-relaxed">
                   Engineered N8N workflows connecting OpenAI, Google Sheets, and legacy ERPs. Reduced manual effort by 40% and cut lead response time to &lt;15 seconds.
                 </p>
               </div>
 
-              <div className="space-y-1">
+              <div className="space-y-1.5 p-4 rounded-xl bg-black/30 border border-white/5">
                 <div className="flex justify-between font-mono">
-                  <strong className="text-sm font-bold text-[#141412]">IQVIA — Sr. Database Support Associate</strong>
-                  <span className="text-[#6B6960]">10/2022 – 02/2025</span>
+                  <strong className="text-sm font-bold text-white">IQVIA — Sr. Database Support Associate</strong>
+                  <span className="text-indigo-400">10/2022 – 02/2025</span>
                 </div>
-                <p className="text-[#55534B]">
+                <p className="text-slate-300 font-light leading-relaxed">
                   Administered enterprise databases on HUE Impala and MySQL. Automated web scraping and SQL pipelines (40% effort reduction) and trained 30+ stakeholders on Looker self-serve querying.
                 </p>
               </div>
@@ -185,16 +180,16 @@ ACHIEVEMENTS & CERTIFICATIONS:
           </div>
 
           {/* Education */}
-          <div className="pt-4 border-t border-[#E3E1DA]">
-            <span className="text-xs font-mono font-bold text-[#141412] uppercase tracking-wider block mb-1">
+          <div className="pt-4 border-t border-white/10">
+            <span className="text-xs font-mono font-bold text-white uppercase tracking-wider block mb-1">
               Education
             </span>
             <div className="flex justify-between text-xs font-mono">
               <div>
-                <strong>BS in Information and Technology</strong> (Major in Business & Data Analytics)
-                <div className="text-[#6B6960]">Bulacan State University</div>
+                <strong className="text-white">BS in Information and Technology</strong> (Major in Business & Data Analytics)
+                <div className="text-slate-400">Bulacan State University</div>
               </div>
-              <span className="text-[#6B6960]">2018 – 2022</span>
+              <span className="text-indigo-400">2018 – 2022</span>
             </div>
           </div>
 
