@@ -36,7 +36,7 @@ export interface ProfileData {
 export const profileData: ProfileData = {
   name: "Genesis L. Auza",
   title: "B2B Cold Outbound & GTM Email Specialist",
-  subtitle: "I build and operate high-scale outbound email engines (6,000+ mailboxes, 500k monthly volume) that book qualified B2B pipeline without burning domains—backed by technical AI scraping and automated CRM triage.",
+  subtitle: "Co-Founder of StylSensei. I build and operate cold outbound infrastructure (6,000+ mailboxes, 645k+ emails sent) delivering qualified C-suite meetings with a 22.4% positive reply rate and 1% bounce rate.",
   location: "Remote (Philippines · US Eastern / Pacific Overlap)",
   email: "genesisauza9@gmail.com",
   phone: "+63 991 502 5407",
@@ -44,24 +44,24 @@ export const profileData: ProfileData = {
   headshotUrl: "/genesis-headshot.jpg",
   highlights: [
     {
-      label: "Monthly Outbound Scale",
-      value: "500K+",
-      detail: "Emails delivered monthly with strict SPF/DKIM/DMARC",
+      label: "Total Emails Dispatched",
+      value: "645,355",
+      detail: "Verified Instantly/Smartlead client outbound fleet",
     },
     {
-      label: "Mailboxes Orchestrated",
-      value: "6,000+",
-      detail: "Warmed secondary inboxes under continuous health telemetry",
+      label: "Positive Replies Generated",
+      value: "7,090",
+      detail: "22.4% positive response rate from B2B decision-makers",
     },
     {
-      label: "Deliverability SLA",
-      value: "< 2.8%",
-      detail: "Sub-5% hard bounce SLA consistently maintained",
+      label: "Total Replies Handled",
+      value: "31,652",
+      detail: "4.9% reply rate across 451k+ leads contacted",
     },
     {
-      label: "Lead Scraping & AI",
-      value: "500+ Leads",
-      detail: "Autonomous Telegram/DeepSeek/Apify scraper to Google Sheets",
+      label: "Verified Bounce Rate",
+      value: "1.0%",
+      detail: "Strict sub-5% SLA held across 6,000+ secondary mailboxes",
     },
   ],
   education: {

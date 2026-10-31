@@ -13,7 +13,9 @@
     line-height: 1.6;
   }
 
-  code, pre, .font-mono {
+  code,
+  pre,
+  .font-mono {
     font-family: var(--font-mono);
   }
 }
@@ -35,13 +37,16 @@
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: #090a0f;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #1e2433;
   border-radius: 9999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #2e384d;
 }

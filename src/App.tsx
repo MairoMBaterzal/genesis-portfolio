@@ -38,28 +38,34 @@ export function App() {
 
   const proofAssets = [
     {
-      title: "n8n Multi-Modal Lead Agent",
-      badge: "AI AGENT WORKFLOW",
-      caption: "Telegram trigger, voice/text router, Whisper speech-to-text, and DeepSeek tools agent with memory.",
-      url: "/case-studies/n8n-agent-architecture.png"
+      title: "645,355 Sends · 7,090 Positive Replies",
+      badge: "VERIFIED SENDING FLEET",
+      caption: "Live Instantly campaign metrics across 451,749 leads: 22.4% positive reply rate and 1.0% bounce rate with 0% unsubscribe rate.",
+      url: "/proof/instantly-645k-stats.png"
     },
     {
-      title: "Apify Apollo Scraper Sub-Workflow",
-      badge: "ENRICHMENT WORKER",
-      caption: "Modular pipeline parsing Apollo parameters, stripping duplicates, and syncing to Google Sheets.",
-      url: "/case-studies/n8n-scraper-subworkflow.png"
+      title: "Live C-Suite Meetings: Healthcare & Services",
+      badge: "SLACK CALENDAR DELIVERY",
+      caption: "Real-time MEETING_BOOKED alerts delivered directly to client Slack channels for Presidents, CEOs, and Partners (Cedar Landscape, Phosis, Alliance Environmental, YogaMedics).",
+      url: "/proof/slack-booked-meetings-feed-1.png"
     },
     {
-      title: "Telegram Bot Live Interaction",
-      badge: "ON-DEMAND EXTRACTION",
-      caption: "User prompts bot for 500 salon leads in Texas; bot autonomously executes and returns sheet link.",
-      url: "/case-studies/telegram-interaction.png"
+      title: "Live C-Suite Meetings: Brands & Tech Founders",
+      badge: "SLACK CALENDAR DELIVERY",
+      caption: "Qualified meetings booked and handed off to closers for Founders & CEOs (Timeless Tartans, Rubbit, Fantastic Fungi).",
+      url: "/proof/slack-booked-meetings-feed-2.png"
     },
     {
-      title: "Verified 500-Lead Output Dataset",
-      badge: "LIVE DELIVERABLE",
-      caption: "Enriched columns: Name, Email, Phone, Company, Job Title, Seniority, Website, and LinkedIn URL.",
-      url: "/case-studies/scraped-google-sheet.png"
+      title: "Sub-15 Min Lead Triage: Taylor Hospitality",
+      badge: "RAPID QUALIFICATION",
+      caption: "Direct prospect handoff to client Brand Manager Carrie with verified contact info, phone, website, and scheduled EST discovery meeting.",
+      url: "/proof/slack-booked-meeting-taylor.png"
+    },
+    {
+      title: "Outbound Velocity & Deal Handling Strategy",
+      badge: "STYL SENSEI METHODOLOGY",
+      caption: "Co-Founder breakdown of outbound reply handling: eliminating friction, real-time lead routing, and converting momentum into closed retainers.",
+      url: "/proof/linkedin-post-outbound.png"
     }
   ];
 
@@ -80,7 +86,7 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#090A0F] text-[#F1F5F9] font-sans selection:bg-[#4F46E5] selection:text-white">
-      
+
       {/* Background radial glow */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-indigo-500/10 via-sky-500/5 to-transparent blur-3xl opacity-60" />
@@ -89,7 +95,7 @@ export function App() {
       {/* Floating Top Navigation */}
       <header className="sticky top-4 z-40 max-w-5xl mx-auto px-4 sm:px-6">
         <div className="rounded-full bg-[#12151E]/80 backdrop-blur-xl border border-white/10 px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-2xl shadow-black/60">
-          
+
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20 group-hover:ring-indigo-400 transition">
               <img
@@ -137,10 +143,10 @@ export function App() {
 
       {/* Main Content Container */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-20 space-y-24">
-        
+
         {/* HERO SECTION */}
         <section className="space-y-8 text-center sm:text-left">
-          
+
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-slate-300 text-xs font-mono">
             <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
             <span>B2B Cold Outbound · GTM Email Engines · AI-Verified Data</span>
@@ -186,28 +192,28 @@ export function App() {
 
           {/* Stat Bento Grid (Mobbin-style metric cards) */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 pt-4">
-            
+
             <div className="glow-card p-5 rounded-2xl">
               <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
-                MONTHLY SEND SCALE
+                TOTAL EMAILS SENT
               </span>
               <div className="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">
-                500,000+
+                645,355
               </div>
               <span className="text-xs text-indigo-300 mt-1 block font-light">
-                Emails delivered monthly
+                451k+ verified leads reached
               </span>
             </div>
 
             <div className="glow-card p-5 rounded-2xl">
               <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
-                MAILBOXES MANAGED
+                POSITIVE REPLIES
               </span>
-              <div className="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">
-                6,000+
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-indigo-300 tracking-tight">
+                7,090
               </div>
-              <span className="text-xs text-indigo-300 mt-1 block font-light">
-                Secondary inboxes warmed
+              <span className="text-xs text-emerald-400 mt-1 block font-light font-mono">
+                22.4% positive reply rate
               </span>
             </div>
 
@@ -216,22 +222,22 @@ export function App() {
                 HARD BOUNCE RATE
               </span>
               <div className="text-2xl sm:text-3xl font-bold font-mono text-emerald-400 tracking-tight">
-                &lt; 2.8%
+                1.0%
               </div>
               <span className="text-xs text-slate-400 mt-1 block font-light">
-                Strict sub-5% SLA target
+                6,454 / 645k dispatches
               </span>
             </div>
 
             <div className="glow-card p-5 rounded-2xl">
               <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
-                AI LEAD EXTRACTION
+                SECONDARY MAILBOXES
               </span>
               <div className="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">
-                500+ Leads
+                6,000+
               </div>
               <span className="text-xs text-indigo-300 mt-1 block font-light">
-                On-demand Telegram scraper
+                Warmed & rotated pools
               </span>
             </div>
 
@@ -241,7 +247,7 @@ export function App() {
 
         {/* SECTION 2: THE 4 OUTBOUND PILLARS (Interactive Bento Tabs) */}
         <section id="pillars" className="space-y-6">
-          
+
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>
               <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 block mb-1">
@@ -270,11 +276,10 @@ export function App() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono whitespace-nowrap transition cursor-pointer ${
-                    isActive
+                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono whitespace-nowrap transition cursor-pointer ${isActive
                       ? 'bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-950'
                       : 'bg-[#12151E] text-slate-400 hover:text-white border border-white/5 hover:border-white/10'
-                  }`}
+                    }`}
                 >
                   <Icon className="w-3.5 h-3.5" />
                   <span>{tab.label}</span>
@@ -285,7 +290,7 @@ export function App() {
 
           {/* Active Tab Card */}
           <div className="glow-card rounded-2xl p-6 sm:p-8 space-y-6">
-            
+
             {activeTab === 'infrastructure' && (
               <div className="space-y-5 animate-in fade-in duration-200">
                 <div className="flex items-baseline justify-between gap-4 border-b border-white/10 pb-4">
@@ -423,7 +428,7 @@ export function App() {
                   <div className="text-[11px] text-slate-400">Sample Campaign Architecture:</div>
                   <div className="text-white font-semibold">Subject: quick note for {`{First Name}`}</div>
                   <p className="text-slate-300 font-light leading-relaxed">
-                    "Hi {`{First Name}`}, noticed you rank well for general services in {`{City}`}, but competitors two blocks down are picking up all the high-ticket search volume on Google Maps.<br/>
+                    "Hi {`{First Name}`}, noticed you rank well for general services in {`{City}`}, but competitors two blocks down are picking up all the high-ticket search volume on Google Maps.<br />
                     Recorded a 2-minute video breakdown showing where you're losing local search traffic and how to claim those spots back. Mind if I send the link over here?"
                   </p>
                   <span className="text-[11px] text-emerald-400 block pt-1">
@@ -492,50 +497,53 @@ export function App() {
         </section>
 
         {/* SECTION 3: VISUAL PROOF & ACTUAL DELIVERABLES */}
-        <section id="proof" className="space-y-6">
-          
+        <section id="proof" className="space-y-8">
+
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>
               <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 block mb-1">
-                ACTUAL ARTIFACTS
+                CAMPAIGN PROOF & PRODUCTION DELIVERABLES
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                Visual proof & live outputs.
+                Real outbound metrics & booked C-suite calls.
               </h2>
             </div>
             <a
-              href="https://docs.google.com/spreadsheets/d/1SqyXWaz-lVrfNpFQIKRTjDBoeZagXfY4x1ucOi1ZqKs/edit?usp=sharing"
+              href="https://stylsensei.com/testimonials"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition"
             >
-              <span>Inspect Live 500-Lead Google Sheet ↗</span>
+              <span>View Client Testimonials ↗</span>
             </a>
           </div>
 
+          {/* Proof Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {proofAssets.map((asset, idx) => (
               <div
                 key={idx}
                 onClick={() => setActiveLightbox(asset)}
-                className="glow-card rounded-2xl overflow-hidden cursor-pointer group"
+                className={`glow-card rounded-2xl overflow-hidden cursor-pointer group ${
+                  idx === 0 ? 'sm:col-span-2' : ''
+                }`}
               >
-                <div className="aspect-[16/10] bg-black/50 overflow-hidden relative">
+                <div className={`${idx === 0 ? 'aspect-[21/9]' : 'aspect-[16/10]'} bg-black/50 overflow-hidden relative`}>
                   <img
                     src={asset.url}
                     alt={asset.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                    className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition duration-300"
                   />
                   <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/10 text-[10px] font-mono text-indigo-300 uppercase">
                     {asset.badge}
                   </div>
                 </div>
-                <div className="p-4 flex items-center justify-between gap-3">
+                <div className="p-4 sm:p-5 flex items-center justify-between gap-3">
                   <div>
-                    <h4 className="text-sm font-bold text-white group-hover:text-indigo-300 transition">
+                    <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-indigo-300 transition">
                       {asset.title}
                     </h4>
-                    <p className="text-xs text-slate-400 line-clamp-1 mt-0.5 font-light">
+                    <p className="text-xs text-slate-400 line-clamp-2 mt-0.5 font-light">
                       {asset.caption}
                     </p>
                   </div>
@@ -547,11 +555,97 @@ export function App() {
             ))}
           </div>
 
+          {/* StylSensei Agency Client Results & Testimonials */}
+          <div className="pt-6 space-y-4 border-t border-white/5">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+              <div>
+                <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 block mb-0.5">
+                  STYLSENSEI AGENCY TRACK RECORD
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  High-ticket pipeline generated for clients.
+                </h3>
+              </div>
+              <div className="flex items-center gap-3 text-xs font-mono">
+                <a
+                  href="https://stylsensei.com/testimonials"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-400 hover:text-indigo-300 transition"
+                >
+                  Client Testimonials ↗
+                </a>
+                <span className="text-slate-700">·</span>
+                <a
+                  href="https://stylsensei.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-white transition"
+                >
+                  stylsensei.com ↗
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-5 rounded-2xl bg-[#12151E] border border-white/5 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
+                    HIGH-TICKET B2B
+                  </span>
+                  <span className="text-xs font-mono font-bold text-emerald-400">
+                    6 Closed Retainers
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white">Practice Growth Co</h4>
+                  <p className="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">
+                    Delivered <strong className="text-white font-medium">40+ qualified discovery calls</strong> with medical practice owners and directors, converting 6 high-ticket clients via multi-mailbox targeted outbound.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-[#12151E] border border-white/5 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
+                    HEALTHCARE M&A
+                  </span>
+                  <span className="text-xs font-mono font-bold text-emerald-400">
+                    $150k+ Added Pipeline
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white">Healthcare Advisory</h4>
+                  <p className="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">
+                    Sourced <strong className="text-white font-medium">12 off-market healthcare acquisition deals per month</strong> directly from clinic founders, generating over $150k in active advisory deal pipeline.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-[#12151E] border border-white/5 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
+                    C-SUITE APPOINTMENTS
+                  </span>
+                  <span className="text-xs font-mono font-bold text-emerald-400">
+                    22.4% Positive Rate
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white">Brands & Services</h4>
+                  <p className="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">
+                    Booked calendar calls directly with CEOs, Presidents, and Partners across <strong className="text-white font-medium">Taylor Hospitality, Cedar Landscape, Fantastic Fungi, YogaMedics, Rubbit</strong>, and Timeless Tartans.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </section>
 
         {/* SECTION 4: OPERATOR STACK */}
         <section id="stack" className="space-y-6">
-          
+
           <div className="flex items-baseline justify-between">
             <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400">
               OPERATING STACK
@@ -584,7 +678,7 @@ export function App() {
 
         {/* SECTION 5: ABOUT GENESIS */}
         <section id="about" className="space-y-6 pt-6 border-t border-white/10">
-          
+
           <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 block">
             ABOUT GENESIS
           </span>
@@ -595,7 +689,7 @@ export function App() {
             </p>
 
             <p>
-              I spent years working with enterprise databases and analytics pipelines at <strong className="text-white font-medium">IQVIA</strong> on HUE Impala and MySQL—earning two consecutive <strong className="text-white font-medium">Impact Award nominations (Q4 & Q5)</strong> for workflow optimization and stakeholder enablement. 
+              I spent years working with enterprise databases and analytics pipelines at <strong className="text-white font-medium">IQVIA</strong> on HUE Impala and MySQL—earning two consecutive <strong className="text-white font-medium">Impact Award nominations (Q4 & Q5)</strong> for workflow optimization and stakeholder enablement.
             </p>
 
             <p>
@@ -607,7 +701,7 @@ export function App() {
 
         {/* SECTION 6: CLOSING CTA */}
         <section className="glow-card rounded-3xl p-8 sm:p-12 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8">
-          
+
           <div className="space-y-2 max-w-xl">
             <span className="text-xs font-mono text-indigo-400 font-semibold uppercase tracking-wider block">
               NEXT STEP

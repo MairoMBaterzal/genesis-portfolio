@@ -40,6 +40,137 @@ export interface CaseStudy {
 
 export const caseStudiesData: CaseStudy[] = [
   {
+    id: "stylsensei-outbound-engine",
+    client: "StylSensei (Co-Founder)",
+    period: "06/2025 – 06/2026",
+    role: "Co-Founder & Outbound Infrastructure Lead",
+    tagline: "Scalable Cold Outbound Engine: 6,000+ Mailboxes, 645k+ Dispatches, 7,090 Positive Replies & 1.0% Bounce Rate",
+    badge: "Scale & Revenue Infrastructure",
+    heroMetric: {
+      value: "645,355",
+      label: "Verified Emails Dispatched",
+    },
+    keyMetrics: [
+      {
+        label: "Positive Replies",
+        value: "7,090",
+        subtext: "22.4% positive reply rate",
+      },
+      {
+        label: "Leads Contacted",
+        value: "451,749",
+        subtext: "4.9% overall reply rate",
+      },
+      {
+        label: "Hard Bounce Rate",
+        value: "1.0%",
+        subtext: "Strict deliverability held",
+      },
+      {
+        label: "Secondary Inboxes",
+        value: "6,000+",
+        subtext: "Isolated DNS pools",
+      },
+    ],
+    challenge:
+      "High-ticket B2B agencies and growth firms need predictable qualified meetings without risking primary root domains or getting blacklisted by Google and Microsoft spam filters. Scaling to hundreds of thousands of dispatches requires strict DNS authentication, automated inbox warm-up, continuous deliverability monitoring, rapid reply triage, and real-time CRM calendar booking.",
+    solution: [
+      "Engineered an automated DNS provisioning system across 6,000+ warmed secondary mailboxes using custom tracking domains, SPF, and 2048-bit DKIM keys.",
+      "Maintained a verified 1.0% bounce rate across 645,355 total sends and 451,749 leads contacted with zero root domain reputation loss.",
+      "Generated 7,090 positive replies (22.4% positive conversion rate) by testing human-first, pain-focused angles with low-friction permission asks.",
+      "Orchestrated sub-15 minute reply classification and triage: parsed inbound replies, flagged high-intent responses, and booked discovery calls into client CRMs and calendars.",
+      "Closed high-ticket B2B retainer clients and drove qualified C-suite meetings for clients including Practice Growth Co, Taylor Hospitality, Cedar Landscape, Fantastic Fungi, and Healthcare M&A groups."
+    ],
+    techStack: [
+      "Instantly.ai / Smartlead",
+      "Cloudflare DNS / API",
+      "SPF / DKIM / DMARC",
+      "GoHighLevel & HubSpot CRM",
+      "Apollo.io & Clay.com",
+      "MillionVerifier",
+      "Slack Webhooks",
+      "OpenAI API"
+    ],
+    visualAssets: [
+      {
+        title: "Verified 645,355 Sends Fleet Dashboard",
+        caption: "Instantly performance metrics: 451,749 leads contacted, 7,090 positive replies (22.4%), 1.0% bounce rate, 0% unsubscribe.",
+        imageUrl: "/proof/instantly-645k-stats.png"
+      },
+      {
+        title: "Live C-Suite Slack Delivery: Healthcare & Enterprise",
+        caption: "MEETING_BOOKED alerts routed to client channels for Presidents, CEOs, and Partners (Cedar Landscape, Phosis, Alliance Environmental, YogaMedics).",
+        imageUrl: "/proof/slack-booked-meetings-feed-1.png"
+      },
+      {
+        title: "Live C-Suite Slack Delivery: Brands & Founders",
+        caption: "Booked calls handed off to closers for Founders & CEOs (Timeless Tartans, Rubbit, Fantastic Fungi).",
+        imageUrl: "/proof/slack-booked-meetings-feed-2.png"
+      },
+      {
+        title: "Sub-15 Minute Lead Triage & Handshake",
+        caption: "Taylor Hospitality prospect handoff directly to client Brand Manager Carrie with phone, verified email, and scheduled EST slot.",
+        imageUrl: "/proof/slack-booked-meeting-taylor.png"
+      }
+    ],
+    architectureFlow: [
+      {
+        stepNumber: 1,
+        title: "Multi-Domain DNS Provisioning",
+        description: "Automated creation of secondary domains with isolated SPF, DKIM (2048-bit), and DMARC (p=quarantine) policies.",
+        tag: "Infrastructure"
+      },
+      {
+        stepNumber: 2,
+        title: "21-Day Warmup Protocol",
+        description: "Programmatic volume escalation with AI peer-to-peer inbox replies to build high sender reputation.",
+        tag: "Warmup"
+      },
+      {
+        stepNumber: 3,
+        title: "Rotated Sending Engine",
+        description: "645k+ emails distributed evenly at max 25-30 emails per inbox per day to maintain zero spam flags.",
+        tag: "Delivery"
+      },
+      {
+        stepNumber: 4,
+        title: "Reply Triage & Calendar Booking",
+        description: "Evaluates inbound sentiment, flags high-intent responses, and automatically alerts Slack & inserts meetings into client calendars.",
+        tag: "Conversion"
+      }
+    ],
+    deliverables: [
+      {
+        name: "Secondary Domain DNS Health Matrix",
+        description: "Continuous telemetry verifying MX, SPF, DKIM, and DMARC across 6,000+ mailboxes.",
+        type: "dashboard",
+        dataSnippet: `DNS Matrix Status: 6,140 / 6,140 Healthy
+• SPF: v=spf1 include:_spf.google.com ~all (100% Valid)
+• DKIM: 2048-bit selector active on all secondary zones
+• DMARC: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@...
+• Custom Tracking Domain: SSL-secured, zero shared pool footprint`
+      },
+      {
+        name: "Automated Reply Classifier & Calendar Booking Logic",
+        description: "Production webhook flow qualifying prospect replies and scheduling meetings directly in CRM.",
+        type: "architecture",
+        dataSnippet: `Workflow Payload Handshake:
+Inbound Email -> IMAP Listener -> Intent Classifier -> {
+  "intent": "POSITIVE_INTEREST",
+  "urgency": 94,
+  "action": "AUTO_CALENDLY_DISPATCH",
+  "assigned_rep": "Executive Closer",
+  "crm_stage": "Discovery Call Scheduled"
+}`
+      }
+    ],
+    presenterTalkingPoints: [
+      "Highlight the verified 645,355 total dispatches with a 22.4% positive reply rate (7,090 positive replies).",
+      "Explain why 6,000+ secondary mailboxes were necessary: total root domain protection and zero spam penalties.",
+      "Showcase the sub-15 minute Slack booking handoffs for C-suite decision-makers across healthcare, hospitality, and D2C brands."
+    ]
+  },
+  {
     id: "n8n-telegram-lead-agent",
     client: "Autonomous AI Lead Generation Bot",
     period: "2025 – Production",
@@ -79,7 +210,7 @@ export const caseStudiesData: CaseStudy[] = [
       "Routed audio messages through Telegram's file downloader into OpenAI Whisper for instant, accurate voice transcription.",
       "Configured an N8N Tools Agent powered by DeepSeek Chat Model (with dynamic Google Gemini fallback) and conversational session memory.",
       "Built a modular leadScraping sub-workflow calling Apify's Apollo LinkedIn Scraper API with dynamic search parameter URL construction.",
-      "Integrated automated deduplication and field normalization before appending verified prospect records (Name, Email, Phone, Company, Seniority, Website, LinkedIn) into Google Sheets in real-time."
+      "Integrated automated deduplication and field normalization before appending verified prospect records into Google Sheets in real-time."
     ],
     techStack: [
       "n8n Workflow Engine",
@@ -161,115 +292,6 @@ Telegram Trigger -> [Voice/Text Router] -> OpenAI Whisper -> DeepSeek Tools Agen
       "Demonstrates multi-modal capability: Handling both voice notes and text in the same n8n workflow using Whisper and DeepSeek.",
       "Shows modular architecture: Isolating heavy scraping jobs into sub-workflows prevents memory spikes on the main bot.",
       "Point to the real output: Share the live Google Sheet link with 500 verified, deduplicated business contacts."
-    ]
-  },
-  {
-    id: "stylsensei-outbound-engine",
-    client: "StylSensei (Co-Founder)",
-    period: "06/2025 – 06/2026",
-    role: "Co-Founder & Infrastructure Lead",
-    tagline: "Scalable Cold Outbound Engine: 6,000+ Inboxes, 500K Monthly Volume & Sub-5% Bounce Rate",
-    badge: "Scale & Revenue Infrastructure",
-    heroMetric: {
-      value: "500,000+",
-      label: "Emails Dispatched Monthly",
-    },
-    keyMetrics: [
-      {
-        label: "Secondary Inboxes",
-        value: "6,000+",
-        subtext: "Isolated DNS pools",
-      },
-      {
-        label: "Hard Bounce Rate",
-        value: "< 2.8%",
-        subtext: "Strict sub-5% SLA target",
-      },
-      {
-        label: "Authentication Score",
-        value: "100%",
-        subtext: "SPF, DKIM, DMARC aligned",
-      },
-      {
-        label: "Client Acquisition",
-        value: "High-Ticket",
-        subtext: "Closed B2B retainers directly",
-      },
-    ],
-    challenge:
-      "High-ticket B2B agencies need massive outbound pipeline without risking primary root domains or tripping Google/Outlook algorithmic spam filters. Cold outreach at 500,000 emails/month requires flawless automated inbox warm-up, strict DNS alignment, automated reply triage, and real-time CRM calendar booking.",
-    solution: [
-      "Engineered an automated DNS provisioning system across 6,000+ warmed secondary mailboxes using custom tracking domains and 2048-bit DKIM keys.",
-      "Implemented programmatic warmup curves (1 -> 5 -> 15 -> 30 emails/day per box) with auto-throttle safeguards that trigger if hard bounces touch 3.5%.",
-      "Owned the full sales cycle: audited prospect systems, delivered bespoke technical proposals, and closed high-ticket B2B retainer clients.",
-      "Orchestrated AI-driven reply classification: parsed replies for intent (Positive, Question, Objection, Unsubscribe), auto-booking discovery calls directly into client CRMs and calendars within 90 seconds.",
-      "Enforced continuous inbox QA and deliverability health monitoring, maintaining a sub-5% bounce rate across half a million monthly dispatches."
-    ],
-    techStack: [
-      "N8N Automation",
-      "DNS / Cloudflare API",
-      "SPF / DKIM / DMARC",
-      "Smartlead / Instantly",
-      "Google Workspace & M365",
-      "OpenAI API",
-      "HubSpot / GoHighLevel CRM",
-      "Calendly / Cal.com API"
-    ],
-    architectureFlow: [
-      {
-        stepNumber: 1,
-        title: "Multi-Domain DNS Provisioning",
-        description: "Automated creation of secondary domains with isolated SPF, DKIM (2048-bit), and DMARC (p=quarantine) policies.",
-        tag: "Infrastructure"
-      },
-      {
-        stepNumber: 2,
-        title: "21-Day Warmup Protocol",
-        description: "Programmatic volume escalation with AI peer-to-peer peer inbox replies to build high sender reputation.",
-        tag: "Warmup"
-      },
-      {
-        stepNumber: 3,
-        title: "Rotated Sending Engine",
-        description: "500,000 monthly emails distributed evenly at max 25-30 emails per inbox per day to maintain zero spam flags.",
-        tag: "Delivery"
-      },
-      {
-        stepNumber: 4,
-        title: "AI Reply Triage & Calendar Booking",
-        description: "OpenAI evaluates inbound sentiment, flags high-intent responses, and automatically inserts meetings into client calendars.",
-        tag: "Conversion"
-      }
-    ],
-    deliverables: [
-      {
-        name: "Secondary Domain DNS Health Matrix",
-        description: "Continuous telemetry verifying MX, SPF, DKIM, and DMARC across 6,000+ mailboxes.",
-        type: "dashboard",
-        dataSnippet: `DNS Matrix Status: 6,140 / 6,140 Healthy
-• SPF: v=spf1 include:_spf.google.com ~all (100% Valid)
-• DKIM: 2048-bit selector active on all secondary zones
-• DMARC: v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@...
-• Custom Tracking Domain: SSL-secured, zero shared pool footprint`
-      },
-      {
-        name: "Automated Reply Classifier & Calendar Booking Logic",
-        description: "Production webhook flow qualifying prospect replies and scheduling meetings directly in CRM.",
-        type: "architecture",
-        dataSnippet: `Workflow Payload Handshake:
-Inbound Email -> IMAP Listener -> OpenAI Intent Classifier -> {
-  "intent": "POSITIVE_INTEREST",
-  "urgency": 94,
-  "action": "AUTO_CALENDLY_DISPATCH",
-  "assigned_rep": "Executive Closer",
-  "crm_stage": "Discovery Call Scheduled"
-}`
-      }
-    ],
-    presenterTalkingPoints: [
-      "Explain why 6,000+ secondary mailboxes were necessary: total brand protection and zero risk to primary domain reputation.",
-      "Highlight the sub-5% bounce rate achievement at 500k monthly scale—demonstrating rigorous list verification and DNS hygiene.",
-      "Emphasize the end-to-end commercial ownership: not just setting up tools, but running system audits, presenting proposals, and closing retainer clients."
     ]
   },
   {

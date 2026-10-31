@@ -37,14 +37,14 @@ SUMMARY:
 ${profileData.subtitle}
 
 CORE EXPERTISE:
-• Cold Outbound & Sending Fleets: 6,000+ mailboxes, 500k/mo sends, SPF/DKIM/DMARC, warmup ramp, sub-2.8% bounce rate
+• Cold Outbound & Sending Fleets: 6,000+ mailboxes, 645,355+ emails sent, 7,090 positive replies (22.4%), SPF/DKIM/DMARC, sub-1.0% bounce rate
 • AI Lead Scraping & Enrichment: Apollo, Clay, Apify, Telegram Bot with DeepSeek & Whisper, Google Sheets sync
 • Pipeline & CRM Triage: GoHighLevel, HubSpot CRM, tag-to-deal automation, instant Slack alerts, same-day routing
 • Deliverability Diagnostics: Instantly.ai, Smartlead, MillionVerifier, Cloudflare DNS
 
 EXPERIENCE:
 1. Co-Founder & Outbound Lead | StylSensei (06/2025 – 06/2026)
-• Managed scalable cold outbound infrastructure across 6,000+ warmed secondary mailboxes, sending 500,000+ emails monthly while maintaining strict SPF, DKIM, DMARC authentication and sub-2.8% bounce rates.
+• Managed scalable cold outbound infrastructure across 6,000+ warmed secondary mailboxes, sending 645,355+ emails across 451k+ leads while generating 7,090 positive replies (22.4%) at a 1.0% bounce rate.
 • Ran the full sales cycle for agency acquisition: audited prospect systems, delivered customized proposals, and closed high-ticket B2B retainer clients.
 • Owned end-to-end reply management, objection handling, prospect qualification, booking high-intent discovery calls directly into client calendars and CRMs.
 
@@ -75,7 +75,7 @@ ACHIEVEMENTS:
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-150">
       <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#12151E] border border-white/10 shadow-2xl p-6 sm:p-8 text-[#F1F5F9]">
-        
+
         {/* Modal Controls */}
         <div className="sticky top-0 z-10 flex items-center justify-between pb-4 border-b border-white/10 bg-[#12151E]">
           <span className="text-xs font-mono font-semibold uppercase tracking-wider text-indigo-400">
@@ -107,7 +107,7 @@ ACHIEVEMENTS:
 
         {/* Resume Content Body */}
         <div className="mt-6 space-y-6">
-          
+
           {/* Header */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-white/10">
             <div className="flex items-center gap-4">
