@@ -12,6 +12,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    background-color: #faeef2;
   }
 
   code,
@@ -19,21 +20,6 @@
   .font-mono {
     font-family: var(--font-mono);
   }
-}
-
-/* Biosites Dreamy Pastel Mesh Gradient Canvas */
-.biosites-canvas {
-  background-color: #f7eef0;
-  background-image: 
-    radial-gradient(at 0% 0%, #e3c1d1 0px, transparent 55%),
-    radial-gradient(at 50% 0%, #fee7b1 0px, transparent 50%),
-    radial-gradient(at 100% 0%, #c7d1dd 0px, transparent 55%),
-    radial-gradient(at 0% 45%, #e7c6c1 0px, transparent 50%),
-    radial-gradient(at 0% 85%, #fbd975 0px, transparent 55%),
-    radial-gradient(at 100% 85%, #e9dccc 0px, transparent 50%),
-    radial-gradient(at 50% 50%, #fdf2f4 0px, transparent 65%);
-  background-attachment: fixed;
-  background-size: 100% 100%;
 }
 
 /* Subtle Organic Noise Texture */
@@ -44,17 +30,45 @@
 
 /* Biosites Frosted Glass Surface Cards */
 .glass-card {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
   border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow: 0 10px 30px -5px rgba(40, 20, 60, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.2s ease;
 }
 
 .glass-card:hover {
   border-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 15px 35px -5px rgba(40, 20, 60, 0.1), 0 4px 10px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 20px 40px -10px rgba(40, 20, 60, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Interactive Spotlight Sheen on Cards */
+.interactive-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.2s ease;
+  will-change: transform;
+}
+
+.interactive-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(500px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(255, 255, 255, 0.6), transparent 45%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.interactive-card:hover::before {
+  opacity: 1;
+}
+
+.interactive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 45px -10px rgba(40, 20, 60, 0.12);
 }
 
 /* High-Contrast Obsidian Glass (for Navbar & Accent Cards) */
@@ -64,6 +78,20 @@
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Magnetic Button Animation */
+.interactive-button {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.interactive-button:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.interactive-button:active {
+  transform: translateY(0px) scale(0.98);
 }
 
 /* Infinite Marquee moving smoothly to the left */
@@ -93,7 +121,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f7eef0;
+  background: #faeef2;
 }
 
 ::-webkit-scrollbar-thumb {
