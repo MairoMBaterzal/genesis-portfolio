@@ -18,7 +18,12 @@ import {
   Search,
   Globe,
   Radio,
-  Workflow
+  Workflow,
+  TrendingUp,
+  Award,
+  Zap,
+  Building2,
+  Quote
 } from 'lucide-react';
 import { profileData } from './data/profileData';
 import { ResumeModal } from './components/ResumeModal';
@@ -39,30 +44,35 @@ export function App() {
     {
       title: "645,355 Dispatches · 7,090 Positive Replies (Single Cluster)",
       badge: "LIVE INSTANTLY TELEMETRY",
+      stat: "22.4% Positive Rate · 1.0% Bounce",
       caption: "Live Instantly campaign metrics across 451,749 targeted B2B prospects: 22.4% positive reply rate (7,090 positive leads) and a 1.0% bounce rate using Step 1 permission asks.",
       url: "/proof/instantly-645k-stats.png"
     },
     {
       title: "Live C-Suite Meetings: Healthcare & Services",
       badge: "SLACK CALENDAR DELIVERY",
+      stat: "CEOs, Presidents, Partners",
       caption: "Real-time MEETING_BOOKED alerts delivered directly to client Slack channels for Presidents, CEOs, and Partners (Cedar Landscape, Phosis, Alliance Environmental, YogaMedics).",
       url: "/proof/slack-booked-meetings-feed-1.png"
     },
     {
       title: "Live C-Suite Meetings: Brands & Tech Founders",
       badge: "SLACK CALENDAR DELIVERY",
+      stat: "Direct to Closers",
       caption: "Qualified meetings booked and handed off to closers for Founders & CEOs (Timeless Tartans, Rubbit, Fantastic Fungi).",
       url: "/proof/slack-booked-meetings-feed-2.png"
     },
     {
       title: "Sub-15 Min Lead Triage: Taylor Hospitality",
       badge: "RAPID QUALIFICATION",
+      stat: "Scheduled EST Call",
       caption: "Direct prospect handoff to client Brand Manager Carrie with verified contact info, phone, website, and scheduled discovery meeting.",
       url: "/proof/slack-booked-meeting-taylor.png"
     },
     {
       title: "Outbound Velocity & Deal Handling Strategy",
       badge: "STYLSENSEI METHODOLOGY",
+      stat: "Co-Founder Breakdown",
       caption: "Co-Founder breakdown of cold outbound reply triage: eliminating friction, real-time routing, and turning momentum into signed retainers.",
       url: "/proof/linkedin-post-outbound.png"
     }
@@ -120,7 +130,7 @@ export function App() {
       </header>
 
       {/* Main Container */}
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-8 sm:pt-14 pb-24 space-y-16 relative">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-24 space-y-16 relative">
 
         {/* PROFILE IDENTITY ROW (Matches Image 1 Exactly) */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
@@ -154,15 +164,12 @@ export function App() {
           </div>
         </div>
 
-        {/* HERO HEADLINE WITH EMAIL INCLUDED */}
+        {/* HERO HEADLINE WITH EMAIL INCLUDED (NO REDUNDANT PARAGRAPH) */}
         <section className="space-y-6 text-left">
-          <div className="space-y-3 max-w-3xl">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
+          <div className="space-y-4 max-w-3xl">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12]">
               I build & run cold email engines that book qualified B2B pipeline.
             </h1>
-            <p className="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed">
-              Former Co-Founder at StylSensei. Managed 6,000+ warmed secondary mailboxes and 500k+ monthly dispatches, generating 7,090+ positive C-suite replies with a sub-3% bounce rate.
-            </p>
           </div>
 
           {/* Quick Contact & Action Buttons */}
@@ -193,7 +200,7 @@ export function App() {
             </button>
           </div>
 
-          {/* Specialized Niche Bar */}
+          {/* Specialized Niche Bar (Linear style) */}
           <div className="surface-card p-4 sm:p-5 rounded-2xl border border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
             <div className="space-y-1">
               <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 font-semibold block">
@@ -217,17 +224,17 @@ export function App() {
           </div>
         </section>
 
-        {/* SECTION 1: PROOFS & NICHE (ABOVE TECH STACKS) */}
+        {/* SECTION 1: PROOFS & WINS (PLACED ABOVE TECH STACKS) */}
         <section id="proof" className="space-y-6">
 
           {/* Section Header */}
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-3 border-b border-white/[0.08]">
             <div>
               <span className="text-[10px] font-mono font-medium uppercase tracking-widest text-emerald-400 block mb-1">
-                CAMPAIGN PROOFS & WINS
+                CAMPAIGN PROOFS & TELEMETRY
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                Verified Outbound Telemetry & Booked Meetings
+                Verified Outbound Metrics & Booked Pipeline
               </h2>
             </div>
             <a
@@ -240,7 +247,7 @@ export function App() {
             </a>
           </div>
 
-          {/* 4 Bold Metric Cards (Cursor / Linear style) */}
+          {/* 4 Bold Metric Cards (Linear & Cursor style) */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             <div className="surface-card p-5 rounded-2xl text-left border border-white/[0.08]">
               <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-500 block mb-1">
@@ -291,7 +298,7 @@ export function App() {
             </div>
           </div>
 
-          {/* Proof Screenshot Cards (Cursor / Linear feature cards) */}
+          {/* Proof Screenshot Cards (Cursor & Linear style feature cards) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
             {proofAssets.map((asset, idx) => (
               <div
@@ -303,17 +310,22 @@ export function App() {
               >
                 {/* Window Chrome Header */}
                 <div className="flex items-center justify-between px-4 py-2.5 bg-zinc-950/80 border-b border-white/[0.06]">
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-zinc-700/60" />
                     <span className="w-2.5 h-2.5 rounded-full bg-zinc-700/60" />
                     <span className="w-2.5 h-2.5 rounded-full bg-zinc-700/60" />
-                    <span className="text-[11px] font-mono text-zinc-400 ml-2">
+                    <span className="text-[11px] font-mono text-zinc-400 ml-1">
                       {asset.badge}
                     </span>
                   </div>
-                  <span className="text-xs font-mono text-zinc-500 group-hover:text-zinc-200 transition">
-                    Inspect ↗
-                  </span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-[11px] font-mono text-emerald-400 font-medium">
+                      {asset.stat}
+                    </span>
+                    <span className="text-xs font-mono text-zinc-500 group-hover:text-zinc-200 transition">
+                      Inspect ↗
+                    </span>
+                  </div>
                 </div>
 
                 <div className={`${idx === 0 ? 'aspect-[21/9]' : 'aspect-[16/10]'} bg-black/60 overflow-hidden relative`}>
@@ -338,51 +350,71 @@ export function App() {
             ))}
           </div>
 
-          {/* Client Results Highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-white/[0.08]">
-            <div className="surface-card p-5 rounded-2xl border border-white/[0.08] space-y-2 text-left">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono text-zinc-400 px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700">
-                  HIGH-TICKET B2B
-                </span>
-                <span className="text-xs font-mono font-bold text-emerald-400">
-                  6 Retainers Won
-                </span>
-              </div>
-              <h4 className="text-sm font-semibold text-white">Practice Growth Co</h4>
-              <p className="text-xs text-zinc-400 leading-relaxed font-light">
-                Booked 40+ qualified medical clinic discovery calls, converting 6 high-ticket clients via multi-inbox cold outbound.
-              </p>
+          {/* B2B CLIENT RESULTS & TESTIMONIAL CARDS (Dark Mode High-End Style) */}
+          <div className="space-y-3 pt-4 border-t border-white/[0.08]">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-mono font-semibold uppercase tracking-widest text-zinc-400">
+                PROVEN CLIENT OUTCOMES (STYLSENSEI TRACK RECORD)
+              </span>
+              <span className="text-xs font-mono text-zinc-500">
+                Direct C-Suite Pipeline
+              </span>
             </div>
 
-            <div className="surface-card p-5 rounded-2xl border border-white/[0.08] space-y-2 text-left">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono text-zinc-400 px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700">
-                  HEALTHCARE M&A
-                </span>
-                <span className="text-xs font-mono font-bold text-emerald-400">
-                  $150k+ Pipeline
-                </span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="surface-card p-5 rounded-2xl border border-white/[0.08] space-y-3 text-left">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-zinc-400 px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/60 font-medium">
+                    HIGH-TICKET B2B
+                  </span>
+                  <span className="text-xs font-mono font-bold text-emerald-400">
+                    6 Retainers Won
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed font-normal">
+                  "Delivered <strong className="text-white">40+ qualified discovery calls</strong> with medical clinic owners, resulting in 6 signed high-ticket retainers."
+                </p>
+                <div className="pt-2 border-t border-white/[0.06] flex items-center justify-between text-[11px] font-mono text-zinc-500">
+                  <span className="text-zinc-300 font-semibold">Practice Growth Co</span>
+                  <span>Medical Niche</span>
+                </div>
               </div>
-              <h4 className="text-sm font-semibold text-white">Healthcare Advisory</h4>
-              <p className="text-xs text-zinc-400 leading-relaxed font-light">
-                Sourced 12 off-market healthcare acquisition opportunities per month directly from clinic founders.
-              </p>
-            </div>
 
-            <div className="surface-card p-5 rounded-2xl border border-white/[0.08] space-y-2 text-left">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono text-zinc-400 px-2 py-0.5 rounded bg-zinc-800 border border-zinc-700">
-                  C-SUITE MEETINGS
-                </span>
-                <span className="text-xs font-mono font-bold text-emerald-400">
-                  22.4% Positive Rate
-                </span>
+              <div className="surface-card p-5 rounded-2xl border border-white/[0.08] space-y-3 text-left">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-zinc-400 px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/60 font-medium">
+                    HEALTHCARE M&A
+                  </span>
+                  <span className="text-xs font-mono font-bold text-emerald-400">
+                    $150k+ Added
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed font-normal">
+                  "Sourced <strong className="text-white">12 off-market healthcare acquisition deals monthly</strong> directly from clinic founders for our active advisory pipeline."
+                </p>
+                <div className="pt-2 border-t border-white/[0.06] flex items-center justify-between text-[11px] font-mono text-zinc-500">
+                  <span className="text-zinc-300 font-semibold">Healthcare Advisory</span>
+                  <span>M&A Practice</span>
+                </div>
               </div>
-              <h4 className="text-sm font-semibold text-white">Brands & Services</h4>
-              <p className="text-xs text-zinc-400 leading-relaxed font-light">
-                Delivered booked meetings with CEOs & Presidents across Taylor Hospitality, Cedar Landscape, Fantastic Fungi, and Rubbit.
-              </p>
+
+              <div className="surface-card p-5 rounded-2xl border border-white/[0.08] space-y-3 text-left">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-zinc-400 px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/60 font-medium">
+                    C-SUITE MEETINGS
+                  </span>
+                  <span className="text-xs font-mono font-bold text-emerald-400">
+                    22.4% Positive
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed font-normal">
+                  "Booked meetings directly with CEOs and Presidents across <strong className="text-white">Taylor Hospitality, Cedar Landscape, Fantastic Fungi</strong>, and Rubbit."
+                </p>
+                <div className="pt-2 border-t border-white/[0.06] flex items-center justify-between text-[11px] font-mono text-zinc-500">
+                  <span className="text-zinc-300 font-semibold">Brands & Services</span>
+                  <span>B2B Pipeline</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -430,7 +462,7 @@ export function App() {
           </div>
         </section>
 
-        {/* SECTION 3: THE 4 OUTBOUND PILLARS (The Engine) */}
+        {/* SECTION 3: THE 4 OUTBOUND PILLARS (Segmented Control Feature Tabs - Mobbin & Linear style) */}
         <section id="pillars" className="space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-3 border-b border-white/[0.08]">
             <div>
@@ -446,8 +478,8 @@ export function App() {
             </p>
           </div>
 
-          {/* Segmented Control Selector */}
-          <div className="flex items-center gap-1.5 p-1 rounded-xl bg-zinc-950 border border-white/[0.08] overflow-x-auto">
+          {/* Segmented Control Feature Tabs (Linear & Mobbin style) */}
+          <div className="flex items-center gap-1.5 p-1.5 rounded-2xl bg-zinc-950/90 border border-white/[0.08] overflow-x-auto shadow-inner">
             {[
               { id: 'infrastructure', label: '01. Sending Fleets & DNS', icon: ShieldCheck },
               { id: 'scraping', label: '02. Lead Scraping & Data', icon: Terminal },
@@ -460,9 +492,9 @@ export function App() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
-                  className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-mono whitespace-nowrap transition cursor-pointer ${
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono whitespace-nowrap transition cursor-pointer ${
                     isActive
-                      ? 'bg-zinc-800 text-white font-medium shadow-sm'
+                      ? 'bg-zinc-800 text-white font-semibold border border-white/10 shadow-sm'
                       : 'text-zinc-400 hover:text-zinc-200'
                   }`}
                 >
@@ -473,44 +505,59 @@ export function App() {
             })}
           </div>
 
-          {/* Active Tab Card */}
-          <div className="surface-card rounded-2xl p-6 sm:p-8 space-y-5 border border-white/[0.08] text-left">
+          {/* Active Tab Specification Sheet */}
+          <div className="surface-card rounded-2xl p-6 sm:p-8 space-y-6 border border-white/[0.08] text-left">
             {activeTab === 'infrastructure' && (
-              <div className="space-y-4 animate-in fade-in duration-200">
+              <div className="space-y-5 animate-in fade-in duration-200">
                 <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/[0.08] pb-3">
-                  <h3 className="text-lg sm:text-xl font-bold text-white">
-                    Dedicated Secondary Domains & Inboxing Hygiene
-                  </h3>
-                  <span className="text-xs font-mono text-emerald-400">
+                  <div>
+                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block">PILLAR 01</span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mt-0.5">
+                      Dedicated Secondary Domains & Inboxing Hygiene
+                    </h3>
+                  </div>
+                  <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
                     &lt; 2.8% Hard Bounce SLA
                   </span>
                 </div>
                 <p className="text-sm text-zinc-300 leading-relaxed font-normal">
                   Root company domains are never used for cold sending. We configure dedicated secondary domain fleets across Google Workspace and Microsoft 365, rotated in Instantly and Smartlead with strict SPF, DKIM, and DMARC alignment.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1">
-                    <span className="text-xs font-semibold text-zinc-200 block">Strict DNS Alignment</span>
-                    <p className="text-xs text-zinc-400 font-light">SPF, 2048-bit DKIM selectors, and strict DMARC policies on every domain.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1.5">
+                    <span className="text-xs font-semibold text-zinc-100 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      Strict DNS Alignment
+                    </span>
+                    <p className="text-xs text-zinc-400 leading-relaxed font-light">SPF, 2048-bit DKIM selectors, and strict DMARC quarantine policies configured across every domain.</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1">
-                    <span className="text-xs font-semibold text-zinc-200 block">21-Day Warmup</span>
-                    <p className="text-xs text-zinc-400 font-light">Gradual send ramp with auto-pause if bounce touches 3.0%.</p>
+                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1.5">
+                    <span className="text-xs font-semibold text-zinc-100 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      21-Day Warmup
+                    </span>
+                    <p className="text-xs text-zinc-400 leading-relaxed font-light">Programmatic ramp (1 → 5 → 15 → 30/day) with auto-pause if bounce touches 3.0%.</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1">
-                    <span className="text-xs font-semibold text-zinc-200 block">Backup Reserve Fleets</span>
-                    <p className="text-xs text-zinc-400 font-light">Pre-warmed reserve boxes standing by for instant swapping.</p>
+                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1.5">
+                    <span className="text-xs font-semibold text-zinc-100 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      Reserve Fleets
+                    </span>
+                    <p className="text-xs text-zinc-400 leading-relaxed font-light">Pre-warmed reserve boxes standing by for instant swapping with zero sending downtime.</p>
                   </div>
                 </div>
               </div>
             )}
 
             {activeTab === 'scraping' && (
-              <div className="space-y-4 animate-in fade-in duration-200">
+              <div className="space-y-5 animate-in fade-in duration-200">
                 <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/[0.08] pb-3">
-                  <h3 className="text-lg sm:text-xl font-bold text-white">
-                    Lead Sourcing & Zero-Bounce Verification
-                  </h3>
+                  <div>
+                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block">PILLAR 02</span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mt-0.5">
+                      Lead Sourcing & Zero-Bounce Verification
+                    </h3>
+                  </div>
                   <a
                     href="https://docs.google.com/spreadsheets/d/1SqyXWaz-lVrfNpFQIKRTjDBoeZagXfY4x1ucOi1ZqKs/edit?usp=sharing"
                     target="_blank"
@@ -521,38 +568,50 @@ export function App() {
                   </a>
                 </div>
                 <p className="text-sm text-zinc-300 leading-relaxed font-normal">
-                  Bad lists burn domains. Every lead list pulled from Apollo, Clay, and custom scrapers is thoroughly cleaned via MillionVerifier for catch-alls and spam traps before entering a sequence.
+                  Bad data burns domains. Every lead list pulled from Apollo, Clay, and custom scrapers is thoroughly cleaned via MillionVerifier for catch-alls and spam traps before entering a sequence.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1">
-                    <span className="text-xs font-semibold text-zinc-200 block">Targeted Sourcing</span>
-                    <p className="text-xs text-zinc-400 font-light">Granular ICP filtering matching exact titles, headcounts, and techs.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1.5">
+                    <span className="text-xs font-semibold text-zinc-100 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      Targeted Sourcing
+                    </span>
+                    <p className="text-xs text-zinc-400 leading-relaxed font-light">Granular ICP filtering matching exact titles, verified emails, headcounts, and techs.</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1">
-                    <span className="text-xs font-semibold text-zinc-200 block">Scrubbing Traps</span>
-                    <p className="text-xs text-zinc-400 font-light">Eliminating dead MX records, catch-alls, and invalid emails.</p>
+                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1.5">
+                    <span className="text-xs font-semibold text-zinc-100 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      Scrubbing Traps
+                    </span>
+                    <p className="text-xs text-zinc-400 leading-relaxed font-light">MillionVerifier integration removing catch-alls, disposable inboxes, and spam traps.</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1">
-                    <span className="text-xs font-semibold text-zinc-200 block">CRM Suppression</span>
-                    <p className="text-xs text-zinc-400 font-light">Automatic exclusion of past clients and existing pipeline.</p>
+                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1.5">
+                    <span className="text-xs font-semibold text-zinc-100 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      CRM Suppression
+                    </span>
+                    <p className="text-xs text-zinc-400 leading-relaxed font-light">Automated exclusion lists preventing awkward outreach to current clients or active deals.</p>
                   </div>
                 </div>
               </div>
             )}
 
             {activeTab === 'copywriting' && (
-              <div className="space-y-4 animate-in fade-in duration-200">
+              <div className="space-y-5 animate-in fade-in duration-200">
                 <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/[0.08] pb-3">
-                  <h3 className="text-lg sm:text-xl font-bold text-white">
-                    Short, Pain-Focused Copy with Soft Asks
-                  </h3>
+                  <div>
+                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block">PILLAR 03</span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mt-0.5">
+                      Short, Pain-Focused Copy with Soft Asks
+                    </h3>
+                  </div>
                   <span className="text-xs font-mono text-zinc-400">Zero AI Fluff</span>
                 </div>
                 <p className="text-sm text-zinc-300 leading-relaxed font-normal">
                   Cold emails that read like marketing copy get archived. We write short, plain-text emails that sound like a quick note typed on a phone, asking for permission before sending resources.
                 </p>
                 <div className="p-4 rounded-xl bg-zinc-950 border border-white/[0.06] font-mono text-xs text-zinc-300 space-y-2">
-                  <div className="text-[11px] text-zinc-500">Framework Example:</div>
+                  <div className="text-[11px] text-zinc-500">Framework Architecture:</div>
                   <div className="text-zinc-100 font-semibold">Subject: quick note for {`{First Name}`}</div>
                   <p className="text-zinc-400 font-light leading-relaxed">
                     "Hi {`{First Name}`}, noticed you rank well for general terms in {`{City}`}, but competitors two blocks down are taking all the high-intent Google Maps inquiries.<br />
@@ -566,28 +625,40 @@ export function App() {
             )}
 
             {activeTab === 'crm' && (
-              <div className="space-y-4 animate-in fade-in duration-200">
+              <div className="space-y-5 animate-in fade-in duration-200">
                 <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/[0.08] pb-3">
-                  <h3 className="text-lg sm:text-xl font-bold text-white">
-                    Sub-15 Minute Positive Reply Handshake
-                  </h3>
+                  <div>
+                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block">PILLAR 04</span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mt-0.5">
+                      Sub-15 Minute Positive Reply Handshake
+                    </h3>
+                  </div>
                   <span className="text-xs font-mono text-emerald-400">GoHighLevel & HubSpot</span>
                 </div>
                 <p className="text-sm text-zinc-300 leading-relaxed font-normal">
                   Unread positive replies kill deals. When an inbox receives a positive response, automated webhook triggers immediately notify the closer in Slack and create an opportunity card in HubSpot or GoHighLevel.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1">
-                    <span className="text-xs font-semibold text-zinc-200 block">Instant Slack Alert</span>
-                    <p className="text-xs text-zinc-400 font-light">Lead details and reply snippet posted to sales channel within seconds.</p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1.5">
+                    <span className="text-xs font-semibold text-zinc-100 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      Instant Slack Alert
+                    </span>
+                    <p className="text-xs text-zinc-400 leading-relaxed font-light">Lead details and reply snippet posted to sales channel within seconds.</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1">
-                    <span className="text-xs font-semibold text-zinc-200 block">Deal Pipeline Sync</span>
-                    <p className="text-xs text-zinc-400 font-light">Automatic stage progression: Reply ➔ Booked ➔ Held ➔ Won.</p>
+                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1.5">
+                    <span className="text-xs font-semibold text-zinc-100 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      Pipeline Sync
+                    </span>
+                    <p className="text-xs text-zinc-400 leading-relaxed font-light">Automatic stage progression: Reply ➔ Discovery Booked ➔ Meeting Held ➔ Won.</p>
                   </div>
-                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1">
-                    <span className="text-xs font-semibold text-zinc-200 block">Weekly Reporting</span>
-                    <p className="text-xs text-zinc-400 font-light">Clear Monday summaries on replies, open rates, and meetings booked.</p>
+                  <div className="p-4 rounded-xl bg-zinc-950/80 border border-white/[0.06] space-y-1.5">
+                    <span className="text-xs font-semibold text-zinc-100 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                      Weekly Reporting
+                    </span>
+                    <p className="text-xs text-zinc-400 leading-relaxed font-light">Clear Monday summaries on sends, open rates, replies, and booked calls.</p>
                   </div>
                 </div>
               </div>
