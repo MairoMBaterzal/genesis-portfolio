@@ -53,7 +53,7 @@ export function App() {
     navigator.clipboard.writeText(profileData.email);
     setCopiedEmail(true);
 
-    // Interactive micro-delight: subtle confetti burst
+    // Interactive confetti burst
     if (e) {
       const rect = (e.target as HTMLElement).getBoundingClientRect();
       const x = (rect.left + rect.width / 2) / window.innerWidth;
@@ -68,28 +68,6 @@ export function App() {
     }
 
     setTimeout(() => setCopiedEmail(false), 2500);
-  };
-
-  // Card cursor spotlight sheen
-  const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
-    e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
-  };
-
-  // Card 3D tilt interaction
-  const handleTiltMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    handleCardMouseMove(e);
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    e.currentTarget.style.transform = `perspective(900px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-5px)`;
-  };
-
-  const handleTiltLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.currentTarget.style.transform = 'perspective(900px) rotateY(0deg) rotateX(0deg) translateY(0px)';
   };
 
   // Tech stack items for infinite marquee (1 line moving to the left)
@@ -108,13 +86,13 @@ export function App() {
     { name: "OpenAI Whisper", role: "Voice Transcribe", icon: Sparkles, color: "text-teal-600" }
   ];
 
-  // OFF+BRAND & Linear style Case Studies / Our Work
+  // AWS AI Agents style 3-column aligned Case Study Cards
   const projects = [
     {
       id: "01",
+      tag: "Outbound Fleet",
       client: "Single Campaign Cluster",
       title: "645,355 Dispatches · 7,090 Positive Replies",
-      tags: ["● Outbound Fleet", "△ 22.4% Positive Rate", "⁂ 1.0% Bounce"],
       summary: "Live Instantly campaign metrics across 451,749 targeted B2B decision-makers. Step-1 permission sequence architecture driving 7,090 verified positive leads with zero root-domain burn.",
       image: "/proof/instantly-645k-stats.png",
       statValue: "7,090+",
@@ -122,43 +100,53 @@ export function App() {
     },
     {
       id: "02",
+      tag: "Slack Delivery",
       client: "Healthcare & Tech Services",
       title: "Live C-Suite Meeting Feeds Delivered Directly to Client Slack",
-      tags: ["● Slack Delivery", "△ Presidents & CEOs", "⁂ Sub-15 Min Handoff"],
-      summary: "Automated webhook infrastructure booking confirmed discovery meetings for Founders, Presidents, and Partners across Taylor Hospitality, Cedar Landscape, Fantastic Fungi, YogaMedics, and Rubbit.",
+      summary: "Automated webhook infrastructure booking confirmed discovery meetings for Founders, Presidents, and Partners across Taylor Hospitality, Cedar Landscape, and Fantastic Fungi.",
       image: "/proof/slack-booked-meetings-feed-1.png",
       statValue: "22.4%",
       statLabel: "Cluster Positive Rate"
     },
     {
       id: "03",
+      tag: "Medical B2B",
       client: "Practice Growth Co",
       title: "40+ Qualified Medical Calls · 6 Closed High-Ticket Retainers",
-      tags: ["● Medical B2B", "△ 40+ Discovery Calls", "⁂ 6 Retainers Won"],
       summary: "Engineered multi-mailbox outbound campaign targeting private practice clinic directors, generating over 40 booked calls and 6 closed long-term agency retainers.",
       image: "/proof/slack-booked-meetings-feed-2.png",
       statValue: "6 Retainers",
-      statLabel: "Closed Won Agency Retainers"
+      statLabel: "Closed Won Retainers"
     },
     {
       id: "04",
+      tag: "M&A Sourcing",
       client: "Healthcare M&A Advisory",
       title: "$150k+ Pipeline · 12 Off-Market Clinic Acquisition Deals Monthly",
-      tags: ["● M&A Sourcing", "△ Off-Market Deals", "⁂ $150k+ Pipeline"],
       summary: "Sourced off-market healthcare acquisition opportunities directly from practice owners, adding over $150,000 in active advisory pipeline value monthly.",
       image: "/proof/slack-booked-meeting-taylor.png",
       statValue: "$150k+",
-      statLabel: "Active Advisory Deal Pipeline"
+      statLabel: "Active M&A Pipeline"
     },
     {
       id: "05",
+      tag: "Outbound Playbook",
       client: "StylSensei Methodology",
       title: "Outbound Velocity & Deal Handling Strategy",
-      tags: ["● Outbound Playbook", "△ Objection Handling", "⁂ Rapid Qualification"],
       summary: "Co-Founder breakdown of cold outbound reply triage: eliminating friction, real-time lead routing, and turning momentum into signed retainers.",
       image: "/proof/linkedin-post-outbound.png",
       statValue: "< 3.0%",
-      statLabel: "Hard Bounce SLA Maintained"
+      statLabel: "Hard Bounce SLA"
+    },
+    {
+      id: "06",
+      tag: "Enrichment Engine",
+      client: "Apollo & Clay Waterfall",
+      title: "Automated Lead Extraction & Deliverability Verification",
+      summary: "Custom n8n and Python scraping pipelines verifying 100k+ B2B contacts across MillionVerifier, protecting sender scores and maintaining sub-3% bounce SLA.",
+      image: "/case-studies/n8n-agent-architecture.png",
+      statValue: "98.7%",
+      statLabel: "Verified Deliverability"
     }
   ];
 
@@ -273,10 +261,7 @@ export function App() {
             Former Co-Founder at StylSensei. Managed 6,000+ warmed secondary mailboxes and 500k+ monthly dispatches, generating 7,090+ positive C-suite replies with a sub-3% bounce rate.
           </p>
 
-          <div
-            onMouseMove={handleCardMouseMove}
-            className="p-5 sm:p-6 rounded-2xl glass-card interactive-card text-base sm:text-lg text-zinc-800 leading-relaxed shadow-sm"
-          >
+          <div className="p-5 sm:p-6 rounded-2xl aws-glow-card text-base sm:text-lg text-zinc-800 leading-relaxed shadow-sm">
             <span className="font-extrabold text-zinc-950">I'm open to: </span>
             full-time or contract <strong className="text-zinc-950 font-bold">B2B Outbound Specialist</strong> roles, dedicated secondary domain fleet builds, cold email deliverability auditing, and CRM lead triage workflows.
           </div>
@@ -294,7 +279,7 @@ export function App() {
 
             <button
               onClick={(e) => handleCopyEmail(e)}
-              className="px-5 py-3.5 rounded-full glass-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
+              className="px-5 py-3.5 rounded-full aws-glow-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
             >
               {copiedEmail ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-zinc-600" />}
               <span className="font-semibold">{copiedEmail ? 'Copied genesisauza9@gmail.com!' : 'Copy Email'}</span>
@@ -302,7 +287,7 @@ export function App() {
 
             <button
               onClick={() => setShowResumeModal(true)}
-              className="px-5 py-3.5 rounded-full glass-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
+              className="px-5 py-3.5 rounded-full aws-glow-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
             >
               <Terminal className="w-4 h-4 text-emerald-600" />
               <span className="font-semibold">View Resume</span>
@@ -311,30 +296,19 @@ export function App() {
         </section>
 
         {/* TRUSTED BY OUR GROWING PARTNERS (IMAGE 2 SPEC - ANCHOR OF AUTHORITY) */}
-        <section
-          onMouseMove={handleCardMouseMove}
-          className="rounded-3xl bg-[#04150e] border border-emerald-950/90 py-10 px-6 sm:px-10 text-center space-y-7 shadow-2xl shadow-emerald-950/20 interactive-card"
-        >
+        <section className="rounded-3xl bg-[#04150e] border border-emerald-950/90 py-10 px-6 sm:px-10 text-center space-y-7 shadow-2xl shadow-emerald-950/20">
           <span className="text-xs font-mono font-bold tracking-[0.25em] text-emerald-400 uppercase block">
             TRUSTED BY OUR GROWING PARTNERS
           </span>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 items-center justify-center">
             {/* SIMPSON PHOTO */}
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center font-black text-xs sm:text-sm tracking-wider uppercase transition shadow-sm select-none interactive-card"
-            >
+            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center font-black text-xs sm:text-sm tracking-wider uppercase transition shadow-sm select-none aws-glow-card">
               <span className="font-sans font-black">SIMPSON PHOTO</span>
             </div>
 
             {/* POWEROP */}
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-2 font-black text-xs sm:text-sm tracking-wider uppercase transition shadow-sm select-none interactive-card"
-            >
+            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-2 font-black text-xs sm:text-sm tracking-wider uppercase transition shadow-sm select-none aws-glow-card">
               <svg className="w-5 h-5 fill-zinc-950" viewBox="0 0 24 24">
                 <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" />
                 <circle cx="12" cy="12" r="3.5" fill="#e2e7ec" />
@@ -343,31 +317,19 @@ export function App() {
             </div>
 
             {/* Practice Growth Co. */}
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-2 text-xs sm:text-sm tracking-tight transition shadow-sm select-none interactive-card"
-            >
+            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-2 text-xs sm:text-sm tracking-tight transition shadow-sm select-none aws-glow-card">
               <Activity className="w-4 h-4 text-zinc-950 stroke-[2.5]" />
               <span className="font-serif font-bold text-zinc-950">Practice Growth Co.</span>
             </div>
 
             {/* RED GREEN DIGITAL */}
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex flex-col items-center justify-center text-xs tracking-wider transition shadow-sm select-none interactive-card"
-            >
+            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex flex-col items-center justify-center text-xs tracking-wider transition shadow-sm select-none aws-glow-card">
               <span className="font-black text-xs tracking-widest leading-none">RED·GREEN</span>
               <span className="text-[10px] font-mono tracking-widest text-zinc-600 leading-none mt-0.5">DIGITAL</span>
             </div>
 
             {/* HOSTMETRIC */}
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-1.5 font-black text-xs sm:text-sm tracking-widest uppercase transition shadow-sm select-none interactive-card"
-            >
+            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-1.5 font-black text-xs sm:text-sm tracking-widest uppercase transition shadow-sm select-none aws-glow-card">
               <Server className="w-4 h-4 text-zinc-950 stroke-[2.5]" />
               <span className="font-mono font-black">HOSTMETRIC</span>
             </div>
@@ -392,8 +354,8 @@ export function App() {
 
           {/* 1-Line Infinite Marquee Moving Left */}
           <div className="relative w-full overflow-hidden py-4">
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#faeef2]/80 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#faeef2]/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#faeef2]/90 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#faeef2]/90 to-transparent z-10 pointer-events-none" />
 
             <div className="animate-marquee flex items-center gap-4">
               {[...techStack, ...techStack].map((tool, idx) => {
@@ -401,8 +363,7 @@ export function App() {
                 return (
                   <div
                     key={idx}
-                    onMouseMove={handleCardMouseMove}
-                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl glass-card interactive-card hover:bg-white text-zinc-950 shadow-md transition shrink-0 cursor-default"
+                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl aws-glow-card hover:bg-white text-zinc-950 shadow-md transition shrink-0 cursor-default"
                   >
                     <Icon className="w-6 h-6 text-zinc-900 shrink-0" />
                     <div className="text-left">
@@ -420,7 +381,7 @@ export function App() {
           </div>
         </section>
 
-        {/* 2. PROOFS & TELEMETRY SECTION (OFF+BRAND & LINEAR CARDS WITH 3D TILT) */}
+        {/* 2. PROOFS & TELEMETRY SECTION (AWS 3-COLUMN ALIGNMENT WITH COLOR GLOWING ANIMATION) */}
         <section id="work" className="space-y-12 pt-6 border-t border-zinc-900/10">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
@@ -436,13 +397,9 @@ export function App() {
             </p>
           </div>
 
-          {/* Top 4 Performance Numbers with 3D Tilt */}
+          {/* Top 4 Performance Numbers with AWS Glowing Halo */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="p-6 rounded-2xl glass-card interactive-card text-left"
-            >
+            <div className="p-6 rounded-2xl aws-glow-card text-left">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 MONTHLY SEND SCALE
               </span>
@@ -454,11 +411,7 @@ export function App() {
               </span>
             </div>
 
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="p-6 rounded-2xl glass-card interactive-card text-left"
-            >
+            <div className="p-6 rounded-2xl aws-glow-card text-left">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 POSITIVE REPLIES
               </span>
@@ -470,11 +423,7 @@ export function App() {
               </span>
             </div>
 
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="p-6 rounded-2xl glass-card interactive-card text-left"
-            >
+            <div className="p-6 rounded-2xl aws-glow-card text-left">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 RESPONSE RATE
               </span>
@@ -486,11 +435,7 @@ export function App() {
               </span>
             </div>
 
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="p-6 rounded-2xl glass-card interactive-card text-left"
-            >
+            <div className="p-6 rounded-2xl aws-glow-card text-left">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 HARD BOUNCE SLA
               </span>
@@ -503,63 +448,59 @@ export function App() {
             </div>
           </div>
 
-          {/* OFF+BRAND Style Showcase Project Cards with Spotlight Sheen */}
-          <div className="space-y-12">
+          {/* AWS 3-COLUMN ALIGNED PROOF CARDS WITH VIBRANT COLOR GLOW */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
             {projects.map((proj, idx) => (
               <div
                 key={idx}
-                onMouseMove={handleCardMouseMove}
                 onClick={() => setActiveLightbox({ url: proj.image, title: proj.title, caption: proj.summary })}
-                className="group cursor-pointer rounded-3xl overflow-hidden glass-card interactive-card hover:shadow-2xl transition duration-300"
+                className="aws-glow-card group cursor-pointer flex flex-col overflow-hidden text-left"
               >
-                {/* Visual Showcase (Big cinematic preview with dark backdrop) */}
-                <div className="aspect-[16/9] sm:aspect-[21/9] bg-black overflow-hidden relative">
+                {/* Top Visual Screenshot Container (AWS aspect-[16/10]) */}
+                <div className="aspect-[16/10] bg-zinc-950 overflow-hidden relative">
                   <img
                     src={proj.image}
                     alt={proj.title}
-                    className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-50 group-hover:opacity-25 transition" />
-                  
-                  {/* Top inspect pill */}
-                  <div className="absolute top-4 right-4 px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-xs font-mono text-white group-hover:bg-white group-hover:text-black transition">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition" />
+
+                  {/* Floating Case Study Tag (Top-Left) */}
+                  <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-mono font-bold text-zinc-900 border border-black/5 shadow-xs flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                    <span>Case Study</span>
+                  </div>
+
+                  {/* Floating Inspect Pill (Top-Right) */}
+                  <div className="absolute top-3.5 right-3.5 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-[10px] font-mono text-white opacity-0 group-hover:opacity-100 transition duration-200">
                     Inspect ↗
                   </div>
                 </div>
 
-                {/* Metadata Bar */}
-                <div className="p-6 sm:p-8 space-y-4 text-left">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-zinc-900/10">
-                    <div className="space-y-1">
-                      <span className="text-xs font-mono text-emerald-700 uppercase tracking-widest font-black">
-                        {proj.client}
-                      </span>
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-zinc-950 tracking-tight group-hover:text-emerald-700 transition">
-                        {proj.title}
-                      </h3>
+                {/* Bottom Content Area */}
+                <div className="p-6 flex flex-col justify-between flex-1 space-y-4">
+                  <div className="space-y-2.5">
+                    <div className="flex items-center justify-between text-xs font-mono font-bold">
+                      <span className="text-emerald-700 bg-emerald-100/80 px-2.5 py-0.5 rounded-md">{proj.statValue}</span>
+                      <span className="text-zinc-500 font-medium">{proj.tag}</span>
                     </div>
 
-                    <div className="text-left sm:text-right shrink-0">
-                      <div className="text-2xl font-black font-mono text-zinc-950">
-                        {proj.statValue}
-                      </div>
-                      <div className="text-xs font-mono text-zinc-600 font-semibold">
-                        {proj.statLabel}
-                      </div>
-                    </div>
+                    <h3 className="text-lg sm:text-xl font-black text-zinc-950 tracking-tight leading-snug group-hover:text-rose-600 transition">
+                      {proj.title}
+                    </h3>
+
+                    <p className="text-sm text-zinc-600 leading-relaxed line-clamp-3">
+                      {proj.summary}
+                    </p>
                   </div>
 
-                  <p className="text-base sm:text-lg text-zinc-700 font-normal leading-relaxed">
-                    {proj.summary}
-                  </p>
-
-                  {/* Dot/triangle/asterisk tags */}
-                  <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono">
-                    {proj.tags.map((tag, tIdx) => (
-                      <span key={tIdx} className="px-3.5 py-1.5 rounded-full bg-white/90 border border-zinc-200 text-zinc-800 font-semibold shadow-xs">
-                        {tag}
-                      </span>
-                    ))}
+                  {/* Interactive Bottom CTA Link */}
+                  <div className="pt-3 flex items-center justify-between border-t border-zinc-900/10 mt-auto">
+                    <div className="flex items-center gap-1.5 text-sm font-bold text-zinc-950 group-hover:text-rose-600 transition">
+                      <span>Explore telemetry</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition duration-200" />
+                    </div>
+                    <span className="text-xs font-mono text-zinc-500 font-medium">{proj.statLabel}</span>
                   </div>
                 </div>
               </div>
@@ -584,11 +525,7 @@ export function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="p-6 sm:p-7 rounded-2xl glass-card interactive-card space-y-4"
-            >
+            <div className="p-6 sm:p-7 rounded-2xl aws-glow-card space-y-4">
               <div className="w-12 h-12 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-800 shadow-xs">
                 <Globe className="w-6 h-6" />
               </div>
@@ -600,11 +537,7 @@ export function App() {
               </p>
             </div>
 
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="p-6 sm:p-7 rounded-2xl glass-card interactive-card space-y-4"
-            >
+            <div className="p-6 sm:p-7 rounded-2xl aws-glow-card space-y-4">
               <div className="w-12 h-12 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-800 shadow-xs">
                 <Send className="w-6 h-6" />
               </div>
@@ -616,11 +549,7 @@ export function App() {
               </p>
             </div>
 
-            <div
-              onMouseMove={handleTiltMove}
-              onMouseLeave={handleTiltLeave}
-              className="p-6 sm:p-7 rounded-2xl glass-card interactive-card space-y-4"
-            >
+            <div className="p-6 sm:p-7 rounded-2xl aws-glow-card space-y-4">
               <div className="w-12 h-12 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-800 shadow-xs">
                 <Zap className="w-6 h-6" />
               </div>
@@ -653,12 +582,9 @@ export function App() {
             </button>
           </div>
 
-          {/* Polywork-style timeline items with spotlight sheen */}
+          {/* Polywork-style timeline items with AWS glow */}
           <div className="space-y-6">
-            <div
-              onMouseMove={handleCardMouseMove}
-              className="p-6 rounded-2xl glass-card interactive-card space-y-2"
-            >
+            <div className="p-6 rounded-2xl aws-glow-card space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-emerald-800 font-bold">
                 <span>08/2024 – Present · 1 yr 4 mos</span>
                 <span className="text-zinc-500 font-medium">Full-Time</span>
@@ -671,10 +597,7 @@ export function App() {
               </p>
             </div>
 
-            <div
-              onMouseMove={handleCardMouseMove}
-              className="p-6 rounded-2xl glass-card interactive-card space-y-2"
-            >
+            <div className="p-6 rounded-2xl aws-glow-card space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>10/2023 – 08/2024 · 10 mos</span>
                 <span className="text-zinc-500 font-medium">Contract</span>
@@ -687,10 +610,7 @@ export function App() {
               </p>
             </div>
 
-            <div
-              onMouseMove={handleCardMouseMove}
-              className="p-6 rounded-2xl glass-card interactive-card space-y-2"
-            >
+            <div className="p-6 rounded-2xl aws-glow-card space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>08/2022 – 10/2023 · 1 yr 2 mos</span>
                 <span className="text-zinc-500 font-medium">Enterprise</span>
@@ -703,10 +623,7 @@ export function App() {
               </p>
             </div>
 
-            <div
-              onMouseMove={handleCardMouseMove}
-              className="p-6 rounded-2xl glass-card interactive-card space-y-2"
-            >
+            <div className="p-6 rounded-2xl aws-glow-card space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>08/2018 – 07/2022 · 4 yrs</span>
                 <span className="text-zinc-500 font-medium">Education</span>
@@ -722,10 +639,7 @@ export function App() {
         </section>
 
         {/* 5. CLOSING CTA (Seated Photo + High-Contrast Obsidian Container) */}
-        <section
-          onMouseMove={handleCardMouseMove}
-          className="rounded-3xl p-8 sm:p-12 obsidian-card interactive-card text-white flex flex-col md:flex-row items-center gap-8 lg:gap-12 text-left shadow-2xl"
-        >
+        <section className="rounded-3xl p-8 sm:p-12 obsidian-card text-white flex flex-col md:flex-row items-center gap-8 lg:gap-12 text-left shadow-2xl">
           <div className="w-48 sm:w-56 md:w-60 lg:w-64 shrink-0 aspect-square rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-black">
             <img
               src="/genesis-full-seated.jpg"
