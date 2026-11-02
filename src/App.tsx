@@ -189,7 +189,7 @@ export function App() {
       {/* Main Container */}
       <main className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 pt-28 sm:pt-36 pb-32 space-y-16 sm:space-y-20">
 
-        {/* HERO HEADER ROW (IMAGE 1 SPEC WITH 4TH IMAGE FIX) */}
+        {/* HERO HEADER ROW */}
         <section className="space-y-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div className="flex items-center gap-5 sm:gap-7">
@@ -221,7 +221,7 @@ export function App() {
                 </div>
               </div>
 
-              {/* Title & Role Info (4th Image Fix: B2B line placed directly BELOW Co-Founder) */}
+              {/* Title & Role Info (B2B line directly BELOW Former Co-Founder) */}
               <div className="space-y-1.5 text-left">
                 <div className="flex flex-wrap items-center gap-3">
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight">
@@ -254,20 +254,20 @@ export function App() {
           <div className="w-full border-b border-zinc-900/15 pt-2" />
         </section>
 
-        {/* CENTERED HEADLINE & REWRITTEN OPERATING COPY (IMAGE 2 & 3 FIX) */}
+        {/* HEADLINE & SUBHEADLINE (EXACT REQUESTED COPY & CENTERED) */}
         <section className="space-y-6 max-w-4xl mx-auto text-center py-2">
-          {/* Main Headline (Centered with Elevated Typography) */}
+          {/* Main Headline (Centered) */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight leading-[1.18] max-w-4xl mx-auto">
-            I build and run cold email infrastructure that books qualified C-suite pipeline for high-ticket B2B agencies and SaaS companies.
+            I build and manage modern outbound systems for high-ticket B2B agencies and SaaS companies.
           </h2>
 
-          {/* Sub-Headline Copy (Rewritten cleanly mentioning Plusvibe, without "mailbox provisioning") */}
+          {/* Subheadline (Exact text requested) */}
           <p className="text-base sm:text-lg text-zinc-700 leading-relaxed font-normal max-w-3xl mx-auto">
-            Operating 1,000 to 20,000+ daily sends across dedicated secondary domain fleets with zero domain burn. Plusvibe outbound tooling, Instantly & Smartlead deliverability warmup, AI-verified lead scraping, human-first permission copy, and real-time GoHighLevel/HubSpot CRM triage.
+            End-to-end outbound operations: secondary domain authentication, inbox deliverability management, enriched lead sourcing, and tested copy. Fully integrated with your CRM to deliver predictable deal flow on auto-pilot.
           </p>
 
-          {/* Open-To Card (Soothing Pearl Frosted Tint) */}
-          <div className="p-4 sm:p-5 rounded-2xl aws-soft-card text-sm sm:text-base text-zinc-800 leading-relaxed max-w-2xl mx-auto shadow-xs">
+          {/* Open-To Card (Apple iOS Transparent Frosted Glass) */}
+          <div className="p-4 sm:p-5 rounded-2xl ios-glass text-sm sm:text-base text-zinc-800 leading-relaxed max-w-2xl mx-auto shadow-xs">
             <span className="font-extrabold text-zinc-950">I'm open to: </span>
             full-time or contract <strong className="text-zinc-950 font-bold">B2B Outbound Specialist</strong> roles, dedicated secondary domain fleet builds, cold email deliverability auditing, and CRM lead triage workflows.
           </div>
@@ -285,7 +285,7 @@ export function App() {
 
             <button
               onClick={(e) => handleCopyEmail(e)}
-              className="px-5 py-3.5 rounded-full aws-soft-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
+              className="px-5 py-3.5 rounded-full ios-glass hover:bg-white/50 text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
             >
               {copiedEmail ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-zinc-600" />}
               <span className="font-semibold">{copiedEmail ? 'Copied genesisauza9@gmail.com!' : 'Copy Email'}</span>
@@ -293,7 +293,7 @@ export function App() {
 
             <button
               onClick={() => setShowResumeModal(true)}
-              className="px-5 py-3.5 rounded-full aws-soft-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
+              className="px-5 py-3.5 rounded-full ios-glass hover:bg-white/50 text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
             >
               <Terminal className="w-4 h-4 text-emerald-600" />
               <span className="font-semibold">View Resume</span>
@@ -301,7 +301,7 @@ export function App() {
           </div>
         </section>
 
-        {/* 1. TECH STACKS SECTION (ABOVE PROOFS - 1-LINE MARQUEE WITH SOFTER PEARL TINT) */}
+        {/* 1. TECH STACKS SECTION (ABOVE PROOFS - 1-LINE MARQUEE WITH APPLE IOS GLASS) */}
         <section id="stack" className="space-y-4 pt-4 border-t border-zinc-900/10">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
@@ -317,7 +317,7 @@ export function App() {
             </span>
           </div>
 
-          {/* 1-Line Infinite Marquee Moving Left (Image 5 fix: Soothing Pearl Tint) */}
+          {/* 1-Line Infinite Marquee Moving Left (iOS Glass Pills) */}
           <div className="relative w-full overflow-hidden py-4">
             <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#faeef2]/80 to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#faeef2]/80 to-transparent z-10 pointer-events-none" />
@@ -328,7 +328,7 @@ export function App() {
                 return (
                   <div
                     key={idx}
-                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl aws-soft-card text-zinc-950 shadow-xs transition shrink-0 cursor-default"
+                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl ios-glass text-zinc-950 shadow-xs transition shrink-0 cursor-default"
                   >
                     <Icon className="w-6 h-6 text-zinc-900 shrink-0" />
                     <div className="text-left">
@@ -346,7 +346,7 @@ export function App() {
           </div>
         </section>
 
-        {/* 2. PROOFS & TELEMETRY SECTION (WORK & PROOFS - AWS 3-COLUMN ALIGNMENT WITH GREEN HOVER GLOW) */}
+        {/* 2. PROOFS & TELEMETRY SECTION (WORK & PROOFS - AWS 3-COLUMN ALIGNMENT WITH IOS GLASS & REFINED SANS FONT) */}
         <section id="work" className="space-y-10 pt-4 border-t border-zinc-900/10">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
@@ -362,58 +362,58 @@ export function App() {
             </p>
           </div>
 
-          {/* Top 4 Performance Numbers (Image 5 Fix: Soothing Pearl Tint) */}
+          {/* Top 4 Performance Numbers (2nd Image Fix: Refined, elegant sans font & iOS Glass) */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="p-6 rounded-2xl aws-soft-card text-left">
-              <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
+            <div className="p-6 rounded-2xl ios-glass text-left">
+              <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-zinc-500 block mb-1">
                 MONTHLY SEND SCALE
               </span>
-              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-zinc-950 tracking-tight">
+              <div className="text-3xl sm:text-4xl font-black font-sans text-zinc-950 tracking-tight">
                 500K+
               </div>
-              <span className="text-xs sm:text-sm text-zinc-600 mt-2 block font-medium">
+              <span className="text-xs sm:text-sm text-zinc-600 mt-1.5 block font-medium">
                 Dispatched monthly with 0 domain burn
               </span>
             </div>
 
-            <div className="p-6 rounded-2xl aws-soft-card text-left">
-              <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
+            <div className="p-6 rounded-2xl ios-glass text-left">
+              <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-zinc-500 block mb-1">
                 POSITIVE REPLIES
               </span>
-              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-emerald-600 tracking-tight">
+              <div className="text-3xl sm:text-4xl font-black font-sans text-emerald-600 tracking-tight">
                 7,090+
               </div>
-              <span className="text-xs sm:text-sm text-zinc-600 mt-2 block font-mono font-medium">
+              <span className="text-xs sm:text-sm text-zinc-600 mt-1.5 block font-medium">
                 Single cluster positive response
               </span>
             </div>
 
-            <div className="p-6 rounded-2xl aws-soft-card text-left">
-              <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
+            <div className="p-6 rounded-2xl ios-glass text-left">
+              <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-zinc-500 block mb-1">
                 RESPONSE RATE
               </span>
-              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-zinc-950 tracking-tight">
+              <div className="text-3xl sm:text-4xl font-black font-sans text-zinc-950 tracking-tight">
                 22.4%
               </div>
-              <span className="text-xs sm:text-sm text-zinc-600 mt-2 block font-medium">
+              <span className="text-xs sm:text-sm text-zinc-600 mt-1.5 block font-medium">
                 Across 451,749 targeted B2B leads
               </span>
             </div>
 
-            <div className="p-6 rounded-2xl aws-soft-card text-left">
-              <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
+            <div className="p-6 rounded-2xl ios-glass text-left">
+              <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-zinc-500 block mb-1">
                 HARD BOUNCE SLA
               </span>
-              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-emerald-600 tracking-tight">
+              <div className="text-3xl sm:text-4xl font-black font-sans text-emerald-600 tracking-tight">
                 &lt; 3.0%
               </div>
-              <span className="text-xs sm:text-sm text-zinc-600 mt-2 block font-medium">
+              <span className="text-xs sm:text-sm text-zinc-600 mt-1.5 block font-medium">
                 Strict deliverability preservation
               </span>
             </div>
           </div>
 
-          {/* AWS 3-COLUMN ALIGNED PROOF CARDS (GREEN HOVER & CRYSTAL CLEAR DESCRIPTION) */}
+          {/* AWS 3-COLUMN ALIGNED PROOF CARDS (3rd Image Fix: Case study placed above 7,090+, unobstructed preview, no link collision) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
             {projects.map((proj, idx) => (
               <div
@@ -421,20 +421,14 @@ export function App() {
                 onClick={() => setActiveLightbox({ url: proj.image, title: proj.title, caption: proj.summary })}
                 className="aws-glow-card group cursor-pointer flex flex-col overflow-hidden text-left"
               >
-                {/* Top Visual Screenshot Container (AWS aspect-[16/10]) */}
+                {/* Top Visual Screenshot Container - 100% Unobstructed Preview */}
                 <div className="aspect-[16/10] bg-zinc-950 overflow-hidden relative">
                   <img
                     src={proj.image}
                     alt={proj.title}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition" />
-
-                  {/* Floating Case Study Tag (Top-Left) */}
-                  <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-mono font-bold text-zinc-900 border border-black/5 shadow-xs flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                    <span>Case Study</span>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40 group-hover:opacity-15 transition" />
 
                   {/* Floating Inspect Pill (Top-Right) */}
                   <div className="absolute top-3.5 right-3.5 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-[10px] font-mono text-white opacity-0 group-hover:opacity-100 transition duration-200">
@@ -442,32 +436,48 @@ export function App() {
                   </div>
                 </div>
 
-                {/* Bottom Content Area (Crystal clear typography on hover) */}
+                {/* Bottom Content Area (Case Study placed directly above the metric, unobstructed, no link collision) */}
                 <div className="p-6 flex flex-col justify-between flex-1 space-y-4">
-                  <div className="space-y-2.5">
-                    <div className="flex items-center justify-between text-xs font-mono font-bold">
-                      <span className="text-emerald-700 bg-emerald-100/90 px-2.5 py-0.5 rounded-md">{proj.statValue}</span>
-                      <span className="text-zinc-500 font-medium">{proj.tag}</span>
+                  <div className="space-y-3">
+                    {/* Case Study Pill & Category Tag Placed Above the Metric */}
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-800 text-[11px] font-bold">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                        Case Study
+                      </span>
+                      <span className="text-xs font-mono font-medium text-zinc-500">{proj.tag}</span>
                     </div>
 
-                    {/* Headline turns emerald GREEN on hover! */}
+                    {/* Metric Highlight (Placed directly below Case Study badge) */}
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-2xl font-black font-sans text-emerald-600 tracking-tight">
+                        {proj.statValue}
+                      </span>
+                      <span className="text-xs font-medium text-zinc-600 truncate max-w-[180px]">
+                        {proj.statLabel}
+                      </span>
+                    </div>
+
+                    {/* Headline turns emerald GREEN on hover */}
                     <h3 className="text-lg sm:text-xl font-black text-zinc-950 tracking-tight leading-snug group-hover:text-emerald-600 transition duration-200">
                       {proj.title}
                     </h3>
 
-                    {/* Description: high contrast and crystal clear on hover */}
+                    {/* Description: high contrast, crisp font, perfectly readable on hover */}
                     <p className="text-sm text-zinc-700 leading-relaxed font-normal line-clamp-3 group-hover:text-zinc-950 transition duration-200">
                       {proj.summary}
                     </p>
                   </div>
 
-                  {/* Interactive Bottom CTA Link (Turns emerald GREEN on hover) */}
-                  <div className="pt-3 flex items-center justify-between border-t border-zinc-900/10 mt-auto">
-                    <div className="flex items-center gap-1.5 text-sm font-bold text-zinc-950 group-hover:text-emerald-600 transition duration-200">
+                  {/* Interactive Bottom CTA Link (No collision, cleanly spaced) */}
+                  <div className="pt-3 border-t border-zinc-900/10 mt-auto flex items-center justify-between">
+                    <div className="inline-flex items-center gap-2 text-sm font-bold text-zinc-950 group-hover:text-emerald-600 transition-colors">
                       <span>Explore telemetry</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition duration-200" />
+                      <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" />
                     </div>
-                    <span className="text-xs font-mono text-zinc-500 font-medium">{proj.statLabel}</span>
+                    <span className="text-xs font-mono text-zinc-400 font-semibold group-hover:text-zinc-600 transition-colors">
+                      Inspect ↗
+                    </span>
                   </div>
                 </div>
               </div>
@@ -475,7 +485,7 @@ export function App() {
           </div>
         </section>
 
-        {/* 3. THE ENGINE / ARCHITECTURAL PILLARS */}
+        {/* 3. THE ENGINE / ARCHITECTURAL PILLARS (APPLE IOS GLASS) */}
         <section id="engine" className="space-y-8 pt-6 border-t border-zinc-900/10 text-left">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
@@ -492,7 +502,7 @@ export function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 sm:p-7 rounded-2xl aws-soft-card space-y-4">
+            <div className="p-6 sm:p-7 rounded-2xl ios-glass space-y-4">
               <div className="w-12 h-12 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-800 shadow-xs">
                 <Globe className="w-6 h-6" />
               </div>
@@ -504,7 +514,7 @@ export function App() {
               </p>
             </div>
 
-            <div className="p-6 sm:p-7 rounded-2xl aws-soft-card space-y-4">
+            <div className="p-6 sm:p-7 rounded-2xl ios-glass space-y-4">
               <div className="w-12 h-12 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-800 shadow-xs">
                 <Send className="w-6 h-6" />
               </div>
@@ -516,7 +526,7 @@ export function App() {
               </p>
             </div>
 
-            <div className="p-6 sm:p-7 rounded-2xl aws-soft-card space-y-4">
+            <div className="p-6 sm:p-7 rounded-2xl ios-glass space-y-4">
               <div className="w-12 h-12 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-800 shadow-xs">
                 <Zap className="w-6 h-6" />
               </div>
@@ -530,7 +540,7 @@ export function App() {
           </div>
         </section>
 
-        {/* 4. RESUME TIMELINE (POLYWORK STYLE) */}
+        {/* 4. RESUME TIMELINE (POLYWORK STYLE WITH APPLE IOS GLASS) */}
         <section id="about" className="space-y-8 pt-6 border-t border-zinc-900/10 text-left">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-4 border-b border-zinc-900/10">
             <div>
@@ -549,9 +559,9 @@ export function App() {
             </button>
           </div>
 
-          {/* Polywork-style timeline items with soft pearl tint */}
+          {/* Polywork-style timeline items with iOS glass */}
           <div className="space-y-6">
-            <div className="p-6 rounded-2xl aws-soft-card space-y-2">
+            <div className="p-6 rounded-2xl ios-glass space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-emerald-800 font-bold">
                 <span>08/2024 – Present · 1 yr 4 mos</span>
                 <span className="text-zinc-500 font-medium">Full-Time</span>
@@ -564,7 +574,7 @@ export function App() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl aws-soft-card space-y-2">
+            <div className="p-6 rounded-2xl ios-glass space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>10/2023 – 08/2024 · 10 mos</span>
                 <span className="text-zinc-500 font-medium">Contract</span>
@@ -577,7 +587,7 @@ export function App() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl aws-soft-card space-y-2">
+            <div className="p-6 rounded-2xl ios-glass space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>08/2022 – 10/2023 · 1 yr 2 mos</span>
                 <span className="text-zinc-500 font-medium">Enterprise</span>
@@ -590,7 +600,7 @@ export function App() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl aws-soft-card space-y-2">
+            <div className="p-6 rounded-2xl ios-glass space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>08/2018 – 07/2022 · 4 yrs</span>
                 <span className="text-zinc-500 font-medium">Education</span>
@@ -623,7 +633,7 @@ export function App() {
               Ready to launch or scale your outbound pipeline?
             </h3>
             <p className="text-base text-zinc-300 font-normal leading-relaxed">
-              Whether you need 6,000 secondary mailboxes provisioned, step-1 reply campaigns deployed, or real-time Slack triage routing, let's talk.
+              Whether you need secondary domain fleet deployment, step-1 reply campaigns, or real-time CRM triage routing, let's talk.
             </p>
 
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
