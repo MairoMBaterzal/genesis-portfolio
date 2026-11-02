@@ -743,36 +743,48 @@ export function App() {
 
 
         {/* SECTION 6: CLOSING CTA */}
-        <section className="glow-card rounded-3xl p-8 sm:p-12 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8">
+        <section className="glow-card rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 sm:gap-8 lg:gap-10">
 
-          <div className="space-y-2 max-w-xl">
-            <span className="text-xs font-mono text-indigo-400 font-semibold uppercase tracking-wider block">
-              NEXT STEP
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Ready to launch or scale your outbound pipeline?
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300 font-light">
-              Available for full-time or contract B2B outbound operator roles with US business hours overlap.
-            </p>
+          {/* Left: Uncropped Full Seated Photo */}
+          <div className="w-44 sm:w-52 md:w-56 lg:w-64 shrink-0 aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#181f32]/80 ring-1 ring-white/5">
+            <img
+              src="/genesis-full-seated.jpg"
+              alt="Genesis Auza - B2B Outbound Specialist"
+              className="w-full h-full object-cover object-top"
+            />
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
-            <a
-              href={`mailto:${profileData.email}`}
-              className="px-6 py-3 rounded-xl bg-white text-slate-950 font-bold text-xs hover:bg-slate-200 transition shadow-lg shadow-white/5 flex items-center gap-2"
-            >
-              <Mail className="w-4 h-4" />
-              <span>Email Genesis</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+          {/* Right: Text & Action Buttons Beside Photo */}
+          <div className="flex-1 space-y-4 text-center md:text-left">
+            <div className="space-y-2">
+              <span className="text-xs font-mono text-indigo-400 font-semibold uppercase tracking-wider block">
+                NEXT STEP
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                Ready to launch or scale your outbound pipeline?
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 font-light">
+                Available for full-time or contract B2B outbound operator roles with US business hours overlap.
+              </p>
+            </div>
 
-            <button
-              onClick={() => setShowResumeModal(true)}
-              className="px-5 py-3 rounded-xl bg-transparent border border-white/10 text-slate-300 hover:text-white font-mono text-xs transition cursor-pointer"
-            >
-              View Resume
-            </button>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-1">
+              <a
+                href={`mailto:${profileData.email}`}
+                className="px-6 py-3 rounded-xl bg-white text-slate-950 font-bold text-xs hover:bg-slate-200 transition shadow-lg shadow-white/5 flex items-center gap-2 cursor-pointer"
+              >
+                <Mail className="w-4 h-4" />
+                <span>Email Genesis</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+
+              <button
+                onClick={() => setShowResumeModal(true)}
+                className="px-5 py-3 rounded-xl bg-[#212b44] border border-white/10 text-slate-200 hover:text-white font-mono text-xs transition cursor-pointer"
+              >
+                View Resume
+              </button>
+            </div>
           </div>
 
         </section>
