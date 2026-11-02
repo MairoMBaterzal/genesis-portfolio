@@ -82,6 +82,7 @@ export const caseStudiesData: CaseStudy[] = [
       "Closed high-ticket B2B retainer clients and drove qualified C-suite meetings for clients including Practice Growth Co, Taylor Hospitality, Cedar Landscape, Fantastic Fungi, and Healthcare M&A groups."
     ],
     techStack: [
+      "Plusvibe.ai",
       "Instantly.ai / Smartlead",
       "Cloudflare DNS / API",
       "SPF / DKIM / DMARC",

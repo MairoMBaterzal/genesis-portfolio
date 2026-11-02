@@ -36,7 +36,7 @@ export interface ProfileData {
 export const profileData: ProfileData = {
   name: "Genesis L. Auza",
   title: "B2B Cold Outbound & GTM Email Specialist",
-  subtitle: "Co-Founder of StylSensei. I build and operate cold outbound infrastructure (6,000+ mailboxes, 500,000+ monthly sends) delivering qualified C-suite meetings with a 22.4% positive reply rate and 1% bounce rate.",
+  subtitle: "Co-Founder of StylSensei. I build and operate cold outbound infrastructure (Plusvibe, Instantly, Smartlead across 6,000+ mailboxes and 500,000+ monthly sends) delivering qualified C-suite meetings with a 22.4% positive reply rate and 1% bounce rate.",
   location: "Remote (Philippines · US Eastern / Pacific Overlap)",
   email: "genesisauza9@gmail.com",
   phone: "+63 991 502 5407",
@@ -46,7 +46,7 @@ export const profileData: ProfileData = {
     {
       label: "Monthly Send Capacity",
       value: "500,000+",
-      detail: "Verified Instantly/Smartlead secondary domain fleet",
+      detail: "Plusvibe, Instantly & Smartlead secondary domain fleet",
     },
     {
       label: "Active Mailbox Fleet",

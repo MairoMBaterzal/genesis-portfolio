@@ -70,6 +70,7 @@ export function App() {
   ];
 
   const tools = [
+    { name: "Plusvibe.ai", cat: "Mailbox Infrastructure" },
     { name: "Instantly.ai", cat: "Sending & Warmup" },
     { name: "Smartlead", cat: "Outbound Engine" },
     { name: "HubSpot CRM", cat: "Pipeline & Deals" },
@@ -85,7 +86,7 @@ export function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#090A0F] text-[#F1F5F9] font-sans selection:bg-[#4F46E5] selection:text-white">
+    <div className="min-h-screen bg-[#11141f] text-[#F1F5F9] font-sans selection:bg-[#4F46E5] selection:text-white">
 
       {/* Background radial glow */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -94,7 +95,7 @@ export function App() {
 
       {/* Floating Top Navigation */}
       <header className="sticky top-4 z-40 max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="rounded-full bg-[#12151E]/80 backdrop-blur-xl border border-white/10 px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-2xl shadow-black/60">
+        <div className="rounded-full bg-[#181d2c]/85 backdrop-blur-xl border border-white/10 px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-2xl shadow-black/60">
 
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20 group-hover:ring-indigo-400 transition">
@@ -158,12 +159,12 @@ export function App() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
-              Operating 1,000 to 20,000+ daily sends across dedicated secondary domain fleets with zero domain burn. Instantly & Smartlead deliverability, AI-verified lead scraping, human-first copy, and GoHighLevel/HubSpot CRM triage.
+              Operating 1,000 to 20,000+ daily sends across dedicated secondary domain fleets with zero domain burn. Plusvibe mailbox provisioning, Instantly & Smartlead deliverability, AI-verified lead scraping, human-first copy, and GoHighLevel/HubSpot CRM triage.
             </p>
           </div>
 
           {/* Specialized Niche Bar */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-[#12151E] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#181d2c] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
             <div className="space-y-1">
               <span className="text-[10px] font-mono uppercase tracking-widest text-indigo-400 font-semibold block">
                 SPECIALIZED NICHE & VERTICAL FOCUS
@@ -172,12 +173,12 @@ export function App() {
                 High-Ticket B2B & Agency Cold Outbound Infrastructure
               </p>
               <p className="text-xs text-slate-400 font-light">
-                Zero-burn secondary domain fleets · Signal-based list enrichment · Sub-15 min CRM reply triage for B2B Agencies, SaaS, and High-Ticket Services.
+                Zero-burn secondary domain fleets via Plusvibe · Instantly & Smartlead warmup rotation · Sub-15 min CRM reply triage for B2B Agencies, SaaS, and High-Ticket Services.
               </p>
             </div>
             <div className="flex items-center gap-2 shrink-0">
-              <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300">
-                Instantly / Smartlead
+              <span className="px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/30 text-[11px] font-mono text-indigo-300 font-semibold">
+                Plusvibe / Instantly / Smartlead
               </span>
               <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300">
                 GoHighLevel / HubSpot
@@ -198,7 +199,7 @@ export function App() {
 
             <button
               onClick={handleCopyEmail}
-              className="px-4 py-2.5 rounded-xl bg-[#131622] border border-white/10 text-slate-300 hover:text-white font-mono text-xs transition flex items-center gap-2 cursor-pointer"
+              className="px-4 py-2.5 rounded-xl bg-[#1e2436] border border-white/10 text-slate-300 hover:text-white font-mono text-xs transition flex items-center gap-2 cursor-pointer"
             >
               {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
               <span>{copiedEmail ? 'Copied to Clipboard' : 'Copy Email'}</span>
@@ -329,7 +330,7 @@ export function App() {
                   onClick={() => setActiveTab(tab.id as any)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono whitespace-nowrap transition cursor-pointer ${isActive
                       ? 'bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-950'
-                      : 'bg-[#12151E] text-slate-400 hover:text-white border border-white/5 hover:border-white/10'
+                      : 'bg-[#181d2c] text-slate-400 hover:text-white border border-white/5 hover:border-white/10'
                     }`}
                 >
                   <Icon className="w-3.5 h-3.5" />
@@ -359,7 +360,7 @@ export function App() {
                 </div>
 
                 <p className="text-sm text-slate-300 font-light leading-relaxed max-w-3xl">
-                  Most cold outbound fails because teams send from their root company domain, get flagged, and kill their business email. I build and manage isolated secondary domain fleets across Google Workspace and Microsoft 365 with strict cryptographic authentication.
+                  Most cold outbound fails because teams send from their root company domain, get flagged, and kill their business email. At StylSensei, we use Plusvibe to provision isolated secondary domain fleets across Google Workspace and Microsoft 365, rotating across Instantly and Smartlead with strict SPF, DKIM, and DMARC cryptographic authentication.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
@@ -639,7 +640,7 @@ export function App() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-5 rounded-2xl bg-[#12151E] border border-white/5 space-y-3">
+              <div className="p-5 rounded-2xl bg-[#181d2c] border border-white/5 space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
                     HIGH-TICKET B2B
@@ -656,7 +657,7 @@ export function App() {
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[#12151E] border border-white/5 space-y-3">
+              <div className="p-5 rounded-2xl bg-[#181d2c] border border-white/5 space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
                     HEALTHCARE M&A
@@ -673,7 +674,7 @@ export function App() {
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[#12151E] border border-white/5 space-y-3">
+              <div className="p-5 rounded-2xl bg-[#181d2c] border border-white/5 space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
                     C-SUITE APPOINTMENTS
@@ -710,7 +711,7 @@ export function App() {
             {tools.map((t, i) => (
               <div
                 key={i}
-                className="p-3.5 rounded-xl bg-[#12151E] border border-white/5 hover:border-indigo-500/30 transition flex items-center justify-between"
+                className="p-3.5 rounded-xl bg-[#181d2c] border border-white/5 hover:border-indigo-500/30 transition flex items-center justify-between"
               >
                 <div>
                   <span className="text-xs font-bold text-white block">
@@ -797,7 +798,7 @@ export function App() {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl w-full rounded-2xl bg-[#12151E] border border-white/15 p-5 shadow-2xl space-y-3 cursor-default"
+            className="relative max-w-4xl w-full rounded-2xl bg-[#181d2c] border border-white/15 p-5 shadow-2xl space-y-3 cursor-default"
           >
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
               <div>
