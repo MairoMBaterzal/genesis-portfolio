@@ -21,7 +21,10 @@ import {
   Workflow,
   Briefcase,
   GraduationCap,
-  Award
+  Award,
+  Zap,
+  Activity,
+  Server
 } from 'lucide-react';
 import { profileData } from './data/profileData';
 import { ResumeModal } from './components/ResumeModal';
@@ -37,23 +40,23 @@ export function App() {
     setTimeout(() => setCopiedEmail(false), 2000);
   };
 
-  // Polywork-style skill pills
-  const skillPills = [
-    { label: "Cold Outbound", icon: Send },
-    { label: "Secondary Domains", icon: Globe },
-    { label: "Plusvibe.ai", icon: Flame },
-    { label: "Instantly.ai", icon: Send },
-    { label: "Smartlead", icon: Radio },
-    { label: "Apollo.io", icon: Search },
-    { label: "Clay Enrichment", icon: Database },
-    { label: "MillionVerifier", icon: ShieldCheck },
-    { label: "HubSpot CRM", icon: Layers },
-    { label: "GoHighLevel", icon: Workflow },
-    { label: "n8n Automation", icon: Cpu },
-    { label: "SQL & Python", icon: Terminal },
+  // Tech stack items for infinite marquee (1 line moving to the left)
+  const techStack = [
+    { name: "Plusvibe.ai", role: "Outbound Tooling", icon: Flame, color: "text-amber-500" },
+    { name: "Instantly.ai", role: "Sending & Warmup", icon: Send, color: "text-blue-500" },
+    { name: "Smartlead", role: "Fleet Engine", icon: Radio, color: "text-indigo-500" },
+    { name: "HubSpot CRM", role: "Pipeline & Deals", icon: Layers, color: "text-orange-500" },
+    { name: "GoHighLevel", role: "CRM Automations", icon: Workflow, color: "text-emerald-500" },
+    { name: "Apollo.io", role: "B2B Lead Data", icon: Search, color: "text-cyan-500" },
+    { name: "Clay.com", role: "Enrichment", icon: Database, color: "text-purple-500" },
+    { name: "MillionVerifier", role: "Deliverability", icon: ShieldCheck, color: "text-green-500" },
+    { name: "Cloudflare DNS", role: "SPF / DKIM / DMARC", icon: Globe, color: "text-amber-600" },
+    { name: "n8n Workflow", role: "Logic Automations", icon: Cpu, color: "text-pink-500" },
+    { name: "Python & SQL", role: "Data Scraping", icon: Terminal, color: "text-yellow-500" },
+    { name: "OpenAI Whisper", role: "Voice Transcribe", icon: Sparkles, color: "text-teal-400" }
   ];
 
-  // OFF+BRAND style Case Studies / Our Work
+  // OFF+BRAND & Linear style Case Studies / Our Work
   const projects = [
     {
       id: "01",
@@ -107,127 +110,95 @@ export function App() {
     }
   ];
 
-  // Tech stack items for infinite marquee
-  const techStack = [
-    { name: "Plusvibe.ai", role: "Outbound Tooling", icon: Flame },
-    { name: "Instantly.ai", role: "Sending & Warmup", icon: Send },
-    { name: "Smartlead", role: "Fleet Engine", icon: Radio },
-    { name: "HubSpot CRM", role: "Pipeline & Deals", icon: Layers },
-    { name: "GoHighLevel", role: "CRM Automations", icon: Workflow },
-    { name: "Apollo.io", role: "B2B Lead Data", icon: Search },
-    { name: "Clay.com", role: "Enrichment", icon: Database },
-    { name: "MillionVerifier", role: "Deliverability", icon: ShieldCheck },
-    { name: "Cloudflare DNS", role: "SPF / DKIM / DMARC", icon: Globe },
-    { name: "n8n Workflow", role: "Logic Automations", icon: Cpu },
-    { name: "Python & SQL", role: "Data Scraping", icon: Terminal },
-    { name: "OpenAI Whisper", role: "Voice Transcribe", icon: Sparkles }
-  ];
-
   return (
-    <div className="min-h-screen bg-[#060709] text-[#EDEDED] font-sans selection:bg-white selection:text-black relative">
+    <div className="min-h-screen bg-[#07080b] text-[#EDEDED] font-sans selection:bg-white selection:text-black relative">
 
-      {/* OFF+BRAND Style Minimal Top Bar */}
-      <header className="sticky top-0 z-40 bg-[#060709]/90 backdrop-blur-xl border-b border-white/[0.08] px-6 sm:px-12 py-4">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="font-extrabold tracking-tight text-white text-lg sm:text-xl">
-              GENESIS AUZA<span className="text-emerald-400">.</span>
-            </span>
-            <span className="hidden sm:inline-block text-xs font-mono text-zinc-500 uppercase tracking-widest pl-3 border-l border-zinc-800">
-              GTM OUTBOUND SYSTEMS
-            </span>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
-              <a href="#work" className="hover:text-white transition">Our Work</a>
-              <a href="#stack" className="hover:text-white transition">Stack</a>
-              <a href="#experience" className="hover:text-white transition">Experience</a>
-            </nav>
-
-            <a
-              href={`mailto:${profileData.email}`}
-              className="px-5 py-2 rounded-full bg-white text-black text-xs sm:text-sm font-bold hover:bg-zinc-200 transition shadow-sm cursor-pointer"
-            >
-              Contact Me
-            </a>
-          </div>
-        </div>
-      </header>
+      {/* FLOATING NAVBAR PILL (IMAGE 1 SPEC) */}
+      <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 sm:gap-6 px-5 sm:px-7 py-2.5 rounded-full bg-[#0d0e12]/90 backdrop-blur-xl border border-white/10 shadow-2xl text-xs sm:text-sm font-medium text-zinc-300">
+        <a href="#work" className="hover:text-white transition">Proof & Wins</a>
+        <a href="#stack" className="hover:text-white transition">Stack</a>
+        <a href="#engine" className="hover:text-white transition">The Engine</a>
+        <a href="#about" className="hover:text-white transition">About</a>
+        <span className="text-zinc-700 select-none">|</span>
+        <button
+          onClick={() => setShowResumeModal(true)}
+          className="hover:text-white transition flex items-center gap-1 cursor-pointer"
+        >
+          Resume <span className="text-xs">↗</span>
+        </button>
+        <a
+          href={`mailto:${profileData.email}`}
+          className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white text-black font-bold text-xs sm:text-sm hover:bg-zinc-200 transition shadow-md cursor-pointer ml-1"
+        >
+          <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black" />
+          <span>Let's talk</span>
+        </a>
+      </nav>
 
       {/* Main Container */}
-      <main className="max-w-6xl mx-auto px-6 sm:px-12 pt-12 sm:pt-16 pb-32 space-y-24">
+      <main className="max-w-6xl mx-auto px-6 sm:px-12 pt-28 sm:pt-32 pb-32 space-y-20">
 
-        {/* HERO SECTION: POLYWORK × OFF+BRAND PERSONAL IDENTITY */}
-        <section className="space-y-8 max-w-4xl text-left">
-
-          {/* Profile Identity Bar (Polywork Style) */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white/15 shadow-2xl bg-zinc-900 shrink-0">
-              <img
-                src={profileData.headshotUrl}
-                alt={profileData.name}
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <div className="flex flex-wrap items-center gap-3">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-                  Genesis Auza
-                </h1>
-                <span className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Available for Outbound Roles
-                </span>
+        {/* HERO HEADER ROW (IMAGE 1 SPEC) */}
+        <section className="space-y-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
+              {/* Profile Avatar Squircle */}
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-zinc-900 shrink-0">
+                <img
+                  src={profileData.headshotUrl}
+                  alt={profileData.name}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
-              <p className="text-base sm:text-lg text-zinc-300 font-medium">
-                Former Co-Founder @ StylSensei · B2B Cold Outbound & GTM Email Systems Specialist
-              </p>
-              <p className="text-xs sm:text-sm text-zinc-500 font-mono">
-                Remote (Philippines · US Eastern & Pacific Business Hours Overlap)
-              </p>
+              {/* Title & Role Info */}
+              <div className="space-y-1.5 text-left">
+                <div className="flex flex-wrap items-center gap-3">
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+                    Genesis Auza
+                  </h1>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-medium">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    Available for Outbound Roles
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm md:text-base text-zinc-400 font-medium">
+                  Former Co-Founder @ StylSensei • B2B Cold Outbound & GTM Email Systems
+                </p>
+              </div>
+            </div>
+
+            {/* Right Side Pill Badge */}
+            <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900/80 border border-white/10 text-zinc-300 text-xs sm:text-sm font-mono shrink-0 shadow-sm">
+              <Sparkles className="w-4 h-4 text-zinc-400" />
+              <span>GTM Outbound Infrastructure</span>
             </div>
           </div>
 
-          {/* Polywork Style Skill Badges */}
-          <div className="flex flex-wrap items-center gap-2 pt-2">
-            {skillPills.map((pill, idx) => {
-              const Icon = pill.icon;
-              return (
-                <span
-                  key={idx}
-                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-white/10 text-xs sm:text-sm font-medium text-zinc-200 hover:border-white/20 transition cursor-default"
-                >
-                  <Icon className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>{pill.label}</span>
-                </span>
-              );
-            })}
+          {/* Clean Horizontal Divider */}
+          <div className="w-full border-b border-zinc-800/80 pt-2" />
+        </section>
+
+        {/* AUTHORITATIVE HUMAN COPY SECTION (IMAGE 3 SPEC) */}
+        <section className="space-y-6 max-w-4xl text-left">
+          <p className="text-xl sm:text-2xl md:text-3xl font-medium sm:font-semibold text-zinc-100 leading-snug tracking-tight">
+            Former Co-Founder at StylSensei. Managed 6,000+ warmed secondary mailboxes and 500k+ monthly dispatches, generating 7,090+ positive C-suite replies with a sub-3% bounce rate.
+          </p>
+
+          <div className="p-4 sm:p-5 rounded-2xl bg-zinc-900/60 border border-white/[0.08] text-sm sm:text-base text-zinc-300 leading-relaxed">
+            <span className="font-bold text-white">I'm open to: </span>
+            full-time or contract <strong className="text-white">B2B Outbound Specialist</strong> roles, dedicated secondary domain fleet builds, cold email deliverability auditing, and CRM lead triage workflows.
           </div>
 
-          {/* Human Bio & Open-To Line (Polywork Style) */}
-          <div className="space-y-4 pt-2">
-            <p className="text-lg sm:text-2xl text-white font-bold leading-snug">
-              I build and run cold email infrastructure that books qualified C-suite pipeline for high-ticket B2B agencies and SaaS companies.
-            </p>
-
-            <div className="p-4 rounded-xl bg-zinc-900/50 border border-white/[0.08] text-sm sm:text-base text-zinc-300">
-              <span className="font-bold text-white">I'm open to: </span>
-              full-time or contract <strong className="text-white">B2B Outbound Specialist</strong> roles, dedicated secondary domain fleet builds, cold email deliverability auditing, and CRM lead triage workflows.
-            </div>
-          </div>
-
-          {/* Direct Contact CTAs (With Email Kept on Headline) */}
+          {/* Contact Action CTAs (Email Kept on Headline) */}
           <div className="flex flex-wrap items-center gap-3.5 pt-2">
             <a
               href={`mailto:${profileData.email}`}
               className="px-6 py-3.5 rounded-full bg-white text-black font-extrabold text-sm hover:bg-zinc-200 transition shadow-xl shadow-white/10 flex items-center gap-2.5 cursor-pointer"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4 text-black" />
               <span>Email: {profileData.email}</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-black" />
             </a>
 
             <button
@@ -246,11 +217,51 @@ export function App() {
               <span>View Resume</span>
             </button>
           </div>
-
         </section>
 
-        {/* 1. TECH STACKS SECTION (ABOVE WORK - OFF+BRAND STYLE MARQUEE) */}
-        <section id="stack" className="space-y-4 pt-6 border-t border-white/[0.08]">
+        {/* TRUSTED BY OUR GROWING PARTNERS (IMAGE 2 SPEC) */}
+        <section className="rounded-3xl bg-[#04150e] border border-emerald-950/80 py-8 px-6 sm:px-10 text-center space-y-6">
+          <span className="text-xs font-mono font-bold tracking-[0.25em] text-emerald-400/90 uppercase block">
+            TRUSTED BY OUR GROWING PARTNERS
+          </span>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 items-center justify-center">
+            {/* SIMPSON PHOTO */}
+            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center font-black text-xs sm:text-sm tracking-wider uppercase transition shadow-sm select-none">
+              <span className="font-sans font-black">SIMPSON PHOTO</span>
+            </div>
+
+            {/* POWEROP */}
+            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-2 font-black text-xs sm:text-sm tracking-wider uppercase transition shadow-sm select-none">
+              <svg className="w-5 h-5 fill-zinc-950" viewBox="0 0 24 24">
+                <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" />
+                <circle cx="12" cy="12" r="3.5" fill="#e2e7ec" />
+              </svg>
+              <span className="font-sans font-black">POWEROP</span>
+            </div>
+
+            {/* Practice Growth Co. */}
+            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-2 text-xs sm:text-sm tracking-tight transition shadow-sm select-none">
+              <Activity className="w-4 h-4 text-zinc-950 stroke-[2.5]" />
+              <span className="font-serif font-bold text-zinc-950">Practice Growth Co.</span>
+            </div>
+
+            {/* RED GREEN DIGITAL */}
+            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex flex-col items-center justify-center text-xs tracking-wider transition shadow-sm select-none">
+              <span className="font-black text-xs tracking-widest leading-none">RED·GREEN</span>
+              <span className="text-[10px] font-mono tracking-widest text-zinc-600 leading-none mt-0.5">DIGITAL</span>
+            </div>
+
+            {/* HOSTMETRIC */}
+            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-1.5 font-black text-xs sm:text-sm tracking-widest uppercase transition shadow-sm select-none">
+              <Server className="w-4 h-4 text-zinc-950 stroke-[2.5]" />
+              <span className="font-mono font-black">HOSTMETRIC</span>
+            </div>
+          </div>
+        </section>
+
+        {/* 1. TECH STACKS SECTION (ABOVE WORK - 1-LINE MOVING MARQUEE WITH LARGE READABLE LOGOS) */}
+        <section id="stack" className="space-y-4 pt-4 border-t border-white/[0.08]">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 block mb-1">
@@ -260,15 +271,15 @@ export function App() {
                 Operating Engines & Tech Stack
               </h2>
             </div>
-            <span className="text-xs font-mono text-zinc-500">
-              Running 500k+ Monthly Outbound Volume
+            <span className="text-xs font-mono text-zinc-400 font-medium">
+              1-Line Continuous Fleet Engine · 500k+ Monthly Dispatches
             </span>
           </div>
 
           {/* 1-Line Infinite Marquee Moving Left */}
           <div className="relative w-full overflow-hidden py-4">
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#060709] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#060709] to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#07080b] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#07080b] to-transparent z-10 pointer-events-none" />
 
             <div className="animate-marquee flex items-center gap-4">
               {[...techStack, ...techStack].map((tool, idx) => {
@@ -276,14 +287,14 @@ export function App() {
                 return (
                   <div
                     key={idx}
-                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl bg-[#e4e9f0] text-zinc-950 shadow-md hover:bg-white transition shrink-0 cursor-default"
+                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl bg-[#e4e9f0] hover:bg-white text-zinc-950 shadow-md transition shrink-0 cursor-default"
                   >
                     <Icon className="w-6 h-6 text-zinc-900 shrink-0" />
                     <div className="text-left">
                       <div className="text-base font-extrabold tracking-tight text-zinc-950 whitespace-nowrap">
                         {tool.name}
                       </div>
-                      <div className="text-xs font-mono text-zinc-600 font-medium whitespace-nowrap">
+                      <div className="text-xs font-mono text-zinc-600 font-semibold whitespace-nowrap">
                         {tool.role}
                       </div>
                     </div>
@@ -294,7 +305,7 @@ export function App() {
           </div>
         </section>
 
-        {/* 2. OUR WORK / CASE STUDIES (OFF+BRAND STYLE SHOWCASE) */}
+        {/* 2. PROOFS & TELEMETRY SECTION (OFF+BRAND & LINEAR SHOWCASE) */}
         <section id="work" className="space-y-12 pt-6 border-t border-white/[0.08]">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
@@ -306,7 +317,7 @@ export function App() {
               </h2>
             </div>
             <p className="text-sm font-mono text-zinc-400">
-              Real client campaign data & meeting deliveries
+              Verified client campaign data & meeting deliveries
             </p>
           </div>
 
@@ -384,7 +395,7 @@ export function App() {
                   </div>
                 </div>
 
-                {/* OFF+BRAND Metadata Bar */}
+                {/* Metadata Bar */}
                 <div className="p-6 sm:p-8 space-y-4 text-left">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/[0.08]">
                     <div className="space-y-1">
@@ -410,7 +421,7 @@ export function App() {
                     {proj.summary}
                   </p>
 
-                  {/* OFF+BRAND style dot/triangle/asterisk tags */}
+                  {/* Dot/triangle/asterisk tags */}
                   <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono text-zinc-400">
                     {proj.tags.map((tag, tIdx) => (
                       <span key={tIdx} className="px-3 py-1 rounded-full bg-zinc-800/80 border border-zinc-700/60 text-zinc-300">
@@ -422,11 +433,65 @@ export function App() {
               </div>
             ))}
           </div>
-
         </section>
 
-        {/* 3. RESUME TIMELINE (POLYWORK STYLE) */}
-        <section id="experience" className="space-y-8 pt-6 border-t border-white/[0.08] text-left">
+        {/* 3. THE ENGINE / ARCHITECTURAL PILLARS */}
+        <section id="engine" className="space-y-8 pt-6 border-t border-white/[0.08] text-left">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+            <div>
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 block mb-1">
+                SYSTEM ARCHITECTURE
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                The GTM Outbound Engine<span className="text-emerald-400">.</span>
+              </h2>
+            </div>
+            <span className="text-xs font-mono text-zinc-400 font-medium">
+              Zero Primary Domain Burn · Instant Lead Triage
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-white/[0.08] space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                <Globe className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-white tracking-tight">
+                1. Secondary Fleet & DNS Isolation
+              </h3>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                Complete isolation of client core root domains. Multi-inbox distribution with strictly calibrated SPF, DKIM, DMARC, and custom tracking domains across rotating IP pools.
+              </p>
+            </div>
+
+            <div className="p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-white/[0.08] space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                <Send className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-white tracking-tight">
+                2. Step-1 Permission Sequences
+              </h3>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                Short, hyper-relevant conversational opening hooks. Eliminating sales fluff and friction to prompt immediate C-suite reply momentum, driving positive response rates to 22.4%.
+              </p>
+            </div>
+
+            <div className="p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-white/[0.08] space-y-4">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                <Zap className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-bold text-white tracking-tight">
+                3. Sub-15 Min Lead Triage & Slack Feed
+              </h3>
+              <p className="text-sm text-zinc-300 leading-relaxed">
+                Real-time webhook notifications routing qualified positive prospects directly into client Slack channels and CRMs (HubSpot / GoHighLevel) for immediate sales closing.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 4. RESUME TIMELINE (POLYWORK STYLE) */}
+        <section id="about" className="space-y-8 pt-6 border-t border-white/[0.08] text-left">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-4 border-b border-white/10">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 block mb-1">
@@ -438,7 +503,7 @@ export function App() {
             </div>
             <button
               onClick={() => setShowResumeModal(true)}
-              className="text-sm font-mono text-emerald-400 hover:text-emerald-300 transition"
+              className="text-sm font-mono text-emerald-400 hover:text-emerald-300 transition cursor-pointer"
             >
               Open Full Resume Modal ↗
             </button>
@@ -500,7 +565,7 @@ export function App() {
           </div>
         </section>
 
-        {/* 4. CLOSING CTA (Matches Image 5 with Uncropped Full Seated Photo) */}
+        {/* 5. CLOSING CTA (Seated Photo + Direct Contact) */}
         <section className="rounded-3xl p-8 sm:p-12 bg-zinc-900/60 border border-white/[0.08] flex flex-col md:flex-row items-center gap-8 lg:gap-12 text-left">
           <div className="w-48 sm:w-56 md:w-60 lg:w-64 shrink-0 aspect-square rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-black">
             <img
@@ -518,86 +583,73 @@ export function App() {
               Ready to launch or scale your outbound pipeline?
             </h3>
             <p className="text-base text-zinc-300 font-normal">
-              Available for full-time or contract B2B outbound operator roles with US business hours overlap.
+              Whether you need 6,000 secondary mailboxes provisioned, step-1 reply campaigns deployed, or real-time Slack triage routing, let's talk.
             </p>
 
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <a
                 href={`mailto:${profileData.email}`}
-                className="px-6 py-3.5 rounded-full bg-white text-black font-extrabold text-sm hover:bg-zinc-200 transition shadow-lg flex items-center gap-2 cursor-pointer"
+                className="px-6 py-3.5 rounded-full bg-white text-black font-extrabold text-sm hover:bg-zinc-200 transition shadow-xl shadow-white/10 flex items-center gap-2 cursor-pointer"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 text-black" />
                 <span>Email Genesis: {profileData.email}</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-black" />
               </a>
 
-              <button
-                onClick={() => setShowResumeModal(true)}
-                className="px-5 py-3.5 rounded-full bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-white font-mono text-sm transition cursor-pointer"
+              <a
+                href={profileData.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="px-5 py-3.5 rounded-full bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-mono text-sm transition flex items-center gap-2 cursor-pointer"
               >
-                View Resume
-              </button>
+                <ExternalLink className="w-4 h-4" />
+                <span>LinkedIn Profile ↗</span>
+              </a>
             </div>
           </div>
         </section>
 
-        {/* FOOTER */}
-        <footer className="pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-mono text-zinc-500">
-          <div>
-            <span>GENESIS AUZA · B2B COLD OUTBOUND & GTM EMAIL SYSTEMS</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <a href={`mailto:${profileData.email}`} className="hover:text-white transition">
-              {profileData.email}
-            </a>
-            <span>·</span>
-            <a
-              href={profileData.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition"
-            >
-              LinkedIn ↗
-            </a>
-          </div>
-        </footer>
-
       </main>
 
-      {/* Lightbox Modal */}
+      {/* Footer */}
+      <footer className="border-t border-white/[0.08] py-8 text-center text-xs font-mono text-zinc-500">
+        Genesis Auza · GTM Outbound Infrastructure & B2B Cold Email Specialist · {profileData.email}
+      </footer>
+
+      {/* LIGHTBOX MODAL */}
       {activeLightbox && (
         <div
           onClick={() => setActiveLightbox(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md cursor-pointer animate-in fade-in duration-150"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-black/90 backdrop-blur-xl animate-in fade-in duration-200"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="rounded-2xl max-w-5xl max-h-[92vh] overflow-hidden border border-white/15 bg-zinc-950 shadow-2xl relative flex flex-col"
+            className="relative max-w-5xl w-full max-h-[90vh] flex flex-col rounded-2xl bg-zinc-950 border border-white/20 overflow-hidden shadow-2xl"
           >
-            <div className="flex items-center justify-between p-4 bg-zinc-900 border-b border-white/10">
+            <div className="flex items-center justify-between p-4 border-b border-zinc-800 bg-zinc-900/80">
               <div>
                 <h4 className="text-base font-bold text-white">{activeLightbox.title}</h4>
-                <p className="text-xs sm:text-sm text-zinc-300 mt-0.5">{activeLightbox.caption}</p>
+                <p className="text-xs font-mono text-zinc-400">{activeLightbox.caption}</p>
               </div>
               <button
                 onClick={() => setActiveLightbox(null)}
-                className="p-1 rounded text-zinc-400 hover:text-white transition"
+                className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 hover:text-white transition cursor-pointer"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
               </button>
             </div>
-            <div className="overflow-auto max-h-[78vh] bg-black flex items-center justify-center p-2">
+            <div className="overflow-auto p-4 flex items-center justify-center bg-black/60">
               <img
                 src={activeLightbox.url}
                 alt={activeLightbox.title}
-                className="max-h-[74vh] object-contain rounded-lg"
+                className="max-h-[75vh] w-auto object-contain rounded-lg shadow-xl"
               />
             </div>
           </div>
         </div>
       )}
 
-      {/* Resume Modal */}
+      {/* RESUME MODAL */}
       <ResumeModal
         isOpen={showResumeModal}
         onClose={() => setShowResumeModal(false)}
