@@ -86,16 +86,16 @@ export function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#11141f] text-[#F1F5F9] font-sans selection:bg-[#4F46E5] selection:text-white">
+    <div className="min-h-screen bg-[#181f32] text-[#F1F5F9] font-sans selection:bg-[#4F46E5] selection:text-white">
 
       {/* Background radial glow */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-indigo-500/10 via-sky-500/5 to-transparent blur-3xl opacity-60" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-indigo-500/12 via-sky-500/6 to-transparent blur-3xl opacity-70" />
       </div>
 
       {/* Floating Top Navigation */}
       <header className="sticky top-4 z-40 max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="rounded-full bg-[#181d2c]/85 backdrop-blur-xl border border-white/10 px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-2xl shadow-black/60">
+        <div className="rounded-full bg-[#212b44]/90 backdrop-blur-xl border border-white/12 px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-2xl shadow-black/40">
 
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20 group-hover:ring-indigo-400 transition">
@@ -164,7 +164,7 @@ export function App() {
           </div>
 
           {/* Specialized Niche Bar */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-[#181d2c] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#212b44] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
             <div className="space-y-1">
               <span className="text-[10px] font-mono uppercase tracking-widest text-indigo-400 font-semibold block">
                 SPECIALIZED NICHE & VERTICAL FOCUS
@@ -172,12 +172,12 @@ export function App() {
               <p className="text-sm font-semibold text-white">
                 High-Ticket B2B & Agency Cold Outbound Infrastructure
               </p>
-              <p className="text-xs text-slate-400 font-light">
+              <p className="text-xs text-slate-300 font-light">
                 Zero-burn secondary domain fleets via Plusvibe · Instantly & Smartlead warmup rotation · Sub-15 min CRM reply triage for B2B Agencies, SaaS, and High-Ticket Services.
               </p>
             </div>
             <div className="flex items-center gap-2 shrink-0">
-              <span className="px-3 py-1 rounded-md bg-indigo-500/10 border border-indigo-500/30 text-[11px] font-mono text-indigo-300 font-semibold">
+              <span className="px-3 py-1 rounded-md bg-indigo-500/15 border border-indigo-500/30 text-[11px] font-mono text-indigo-300 font-semibold">
                 Plusvibe / Instantly / Smartlead
               </span>
               <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300">
@@ -199,7 +199,7 @@ export function App() {
 
             <button
               onClick={handleCopyEmail}
-              className="px-4 py-2.5 rounded-xl bg-[#1e2436] border border-white/10 text-slate-300 hover:text-white font-mono text-xs transition flex items-center gap-2 cursor-pointer"
+              className="px-4 py-2.5 rounded-xl bg-[#273352] border border-white/10 text-slate-200 hover:text-white font-mono text-xs transition flex items-center gap-2 cursor-pointer"
             >
               {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
               <span>{copiedEmail ? 'Copied to Clipboard' : 'Copy Email'}</span>
@@ -330,7 +330,7 @@ export function App() {
                   onClick={() => setActiveTab(tab.id as any)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-mono whitespace-nowrap transition cursor-pointer ${isActive
                       ? 'bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-950'
-                      : 'bg-[#181d2c] text-slate-400 hover:text-white border border-white/5 hover:border-white/10'
+                      : 'bg-[#212b44] text-slate-300 hover:text-white border border-white/5 hover:border-white/10'
                     }`}
                 >
                   <Icon className="w-3.5 h-3.5" />
@@ -640,7 +640,7 @@ export function App() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-5 rounded-2xl bg-[#181d2c] border border-white/5 space-y-3">
+              <div className="p-5 rounded-2xl bg-[#212b44] border border-white/5 space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
                     HIGH-TICKET B2B
@@ -651,13 +651,13 @@ export function App() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">Practice Growth Co</h4>
-                  <p className="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">
+                  <p className="text-xs text-slate-300 font-light mt-1.5 leading-relaxed">
                     Delivered <strong className="text-white font-medium">40+ qualified discovery calls</strong> with medical practice owners and directors, converting 6 high-ticket clients via multi-mailbox targeted outbound.
                   </p>
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[#181d2c] border border-white/5 space-y-3">
+              <div className="p-5 rounded-2xl bg-[#212b44] border border-white/5 space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
                     HEALTHCARE M&A
@@ -668,13 +668,13 @@ export function App() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">Healthcare Advisory</h4>
-                  <p className="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">
+                  <p className="text-xs text-slate-300 font-light mt-1.5 leading-relaxed">
                     Sourced <strong className="text-white font-medium">12 off-market healthcare acquisition deals per month</strong> directly from clinic founders, generating over $150k in active advisory deal pipeline.
                   </p>
                 </div>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[#181d2c] border border-white/5 space-y-3">
+              <div className="p-5 rounded-2xl bg-[#212b44] border border-white/5 space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
                     C-SUITE APPOINTMENTS
@@ -685,7 +685,7 @@ export function App() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">Brands & Services</h4>
-                  <p className="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">
+                  <p className="text-xs text-slate-300 font-light mt-1.5 leading-relaxed">
                     Booked calendar calls directly with CEOs, Presidents, and Partners across <strong className="text-white font-medium">Taylor Hospitality, Cedar Landscape, Fantastic Fungi, YogaMedics, Rubbit</strong>, and Timeless Tartans.
                   </p>
                 </div>
@@ -702,7 +702,7 @@ export function App() {
             <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400">
               OPERATING STACK
             </span>
-            <span className="text-xs font-mono text-slate-500">
+            <span className="text-xs font-mono text-slate-400">
               Daily Production Tooling
             </span>
           </div>
@@ -711,7 +711,7 @@ export function App() {
             {tools.map((t, i) => (
               <div
                 key={i}
-                className="p-3.5 rounded-xl bg-[#181d2c] border border-white/5 hover:border-indigo-500/30 transition flex items-center justify-between"
+                className="p-3.5 rounded-xl bg-[#212b44] border border-white/5 hover:border-indigo-500/30 transition flex items-center justify-between"
               >
                 <div>
                   <span className="text-xs font-bold text-white block">
@@ -798,7 +798,7 @@ export function App() {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl w-full rounded-2xl bg-[#181d2c] border border-white/15 p-5 shadow-2xl space-y-3 cursor-default"
+            className="relative max-w-4xl w-full rounded-2xl bg-[#212b44] border border-white/15 p-5 shadow-2xl space-y-3 cursor-default"
           >
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
               <div>

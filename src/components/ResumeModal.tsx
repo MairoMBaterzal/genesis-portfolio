@@ -74,10 +74,10 @@ ACHIEVEMENTS:
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-150">
-      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#181d2c] border border-white/10 shadow-2xl p-6 sm:p-8 text-[#F1F5F9]">
+      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-[#212b44] border border-white/10 shadow-2xl p-6 sm:p-8 text-[#F1F5F9]">
 
         {/* Modal Controls */}
-        <div className="sticky top-0 z-10 flex items-center justify-between pb-4 border-b border-white/10 bg-[#181d2c]">
+        <div className="sticky top-0 z-10 flex items-center justify-between pb-4 border-b border-white/10 bg-[#212b44]">
           <span className="text-xs font-mono font-semibold uppercase tracking-wider text-indigo-400">
             Verified Candidate Resume
           </span>
