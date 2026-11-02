@@ -8,9 +8,9 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: #090a0f;
-    color: #e4e4e7;
-    line-height: 1.6;
+    background-color: #08090c;
+    color: #e2e8f0;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -23,35 +23,48 @@
   }
 }
 
-/* Linear & Attio style surface cards */
-.surface-card,
-.glow-card {
+/* Linear & Cursor style surface cards */
+.surface-card {
   position: relative;
   background-color: #0e1117;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
   transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.surface-card:hover,
-.glow-card:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  background-color: #12161f;
+.surface-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  background-color: #12151d;
 }
 
-/* Micro hairline subtle borders */
-.border-subtle {
-  border-color: rgba(255, 255, 255, 0.08);
+/* Infinite Marquee moving to the left */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-/* Minimalist dark scrollbars */
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Clean minimal scrollbars */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #090a0f;
+  background: #08090c;
 }
 
 ::-webkit-scrollbar-thumb {
