@@ -37,27 +37,26 @@ SUMMARY:
 ${profileData.subtitle}
 
 CORE EXPERTISE:
-• Cold Outbound & Sending Fleets: Plusvibe, Instantly, Smartlead, 6,000+ mailboxes, 500k/mo sends, SPF/DKIM/DMARC, sub-1.0% bounce rate
+• Cold Outbound & Sending Fleets: Plusvibe, Instantly, Smartlead, 6,000+ mailboxes, 500k/mo sends, SPF/DKIM/DMARC, < 3% hard bounce SLA
 • AI Lead Scraping & Enrichment: Apollo, Clay, Apify, Telegram Bot with DeepSeek & Whisper, Google Sheets sync
 • Pipeline & CRM Triage: GoHighLevel, HubSpot CRM, tag-to-deal automation, instant Slack alerts, same-day routing
 • Deliverability Diagnostics: Plusvibe, Instantly.ai, Smartlead, MillionVerifier, Cloudflare DNS
 
 EXPERIENCE:
-1. Former Co-Founder & Outbound Lead | StylSensei (06/2025 – 06/2026)
-• Managed scalable cold outbound infrastructure using Plusvibe across 6,000+ warmed secondary mailboxes, dispatching 500,000+ emails monthly while maintaining 22.4% positive response rates and a 1.0% hard bounce rate.
-• Ran the full sales cycle for agency acquisition: audited prospect systems, delivered customized proposals, and closed high-ticket B2B retainer clients.
-• Owned end-to-end reply management, objection handling, prospect qualification, booking high-intent discovery calls directly into client calendars and CRMs.
+1. Former Co-Founder & Outbound Lead | StylSensei (08/2024 – Present · 1 yr 4 mos)
+• Managed scalable cold outbound infrastructure using Plusvibe across 6,000+ warmed secondary mailboxes, dispatching 500,000+ emails monthly with 22.4% positive reply rates and < 3% hard bounce rate.
+• Owned end-to-end reply triage, objection handling, prospect qualification, booking high-intent discovery calls directly into client calendars and CRMs.
+• Closed high-ticket B2B retainer clients by auditing outbound architecture and building customized multi-inbox fleets.
 
-2. AI Automation Developer | Premier Fitness (02/2025 - 06/2025)
-• Designed and implemented N8N workflows to automate client processes (CRM integration, data synchronization, API-driven tasks).
-• Built custom API connectors for platforms like OpenAI, Google Sheets, and ERP systems.
-• Optimized data pipelines for real-time analytics and reporting, reducing manual effort by 40%.
+2. AI & Outbound Automation Developer | Premier Fitness (10/2023 – 08/2024 · 10 mos)
+• Designed N8N workflows connecting lead capture forms to CRM and email notification pipelines.
+• Built custom API connectors for OpenAI, Google Sheets, and CRM tag management, reducing lead response time to <15 seconds.
+• Automated weekly data hygiene and email verification to protect sender scores.
 
-3. Sr. Database Support Associate | IQVIA (10/2022 - 02/2025)
-• Managed and maintained large-scale databases, ensuring data integrity, security, and performance optimization for enterprise systems.
-• Automated data scraping and mining processes using Python and SQL, reducing manual effort by 40%.
-• Collaborated with cross-functional teams, implemented API integrations, and optimized workflows.
-• Documented database processes and provided training to stakeholders on Looker and SQL for self-service analytics.
+3. Database & Analytics Associate | IQVIA (08/2022 – 10/2023 · 1 yr 2 mos)
+• Administered enterprise healthcare analytics databases on HUE Impala and MySQL.
+• Automated ETL and data scraping routines with Python & SQL, cutting manual data prep by 40%.
+• Nominated twice for IQVIA Impact Awards (Q4 & Q5) for workflow optimization and stakeholder enablement.
 
 EDUCATION & TRAINING:
 • BS in Information and Technology (Major in Business & Data Analytics) - Bulacan State University (08/2018 - 07/2022)
@@ -150,30 +149,30 @@ ACHIEVEMENTS:
               <div className="space-y-1.5 p-4 rounded-xl bg-black/30 border border-white/5">
                 <div className="flex justify-between font-mono">
                   <strong className="text-sm font-bold text-white">StylSensei — Former Co-Founder & Outbound Lead</strong>
-                  <span className="text-indigo-400">06/2025 – 06/2026</span>
+                  <span className="text-indigo-400">08/2024 – Present · 1 yr 4 mos</span>
                 </div>
                 <p className="text-slate-300 font-light leading-relaxed">
-                  Managed outbound infrastructure across 6,000+ secondary mailboxes sending 500k+ emails monthly. Sub-2.8% bounce rate SLA, SPF/DKIM/DMARC alignment, AI reply triage, and closing high-ticket B2B retainer clients.
+                  Managed outbound infrastructure across 6,000+ secondary mailboxes sending 500k+ emails monthly. Maintained a sub-3% hard bounce rate SLA, SPF/DKIM/DMARC alignment, AI reply triage, and closing high-ticket B2B retainer clients.
                 </p>
               </div>
 
               <div className="space-y-1.5 p-4 rounded-xl bg-black/30 border border-white/5">
                 <div className="flex justify-between font-mono">
-                  <strong className="text-sm font-bold text-white">Premier Fitness — AI Automation Developer</strong>
-                  <span className="text-indigo-400">02/2025 – 06/2025</span>
+                  <strong className="text-sm font-bold text-white">Premier Fitness — AI & Outbound Automation Developer</strong>
+                  <span className="text-indigo-400">10/2023 – 08/2024 · 10 mos</span>
                 </div>
                 <p className="text-slate-300 font-light leading-relaxed">
-                  Engineered N8N workflows connecting OpenAI, Google Sheets, and legacy ERPs. Reduced manual effort by 40% and cut lead response time to &lt;15 seconds.
+                  Engineered N8N workflows connecting OpenAI, Google Sheets, and CRM lead capture pipelines. Reduced manual effort by 40% and cut lead response time to &lt;15 seconds.
                 </p>
               </div>
 
               <div className="space-y-1.5 p-4 rounded-xl bg-black/30 border border-white/5">
                 <div className="flex justify-between font-mono">
-                  <strong className="text-sm font-bold text-white">IQVIA — Sr. Database Support Associate</strong>
-                  <span className="text-indigo-400">10/2022 – 02/2025</span>
+                  <strong className="text-sm font-bold text-white">IQVIA — Database & Analytics Associate</strong>
+                  <span className="text-indigo-400">08/2022 – 10/2023 · 1 yr 2 mos</span>
                 </div>
                 <p className="text-slate-300 font-light leading-relaxed">
-                  Administered enterprise databases on HUE Impala and MySQL. Automated web scraping and SQL pipelines (40% effort reduction) and trained 30+ stakeholders on Looker self-serve querying.
+                  Administered enterprise databases on HUE Impala and MySQL. Automated web scraping and SQL pipelines (40% effort reduction) and earned two consecutive Impact Award nominations (Q4 & Q5).
                 </p>
               </div>
             </div>

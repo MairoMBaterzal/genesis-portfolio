@@ -99,10 +99,10 @@ export function App() {
 
           {/* Navigation Links */}
           <nav className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium text-slate-200">
-            <a href="#about" className="hover:text-white transition">About</a>
-            <a href="#pillars" className="hover:text-white transition">The Engine</a>
             <a href="#proof" className="hover:text-white transition">Proof & Wins</a>
             <a href="#stack" className="hover:text-white transition">Stack</a>
+            <a href="#pillars" className="hover:text-white transition">The Engine</a>
+            <a href="#about" className="hover:text-white transition">About</a>
           </nav>
 
           {/* Symmetrical Divider */}
@@ -121,7 +121,7 @@ export function App() {
               className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-semibold tracking-wide transition shadow-md shadow-indigo-950 flex items-center gap-1.5 cursor-pointer"
             >
               <Mail className="w-3.5 h-3.5" />
-              <span>Hire me</span>
+              <span>Let's talk</span>
             </a>
           </div>
 
@@ -206,7 +206,7 @@ export function App() {
               className="px-5 py-2.5 rounded-xl bg-white text-slate-950 font-semibold text-xs tracking-wide hover:bg-slate-200 transition shadow-lg shadow-white/5 flex items-center gap-2"
             >
               <Mail className="w-4 h-4" />
-              <span>Email Genesis ({profileData.email})</span>
+              <span>Let's talk ({profileData.email})</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
 
@@ -259,22 +259,22 @@ export function App() {
                 HARD BOUNCE RATE
               </span>
               <div className="text-2xl sm:text-3xl font-bold font-mono text-emerald-400 tracking-tight">
-                1.0%
+                &lt; 3.0%
               </div>
               <span className="text-xs text-slate-400 mt-1 block font-light">
-                Strict sub-5% deliverability SLA
+                Strict sub-3% deliverability SLA
               </span>
             </div>
 
             <div className="glow-card p-5 rounded-2xl text-left">
               <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
-                CAMPAIGN SNAPSHOT
+                POSITIVE REPLIES
               </span>
               <div className="text-2xl sm:text-3xl font-bold font-mono text-indigo-300 tracking-tight">
-                7,090
+                7,090+
               </div>
               <span className="text-xs text-emerald-400 mt-1 block font-light font-mono">
-                22.4% positive reply rate
+                22.4% response rate across 451k leads
               </span>
             </div>
 
@@ -282,34 +282,186 @@ export function App() {
 
         </section>
 
-        {/* SECTION 1: ABOUT GENESIS & TECHNICAL PEDIGREE (Elevated Above) */}
-        <section id="about" className="glow-card rounded-2xl p-6 sm:p-8 space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/10 pb-3">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-indigo-400" />
-              <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400">
-                ABOUT GENESIS · TECHNICAL RIGOR & BACKGROUND
+        {/* SECTION 3: VISUAL PROOF & ACTUAL DELIVERABLES */}
+        <section id="proof" className="space-y-8">
+
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+            <div>
+              <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 block mb-1">
+                CAMPAIGN PROOF & PRODUCTION DELIVERABLES
               </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                Real outbound metrics & booked C-suite calls.
+              </h2>
             </div>
+            <a
+              href="https://stylsensei.com/testimonials"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition"
+            >
+              <span>View Client Testimonials ↗</span>
+            </a>
+          </div>
+
+          {/* Proof Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {proofAssets.map((asset, idx) => (
+              <div
+                key={idx}
+                onClick={() => setActiveLightbox(asset)}
+                className={`glow-card rounded-2xl overflow-hidden cursor-pointer group ${
+                  idx === 0 ? 'sm:col-span-2' : ''
+                }`}
+              >
+                <div className={`${idx === 0 ? 'aspect-[21/9]' : 'aspect-[16/10]'} bg-black/50 overflow-hidden relative`}>
+                  <img
+                    src={asset.url}
+                    alt={asset.title}
+                    className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition duration-300"
+                  />
+                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/10 text-[10px] font-mono text-indigo-300 uppercase">
+                    {asset.badge}
+                  </div>
+                </div>
+                <div className="p-4 sm:p-5 flex items-center justify-between gap-3">
+                  <div>
+                    <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-indigo-300 transition">
+                      {asset.title}
+                    </h4>
+                    <p className="text-xs text-slate-400 line-clamp-2 mt-0.5 font-light">
+                      {asset.caption}
+                    </p>
+                  </div>
+                  <span className="text-xs font-mono text-slate-500 group-hover:text-white transition shrink-0">
+                    Enlarge ↗
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* StylSensei Agency Client Results & Testimonials */}
+          <div className="pt-6 space-y-4 border-t border-white/5">
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+              <div>
+                <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 block mb-0.5">
+                  STYLSENSEI AGENCY TRACK RECORD
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  High-ticket pipeline generated for clients.
+                </h3>
+              </div>
+              <div className="flex items-center gap-3 text-xs font-mono">
+                <a
+                  href="https://stylsensei.com/testimonials"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-400 hover:text-indigo-300 transition"
+                >
+                  Client Testimonials ↗
+                </a>
+                <span className="text-slate-700">·</span>
+                <a
+                  href="https://stylsensei.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-white transition"
+                >
+                  stylsensei.com ↗
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-5 rounded-2xl bg-[#212b44] border border-white/5 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
+                    HIGH-TICKET B2B
+                  </span>
+                  <span className="text-xs font-mono font-bold text-emerald-400">
+                    6 Closed Retainers
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white">Practice Growth Co</h4>
+                  <p className="text-xs text-slate-300 font-light mt-1.5 leading-relaxed">
+                    Delivered <strong className="text-white font-medium">40+ qualified discovery calls</strong> with medical practice owners and directors, converting 6 high-ticket clients via multi-mailbox targeted outbound.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-[#212b44] border border-white/5 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
+                    HEALTHCARE M&A
+                  </span>
+                  <span className="text-xs font-mono font-bold text-emerald-400">
+                    $150k+ Added Pipeline
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white">Healthcare Advisory</h4>
+                  <p className="text-xs text-slate-300 font-light mt-1.5 leading-relaxed">
+                    Sourced <strong className="text-white font-medium">12 off-market healthcare acquisition deals per month</strong> directly from clinic founders, generating over $150k in active advisory deal pipeline.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-[#212b44] border border-white/5 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
+                    C-SUITE APPOINTMENTS
+                  </span>
+                  <span className="text-xs font-mono font-bold text-emerald-400">
+                    22.4% Positive Rate
+                  </span>
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white">Brands & Services</h4>
+                  <p className="text-xs text-slate-300 font-light mt-1.5 leading-relaxed">
+                    Booked calendar calls directly with CEOs, Presidents, and Partners across <strong className="text-white font-medium">Taylor Hospitality, Cedar Landscape, Fantastic Fungi, YogaMedics, Rubbit</strong>, and Timeless Tartans.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        {/* SECTION 4: OPERATOR STACK */}
+        <section id="stack" className="space-y-6">
+
+          <div className="flex items-baseline justify-between">
+            <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400">
+              OPERATING STACK
+            </span>
             <span className="text-xs font-mono text-slate-400">
-              Enterprise Data Analytics ➔ Outbound Engineering
+              Daily Production Tooling
             </span>
           </div>
 
-          <div className="max-w-4xl space-y-3.5 text-sm sm:text-base text-slate-300 font-light leading-relaxed">
-            <p>
-              I studied <strong className="text-white font-medium">Business & Data Analytics</strong> at Bulacan State University and was selected as a <strong className="text-white font-medium">Data Associate Scholar</strong> by Project Sparta (Development Academy of the Philippines).
-            </p>
-
-            <p>
-              I spent years working with enterprise databases and analytics pipelines at <strong className="text-white font-medium">IQVIA</strong> on HUE Impala and MySQL—earning two consecutive <strong className="text-white font-medium">Impact Award nominations (Q4 & Q5)</strong> for workflow optimization and stakeholder enablement.
-            </p>
-
-            <p>
-              Today, I channel that technical rigor into building and scaling outbound B2B email engines (managing <strong className="text-white font-medium">6,000+ secondary mailboxes</strong> and <strong className="text-white font-medium">500k+ monthly dispatches</strong> at <strong className="text-white font-medium">StylSensei</strong>). I make sure the domain infrastructure, scrapers, and copy work in unison so your sales team opens their calendars to qualified decision-makers.
-            </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {tools.map((t, i) => (
+              <div
+                key={i}
+                className="p-3.5 rounded-xl bg-[#212b44] border border-white/5 hover:border-indigo-500/30 transition flex items-center justify-between"
+              >
+                <div>
+                  <span className="text-xs font-bold text-white block">
+                    {t.name}
+                  </span>
+                  <span className="text-[10px] font-mono text-slate-400">
+                    {t.cat}
+                  </span>
+                </div>
+                <span className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
+              </div>
+            ))}
           </div>
+
         </section>
+
 
         {/* SECTION 2: THE 4 OUTBOUND PILLARS (Interactive Bento Tabs) */}
         <section id="pillars" className="space-y-6">
@@ -561,188 +713,54 @@ export function App() {
 
         </section>
 
-        {/* SECTION 3: VISUAL PROOF & ACTUAL DELIVERABLES */}
-        <section id="proof" className="space-y-8">
-
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-            <div>
-              <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 block mb-1">
-                CAMPAIGN PROOF & PRODUCTION DELIVERABLES
+                {/* SECTION 4: ABOUT GENESIS & TECHNICAL PEDIGREE */}
+        <section id="about" className="glow-card rounded-2xl p-6 sm:p-8 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/10 pb-3">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-indigo-400" />
+              <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400">
+                ABOUT GENESIS · TECHNICAL RIGOR & BACKGROUND
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                Real outbound metrics & booked C-suite calls.
-              </h2>
             </div>
-            <a
-              href="https://stylsensei.com/testimonials"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition"
-            >
-              <span>View Client Testimonials ↗</span>
-            </a>
-          </div>
-
-          {/* Proof Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {proofAssets.map((asset, idx) => (
-              <div
-                key={idx}
-                onClick={() => setActiveLightbox(asset)}
-                className={`glow-card rounded-2xl overflow-hidden cursor-pointer group ${
-                  idx === 0 ? 'sm:col-span-2' : ''
-                }`}
-              >
-                <div className={`${idx === 0 ? 'aspect-[21/9]' : 'aspect-[16/10]'} bg-black/50 overflow-hidden relative`}>
-                  <img
-                    src={asset.url}
-                    alt={asset.title}
-                    className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition duration-300"
-                  />
-                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/10 text-[10px] font-mono text-indigo-300 uppercase">
-                    {asset.badge}
-                  </div>
-                </div>
-                <div className="p-4 sm:p-5 flex items-center justify-between gap-3">
-                  <div>
-                    <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-indigo-300 transition">
-                      {asset.title}
-                    </h4>
-                    <p className="text-xs text-slate-400 line-clamp-2 mt-0.5 font-light">
-                      {asset.caption}
-                    </p>
-                  </div>
-                  <span className="text-xs font-mono text-slate-500 group-hover:text-white transition shrink-0">
-                    Enlarge ↗
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* StylSensei Agency Client Results & Testimonials */}
-          <div className="pt-6 space-y-4 border-t border-white/5">
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-              <div>
-                <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 block mb-0.5">
-                  STYLSENSEI AGENCY TRACK RECORD
-                </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                  High-ticket pipeline generated for clients.
-                </h3>
-              </div>
-              <div className="flex items-center gap-3 text-xs font-mono">
-                <a
-                  href="https://stylsensei.com/testimonials"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-400 hover:text-indigo-300 transition"
-                >
-                  Client Testimonials ↗
-                </a>
-                <span className="text-slate-700">·</span>
-                <a
-                  href="https://stylsensei.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-white transition"
-                >
-                  stylsensei.com ↗
-                </a>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-5 rounded-2xl bg-[#212b44] border border-white/5 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
-                    HIGH-TICKET B2B
-                  </span>
-                  <span className="text-xs font-mono font-bold text-emerald-400">
-                    6 Closed Retainers
-                  </span>
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-white">Practice Growth Co</h4>
-                  <p className="text-xs text-slate-300 font-light mt-1.5 leading-relaxed">
-                    Delivered <strong className="text-white font-medium">40+ qualified discovery calls</strong> with medical practice owners and directors, converting 6 high-ticket clients via multi-mailbox targeted outbound.
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-[#212b44] border border-white/5 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
-                    HEALTHCARE M&A
-                  </span>
-                  <span className="text-xs font-mono font-bold text-emerald-400">
-                    $150k+ Added Pipeline
-                  </span>
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-white">Healthcare Advisory</h4>
-                  <p className="text-xs text-slate-300 font-light mt-1.5 leading-relaxed">
-                    Sourced <strong className="text-white font-medium">12 off-market healthcare acquisition deals per month</strong> directly from clinic founders, generating over $150k in active advisory deal pipeline.
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-[#212b44] border border-white/5 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono text-indigo-400 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20">
-                    C-SUITE APPOINTMENTS
-                  </span>
-                  <span className="text-xs font-mono font-bold text-emerald-400">
-                    22.4% Positive Rate
-                  </span>
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-white">Brands & Services</h4>
-                  <p className="text-xs text-slate-300 font-light mt-1.5 leading-relaxed">
-                    Booked calendar calls directly with CEOs, Presidents, and Partners across <strong className="text-white font-medium">Taylor Hospitality, Cedar Landscape, Fantastic Fungi, YogaMedics, Rubbit</strong>, and Timeless Tartans.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </section>
-
-        {/* SECTION 4: OPERATOR STACK */}
-        <section id="stack" className="space-y-6">
-
-          <div className="flex items-baseline justify-between">
-            <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400">
-              OPERATING STACK
-            </span>
             <span className="text-xs font-mono text-slate-400">
-              Daily Production Tooling
+              Enterprise Data Analytics ➔ Outbound Engineering
             </span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {tools.map((t, i) => (
-              <div
-                key={i}
-                className="p-3.5 rounded-xl bg-[#212b44] border border-white/5 hover:border-indigo-500/30 transition flex items-center justify-between"
-              >
-                <div>
-                  <span className="text-xs font-bold text-white block">
-                    {t.name}
-                  </span>
-                  <span className="text-[10px] font-mono text-slate-400">
-                    {t.cat}
-                  </span>
-                </div>
-                <span className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-4 rounded-xl bg-black/25 border border-white/5 space-y-2">
+              <span className="text-[10px] font-mono text-indigo-400 font-semibold uppercase tracking-wider block">
+                01. FOUNDATION & DATA SCHOLARSHIP
+              </span>
+              <h4 className="text-sm font-bold text-white">Bulacan State University</h4>
+              <p className="text-xs text-slate-300 font-light leading-relaxed">
+                BS in Information Technology (Business & Data Analytics). Selected as a <strong className="text-white font-medium">Data Associate Scholar</strong> by Project Sparta (Development Academy of the Philippines).
+              </p>
+            </div>
 
+            <div className="p-4 rounded-xl bg-black/25 border border-white/5 space-y-2">
+              <span className="text-[10px] font-mono text-indigo-400 font-semibold uppercase tracking-wider block">
+                02. ENTERPRISE RIGOR & SCALE
+              </span>
+              <h4 className="text-sm font-bold text-white">IQVIA Enterprise Analytics</h4>
+              <p className="text-xs text-slate-300 font-light leading-relaxed">
+                Administered data pipelines on HUE Impala & MySQL. Earned <strong className="text-white font-medium">two consecutive Impact Award nominations (Q4 & Q5)</strong> for workflow optimization and stakeholder enablement.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-black/25 border border-white/5 space-y-2">
+              <span className="text-[10px] font-mono text-indigo-400 font-semibold uppercase tracking-wider block">
+                03. OPERATOR & CO-FOUNDER
+              </span>
+              <h4 className="text-sm font-bold text-white">StylSensei Outbound Systems</h4>
+              <p className="text-xs text-slate-300 font-light leading-relaxed">
+                Built and managed cold email fleets across <strong className="text-white font-medium">6,000+ mailboxes</strong> and <strong className="text-white font-medium">500k+ monthly dispatches</strong>, delivering qualified C-suite pipeline with 22.4% positive replies.
+              </p>
+            </div>
+          </div>
         </section>
 
-
-        {/* SECTION 6: CLOSING CTA */}
+{/* SECTION 6: CLOSING CTA */}
         <section className="glow-card rounded-3xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 sm:gap-8 lg:gap-10">
 
           {/* Left: Uncropped Full Seated Photo */}

@@ -55,13 +55,13 @@ export const profileData: ProfileData = {
     },
     {
       label: "Positive Replies (Cluster)",
-      value: "7,090",
-      detail: "22.4% positive response rate in verified campaign batch",
+      value: "7,090+",
+      detail: "22.4% positive response rate across 451,749 targeted B2B prospects",
     },
     {
       label: "Verified Bounce Rate",
-      value: "1.0%",
-      detail: "Strict sub-5% SLA held across all client dispatches",
+      value: "< 3.0%",
+      detail: "Strict sub-3% deliverability SLA held across all client dispatches",
     },
   ],
   education: {
