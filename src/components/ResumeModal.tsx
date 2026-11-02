@@ -43,7 +43,7 @@ CORE EXPERTISE:
 • Deliverability Diagnostics: Plusvibe, Instantly.ai, Smartlead, MillionVerifier, Cloudflare DNS
 
 EXPERIENCE:
-1. Co-Founder & Outbound Lead | StylSensei (06/2025 – 06/2026)
+1. Former Co-Founder & Outbound Lead | StylSensei (06/2025 – 06/2026)
 • Managed scalable cold outbound infrastructure using Plusvibe across 6,000+ warmed secondary mailboxes, dispatching 500,000+ emails monthly while maintaining 22.4% positive response rates and a 1.0% hard bounce rate.
 • Ran the full sales cycle for agency acquisition: audited prospect systems, delivered customized proposals, and closed high-ticket B2B retainer clients.
 • Owned end-to-end reply management, objection handling, prospect qualification, booking high-intent discovery calls directly into client calendars and CRMs.
@@ -149,7 +149,7 @@ ACHIEVEMENTS:
             <div className="space-y-5 text-xs">
               <div className="space-y-1.5 p-4 rounded-xl bg-black/30 border border-white/5">
                 <div className="flex justify-between font-mono">
-                  <strong className="text-sm font-bold text-white">StylSensei — Co-Founder & Outbound Lead</strong>
+                  <strong className="text-sm font-bold text-white">StylSensei — Former Co-Founder & Outbound Lead</strong>
                   <span className="text-indigo-400">06/2025 – 06/2026</span>
                 </div>
                 <p className="text-slate-300 font-light leading-relaxed">

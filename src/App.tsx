@@ -93,20 +93,23 @@ export function App() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-indigo-500/12 via-sky-500/6 to-transparent blur-3xl opacity-70" />
       </div>
 
-      {/* Floating Top Navigation */}
-      <header className="sticky top-4 z-40 max-w-5xl mx-auto px-3 sm:px-6">
-        <div className="rounded-full bg-[#212b44]/90 backdrop-blur-xl border border-white/12 px-5 sm:px-8 py-3 flex items-center justify-between shadow-2xl shadow-black/40">
+      {/* Floating Top Navigation (Centered & Symmetrical) */}
+      <header className="sticky top-4 z-40 flex justify-center px-4 pointer-events-auto">
+        <div className="rounded-full bg-[#212b44]/90 backdrop-blur-xl border border-white/12 px-5 sm:px-7 py-2.5 flex items-center gap-4 sm:gap-7 shadow-2xl shadow-black/40">
 
           {/* Navigation Links */}
-          <nav className="flex items-center gap-5 sm:gap-8 text-xs sm:text-sm font-medium text-slate-200">
+          <nav className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium text-slate-200">
             <a href="#about" className="hover:text-white transition">About</a>
             <a href="#pillars" className="hover:text-white transition">The Engine</a>
             <a href="#proof" className="hover:text-white transition">Proof & Wins</a>
             <a href="#stack" className="hover:text-white transition">Stack</a>
           </nav>
 
+          {/* Symmetrical Divider */}
+          <span className="w-px h-4 bg-white/20" />
+
           {/* Right Actions */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-2.5 sm:gap-3">
             <button
               onClick={() => setShowResumeModal(true)}
               className="text-xs sm:text-sm font-mono text-slate-300 hover:text-white transition px-2 py-1 cursor-pointer"
@@ -115,9 +118,9 @@ export function App() {
             </button>
             <a
               href={`mailto:${profileData.email}`}
-              className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-semibold tracking-wide transition shadow-md shadow-indigo-950 flex items-center gap-2 cursor-pointer"
+              className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-semibold tracking-wide transition shadow-md shadow-indigo-950 flex items-center gap-1.5 cursor-pointer"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-3.5 h-3.5" />
               <span>Hire Genesis</span>
             </a>
           </div>
@@ -152,7 +155,7 @@ export function App() {
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-300 font-mono">
-                  Co-Founder @ StylSensei · B2B Cold Outbound & GTM Email Specialist
+                  Former Co-Founder @ StylSensei · B2B Cold Outbound & GTM Email Specialist
                 </p>
               </div>
             </div>

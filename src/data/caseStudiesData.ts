@@ -41,9 +41,9 @@ export interface CaseStudy {
 export const caseStudiesData: CaseStudy[] = [
   {
     id: "stylsensei-outbound-engine",
-    client: "StylSensei (Co-Founder)",
+    client: "StylSensei (Former Co-Founder)",
     period: "06/2025 – 06/2026",
-    role: "Co-Founder & Outbound Infrastructure Lead",
+    role: "Former Co-Founder & Outbound Infrastructure Lead",
     tagline: "Scalable Cold Outbound Engine: 6,000+ Mailboxes, 645k+ Dispatches, 7,090 Positive Replies & 1.0% Bounce Rate",
     badge: "Scale & Revenue Infrastructure",
     heroMetric: {
