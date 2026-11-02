@@ -62,7 +62,7 @@ export function App() {
         particleCount: 35,
         spread: 60,
         origin: { x, y },
-        colors: ['#f472b6', '#818cf8', '#facc15', '#38bdf8', '#10b981'],
+        colors: ['#10b981', '#38bdf8', '#f472b6', '#facc15', '#818cf8'],
         disableForReducedMotion: true
       });
     }
@@ -159,7 +159,7 @@ export function App() {
       {/* FLOATING NAVBAR PILL (IMAGE 1 SPEC - OBSIDIAN GLASS WITH SCROLL PROGRESS) */}
       <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center">
         <div className="flex items-center gap-4 sm:gap-6 px-5 sm:px-7 py-2.5 rounded-full obsidian-card text-xs sm:text-sm font-medium text-zinc-200 relative overflow-hidden">
-          <a href="#work" className="hover:text-white transition">Proof & Wins</a>
+          <a href="#work" className="hover:text-white transition">Work & Proofs</a>
           <a href="#stack" className="hover:text-white transition">Stack</a>
           <a href="#engine" className="hover:text-white transition">The Engine</a>
           <a href="#about" className="hover:text-white transition">About</a>
@@ -180,41 +180,35 @@ export function App() {
 
           {/* Interactive Scroll Progress Indicator along pill border bottom */}
           <div
-            className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-pink-400 via-indigo-400 to-yellow-400 transition-all duration-100 ease-out"
+            className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-emerald-400 via-sky-400 to-yellow-400 transition-all duration-100 ease-out"
             style={{ width: `${scrollProgress}%` }}
           />
         </div>
       </nav>
 
       {/* Main Container */}
-      <main className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 pt-28 sm:pt-36 pb-32 space-y-20">
+      <main className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 pt-28 sm:pt-36 pb-32 space-y-16 sm:space-y-20">
 
-        {/* HERO HEADER ROW (IMAGE 1 SPEC WITH BIOSITES ORGANIC AURA) */}
+        {/* HERO HEADER ROW (IMAGE 1 SPEC WITH 4TH IMAGE FIX) */}
         <section className="space-y-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div className="flex items-center gap-5 sm:gap-7">
 
               {/* Profile Avatar with Biosites Organic Floating Aura Behind It */}
               <div className="relative shrink-0 group cursor-pointer">
-                {/* Organic Biosites Floating Fluid Blobs & Pebbles with dynamic hover pulse */}
                 <div className="absolute -inset-4 sm:-inset-5 pointer-events-none select-none -z-10 transition-transform duration-500 group-hover:scale-110">
-                  {/* Large Primary Fluid Drop (Blue to Violet to Pink Gradient) */}
+                  {/* Large Primary Fluid Drop */}
                   <div
                     className="absolute -bottom-2 -left-3 w-28 h-20 sm:w-32 sm:h-24 rounded-[45%_55%_65%_35%] bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f472b6] opacity-80 blur-[2px] transform -rotate-12 animate-pulse"
                     style={{ animationDuration: '4s' }}
                   />
-                  {/* Floating Pebble 1: Coral Peach (Top-Left) */}
-                  <div className="absolute -top-3 left-2 w-5 h-4 sm:w-6 sm:h-5 rounded-full bg-[#fccaa7] opacity-90 shadow-sm transition-transform duration-300 group-hover:-translate-y-1" />
-                  {/* Floating Pebble 2: Butter Yellow (Top-Center) */}
-                  <div className="absolute -top-4 left-10 sm:left-12 w-4 h-3 sm:w-5 sm:h-4 rounded-full bg-[#fde7ae] opacity-95 shadow-sm transition-transform duration-300 group-hover:-translate-y-1.5" />
-                  {/* Floating Pebble 3: Orchid Pink (Top-Right) */}
-                  <div className="absolute -top-2 right-1 sm:right-0 w-5 h-4 rounded-full bg-[#e0bed9] opacity-90 shadow-sm transition-transform duration-300 group-hover:translate-x-1" />
-                  {/* Floating Pebble 4: Mint Cyan (Right) */}
-                  <div className="absolute top-8 -right-3 w-6 h-5 rounded-[50%_60%_40%_50%] bg-[#98d4dc] opacity-85 shadow-sm transition-transform duration-300 group-hover:translate-x-1.5" />
-                  {/* Floating Pebble 5: Electric Sky Blue (Bottom-Right) */}
-                  <div className="absolute -bottom-1 -right-2 w-5 h-5 rounded-full bg-[#38bdf8] opacity-90 shadow-sm transition-transform duration-300 group-hover:translate-y-1" />
-                  {/* Floating Pebble 6: Lavender (Mid-Left) */}
-                  <div className="absolute top-6 -left-3 w-4 h-5 rounded-[60%_40%_50%_50%] bg-[#afa4cc] opacity-85 shadow-sm transition-transform duration-300 group-hover:-translate-x-1" />
+                  {/* Floating Pebble Droplets */}
+                  <div className="absolute -top-3 left-2 w-5 h-4 sm:w-6 sm:h-5 rounded-full bg-[#fccaa7] opacity-90 shadow-sm" />
+                  <div className="absolute -top-4 left-10 sm:left-12 w-4 h-3 sm:w-5 sm:h-4 rounded-full bg-[#fde7ae] opacity-95 shadow-sm" />
+                  <div className="absolute -top-2 right-1 sm:right-0 w-5 h-4 rounded-full bg-[#e0bed9] opacity-90 shadow-sm" />
+                  <div className="absolute top-8 -right-3 w-6 h-5 rounded-[50%_60%_40%_50%] bg-[#98d4dc] opacity-85 shadow-sm" />
+                  <div className="absolute -bottom-1 -right-2 w-5 h-5 rounded-full bg-[#38bdf8] opacity-90 shadow-sm" />
+                  <div className="absolute top-6 -left-3 w-4 h-5 rounded-[60%_40%_50%_50%] bg-[#afa4cc] opacity-85 shadow-sm" />
                 </div>
 
                 {/* Headshot Squircle */}
@@ -227,7 +221,7 @@ export function App() {
                 </div>
               </div>
 
-              {/* Title & Role Info (High Contrast Dark Slate) */}
+              {/* Title & Role Info (4th Image Fix: B2B line placed directly BELOW Co-Founder) */}
               <div className="space-y-1.5 text-left">
                 <div className="flex flex-wrap items-center gap-3">
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight">
@@ -238,9 +232,14 @@ export function App() {
                     Available for Outbound Roles
                   </span>
                 </div>
-                <p className="text-sm sm:text-base md:text-lg text-zinc-700 font-medium tracking-tight">
-                  Former Co-Founder @ StylSensei • B2B Cold Outbound & GTM Email Systems
-                </p>
+                <div className="space-y-0.5">
+                  <p className="text-sm sm:text-base font-bold text-zinc-800 tracking-tight">
+                    Former Co-Founder @ StylSensei
+                  </p>
+                  <p className="text-xs sm:text-sm font-mono text-zinc-600 font-medium">
+                    B2B Cold Outbound & GTM Email Systems
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -255,19 +254,26 @@ export function App() {
           <div className="w-full border-b border-zinc-900/15 pt-2" />
         </section>
 
-        {/* AUTHORITATIVE HUMAN COPY SECTION (IMAGE 3 SPEC) */}
-        <section className="space-y-6 max-w-4xl text-left">
-          <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-zinc-950 leading-snug tracking-tight">
-            Former Co-Founder at StylSensei. Managed 6,000+ warmed secondary mailboxes and 500k+ monthly dispatches, generating 7,090+ positive C-suite replies with a sub-3% bounce rate.
+        {/* CENTERED HEADLINE & REWRITTEN OPERATING COPY (IMAGE 2 & 3 FIX) */}
+        <section className="space-y-6 max-w-4xl mx-auto text-center py-2">
+          {/* Main Headline (Centered with Elevated Typography) */}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight leading-[1.18] max-w-4xl mx-auto">
+            I build and run cold email infrastructure that books qualified C-suite pipeline for high-ticket B2B agencies and SaaS companies.
+          </h2>
+
+          {/* Sub-Headline Copy (Rewritten cleanly mentioning Plusvibe, without "mailbox provisioning") */}
+          <p className="text-base sm:text-lg text-zinc-700 leading-relaxed font-normal max-w-3xl mx-auto">
+            Operating 1,000 to 20,000+ daily sends across dedicated secondary domain fleets with zero domain burn. Plusvibe outbound tooling, Instantly & Smartlead deliverability warmup, AI-verified lead scraping, human-first permission copy, and real-time GoHighLevel/HubSpot CRM triage.
           </p>
 
-          <div className="p-5 sm:p-6 rounded-2xl aws-glow-card text-base sm:text-lg text-zinc-800 leading-relaxed shadow-sm">
+          {/* Open-To Card (Soothing Pearl Frosted Tint) */}
+          <div className="p-4 sm:p-5 rounded-2xl aws-soft-card text-sm sm:text-base text-zinc-800 leading-relaxed max-w-2xl mx-auto shadow-xs">
             <span className="font-extrabold text-zinc-950">I'm open to: </span>
             full-time or contract <strong className="text-zinc-950 font-bold">B2B Outbound Specialist</strong> roles, dedicated secondary domain fleet builds, cold email deliverability auditing, and CRM lead triage workflows.
           </div>
 
-          {/* Contact Action CTAs (Email Kept on Headline) */}
-          <div className="flex flex-wrap items-center gap-3.5 pt-2">
+          {/* Centered Contact Action CTAs */}
+          <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
             <a
               href={`mailto:${profileData.email}`}
               className="px-6 py-3.5 rounded-full bg-zinc-950 text-white font-extrabold text-sm sm:text-base hover:bg-zinc-800 transition shadow-xl shadow-zinc-950/20 flex items-center gap-2.5 cursor-pointer interactive-button"
@@ -279,7 +285,7 @@ export function App() {
 
             <button
               onClick={(e) => handleCopyEmail(e)}
-              className="px-5 py-3.5 rounded-full aws-glow-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
+              className="px-5 py-3.5 rounded-full aws-soft-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
             >
               {copiedEmail ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-zinc-600" />}
               <span className="font-semibold">{copiedEmail ? 'Copied genesisauza9@gmail.com!' : 'Copy Email'}</span>
@@ -287,7 +293,7 @@ export function App() {
 
             <button
               onClick={() => setShowResumeModal(true)}
-              className="px-5 py-3.5 rounded-full aws-glow-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
+              className="px-5 py-3.5 rounded-full aws-soft-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
             >
               <Terminal className="w-4 h-4 text-emerald-600" />
               <span className="font-semibold">View Resume</span>
@@ -295,48 +301,7 @@ export function App() {
           </div>
         </section>
 
-        {/* TRUSTED BY OUR GROWING PARTNERS (IMAGE 2 SPEC - ANCHOR OF AUTHORITY) */}
-        <section className="rounded-3xl bg-[#04150e] border border-emerald-950/90 py-10 px-6 sm:px-10 text-center space-y-7 shadow-2xl shadow-emerald-950/20">
-          <span className="text-xs font-mono font-bold tracking-[0.25em] text-emerald-400 uppercase block">
-            TRUSTED BY OUR GROWING PARTNERS
-          </span>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 items-center justify-center">
-            {/* SIMPSON PHOTO */}
-            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center font-black text-xs sm:text-sm tracking-wider uppercase transition shadow-sm select-none aws-glow-card">
-              <span className="font-sans font-black">SIMPSON PHOTO</span>
-            </div>
-
-            {/* POWEROP */}
-            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-2 font-black text-xs sm:text-sm tracking-wider uppercase transition shadow-sm select-none aws-glow-card">
-              <svg className="w-5 h-5 fill-zinc-950" viewBox="0 0 24 24">
-                <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" />
-                <circle cx="12" cy="12" r="3.5" fill="#e2e7ec" />
-              </svg>
-              <span className="font-sans font-black">POWEROP</span>
-            </div>
-
-            {/* Practice Growth Co. */}
-            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-2 text-xs sm:text-sm tracking-tight transition shadow-sm select-none aws-glow-card">
-              <Activity className="w-4 h-4 text-zinc-950 stroke-[2.5]" />
-              <span className="font-serif font-bold text-zinc-950">Practice Growth Co.</span>
-            </div>
-
-            {/* RED GREEN DIGITAL */}
-            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex flex-col items-center justify-center text-xs tracking-wider transition shadow-sm select-none aws-glow-card">
-              <span className="font-black text-xs tracking-widest leading-none">RED·GREEN</span>
-              <span className="text-[10px] font-mono tracking-widest text-zinc-600 leading-none mt-0.5">DIGITAL</span>
-            </div>
-
-            {/* HOSTMETRIC */}
-            <div className="h-14 sm:h-16 px-4 rounded-xl bg-[#e2e7ec] hover:bg-white text-zinc-950 flex items-center justify-center gap-1.5 font-black text-xs sm:text-sm tracking-widest uppercase transition shadow-sm select-none aws-glow-card">
-              <Server className="w-4 h-4 text-zinc-950 stroke-[2.5]" />
-              <span className="font-mono font-black">HOSTMETRIC</span>
-            </div>
-          </div>
-        </section>
-
-        {/* 1. TECH STACKS SECTION (ABOVE PROOFS - 1-LINE MOVING MARQUEE ON INTERACTIVE CANVAS) */}
+        {/* 1. TECH STACKS SECTION (ABOVE PROOFS - 1-LINE MARQUEE WITH SOFTER PEARL TINT) */}
         <section id="stack" className="space-y-4 pt-4 border-t border-zinc-900/10">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
@@ -352,10 +317,10 @@ export function App() {
             </span>
           </div>
 
-          {/* 1-Line Infinite Marquee Moving Left */}
+          {/* 1-Line Infinite Marquee Moving Left (Image 5 fix: Soothing Pearl Tint) */}
           <div className="relative w-full overflow-hidden py-4">
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#faeef2]/90 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#faeef2]/90 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#faeef2]/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#faeef2]/80 to-transparent z-10 pointer-events-none" />
 
             <div className="animate-marquee flex items-center gap-4">
               {[...techStack, ...techStack].map((tool, idx) => {
@@ -363,7 +328,7 @@ export function App() {
                 return (
                   <div
                     key={idx}
-                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl aws-glow-card hover:bg-white text-zinc-950 shadow-md transition shrink-0 cursor-default"
+                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl aws-soft-card text-zinc-950 shadow-xs transition shrink-0 cursor-default"
                   >
                     <Icon className="w-6 h-6 text-zinc-900 shrink-0" />
                     <div className="text-left">
@@ -381,12 +346,12 @@ export function App() {
           </div>
         </section>
 
-        {/* 2. PROOFS & TELEMETRY SECTION (AWS 3-COLUMN ALIGNMENT WITH COLOR GLOWING ANIMATION) */}
-        <section id="work" className="space-y-12 pt-6 border-t border-zinc-900/10">
+        {/* 2. PROOFS & TELEMETRY SECTION (WORK & PROOFS - AWS 3-COLUMN ALIGNMENT WITH GREEN HOVER GLOW) */}
+        <section id="work" className="space-y-10 pt-4 border-t border-zinc-900/10">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
-                OUR WORK & PROOFS
+                WORK & PROOFS
               </span>
               <h2 className="text-3xl sm:text-5xl font-black text-zinc-950 tracking-tight">
                 Selected Work & Campaign Telemetry<span className="text-emerald-600">.</span>
@@ -397,9 +362,9 @@ export function App() {
             </p>
           </div>
 
-          {/* Top 4 Performance Numbers with AWS Glowing Halo */}
+          {/* Top 4 Performance Numbers (Image 5 Fix: Soothing Pearl Tint) */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="p-6 rounded-2xl aws-glow-card text-left">
+            <div className="p-6 rounded-2xl aws-soft-card text-left">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 MONTHLY SEND SCALE
               </span>
@@ -411,7 +376,7 @@ export function App() {
               </span>
             </div>
 
-            <div className="p-6 rounded-2xl aws-glow-card text-left">
+            <div className="p-6 rounded-2xl aws-soft-card text-left">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 POSITIVE REPLIES
               </span>
@@ -423,7 +388,7 @@ export function App() {
               </span>
             </div>
 
-            <div className="p-6 rounded-2xl aws-glow-card text-left">
+            <div className="p-6 rounded-2xl aws-soft-card text-left">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 RESPONSE RATE
               </span>
@@ -435,7 +400,7 @@ export function App() {
               </span>
             </div>
 
-            <div className="p-6 rounded-2xl aws-glow-card text-left">
+            <div className="p-6 rounded-2xl aws-soft-card text-left">
               <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 HARD BOUNCE SLA
               </span>
@@ -448,7 +413,7 @@ export function App() {
             </div>
           </div>
 
-          {/* AWS 3-COLUMN ALIGNED PROOF CARDS WITH VIBRANT COLOR GLOW */}
+          {/* AWS 3-COLUMN ALIGNED PROOF CARDS (GREEN HOVER & CRYSTAL CLEAR DESCRIPTION) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
             {projects.map((proj, idx) => (
               <div
@@ -467,7 +432,7 @@ export function App() {
 
                   {/* Floating Case Study Tag (Top-Left) */}
                   <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-mono font-bold text-zinc-900 border border-black/5 shadow-xs flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                     <span>Case Study</span>
                   </div>
 
@@ -477,26 +442,28 @@ export function App() {
                   </div>
                 </div>
 
-                {/* Bottom Content Area */}
+                {/* Bottom Content Area (Crystal clear typography on hover) */}
                 <div className="p-6 flex flex-col justify-between flex-1 space-y-4">
                   <div className="space-y-2.5">
                     <div className="flex items-center justify-between text-xs font-mono font-bold">
-                      <span className="text-emerald-700 bg-emerald-100/80 px-2.5 py-0.5 rounded-md">{proj.statValue}</span>
+                      <span className="text-emerald-700 bg-emerald-100/90 px-2.5 py-0.5 rounded-md">{proj.statValue}</span>
                       <span className="text-zinc-500 font-medium">{proj.tag}</span>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-black text-zinc-950 tracking-tight leading-snug group-hover:text-rose-600 transition">
+                    {/* Headline turns emerald GREEN on hover! */}
+                    <h3 className="text-lg sm:text-xl font-black text-zinc-950 tracking-tight leading-snug group-hover:text-emerald-600 transition duration-200">
                       {proj.title}
                     </h3>
 
-                    <p className="text-sm text-zinc-600 leading-relaxed line-clamp-3">
+                    {/* Description: high contrast and crystal clear on hover */}
+                    <p className="text-sm text-zinc-700 leading-relaxed font-normal line-clamp-3 group-hover:text-zinc-950 transition duration-200">
                       {proj.summary}
                     </p>
                   </div>
 
-                  {/* Interactive Bottom CTA Link */}
+                  {/* Interactive Bottom CTA Link (Turns emerald GREEN on hover) */}
                   <div className="pt-3 flex items-center justify-between border-t border-zinc-900/10 mt-auto">
-                    <div className="flex items-center gap-1.5 text-sm font-bold text-zinc-950 group-hover:text-rose-600 transition">
+                    <div className="flex items-center gap-1.5 text-sm font-bold text-zinc-950 group-hover:text-emerald-600 transition duration-200">
                       <span>Explore telemetry</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition duration-200" />
                     </div>
@@ -525,7 +492,7 @@ export function App() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 sm:p-7 rounded-2xl aws-glow-card space-y-4">
+            <div className="p-6 sm:p-7 rounded-2xl aws-soft-card space-y-4">
               <div className="w-12 h-12 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-800 shadow-xs">
                 <Globe className="w-6 h-6" />
               </div>
@@ -537,7 +504,7 @@ export function App() {
               </p>
             </div>
 
-            <div className="p-6 sm:p-7 rounded-2xl aws-glow-card space-y-4">
+            <div className="p-6 sm:p-7 rounded-2xl aws-soft-card space-y-4">
               <div className="w-12 h-12 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-800 shadow-xs">
                 <Send className="w-6 h-6" />
               </div>
@@ -549,7 +516,7 @@ export function App() {
               </p>
             </div>
 
-            <div className="p-6 sm:p-7 rounded-2xl aws-glow-card space-y-4">
+            <div className="p-6 sm:p-7 rounded-2xl aws-soft-card space-y-4">
               <div className="w-12 h-12 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-800 shadow-xs">
                 <Zap className="w-6 h-6" />
               </div>
@@ -582,9 +549,9 @@ export function App() {
             </button>
           </div>
 
-          {/* Polywork-style timeline items with AWS glow */}
+          {/* Polywork-style timeline items with soft pearl tint */}
           <div className="space-y-6">
-            <div className="p-6 rounded-2xl aws-glow-card space-y-2">
+            <div className="p-6 rounded-2xl aws-soft-card space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-emerald-800 font-bold">
                 <span>08/2024 – Present · 1 yr 4 mos</span>
                 <span className="text-zinc-500 font-medium">Full-Time</span>
@@ -597,7 +564,7 @@ export function App() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl aws-glow-card space-y-2">
+            <div className="p-6 rounded-2xl aws-soft-card space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>10/2023 – 08/2024 · 10 mos</span>
                 <span className="text-zinc-500 font-medium">Contract</span>
@@ -610,7 +577,7 @@ export function App() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl aws-glow-card space-y-2">
+            <div className="p-6 rounded-2xl aws-soft-card space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>08/2022 – 10/2023 · 1 yr 2 mos</span>
                 <span className="text-zinc-500 font-medium">Enterprise</span>
@@ -623,7 +590,7 @@ export function App() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl aws-glow-card space-y-2">
+            <div className="p-6 rounded-2xl aws-soft-card space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>08/2018 – 07/2022 · 4 yrs</span>
                 <span className="text-zinc-500 font-medium">Education</span>
