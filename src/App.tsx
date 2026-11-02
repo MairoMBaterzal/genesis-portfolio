@@ -223,10 +223,17 @@ export function App() {
 
               {/* Title & Role Info (B2B line directly BELOW Former Co-Founder) */}
               <div className="space-y-1.5 text-left">
-                <div className="flex flex-wrap items-center gap-3">
+                <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight">
                     Genesis Auza
                   </h1>
+                  {/* Official Blue Verified Badge Tick */}
+                  <span className="inline-flex items-center" title="Verified Outbound Specialist">
+                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#1d9bf0] shrink-0 drop-shadow-xs" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.33 2.33 4.99-4.99 1.42 1.42-6.41 6.4z" />
+                      <path d="M10.54 16.2L6.8 12.46l1.41-1.42 2.33 2.33 4.99-4.99 1.42 1.42-6.41 6.4z" fill="#ffffff" />
+                    </svg>
+                  </span>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/85 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-medium shadow-sm">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     Available for Outbound Roles
@@ -254,16 +261,33 @@ export function App() {
           <div className="w-full border-b border-zinc-900/15 pt-2" />
         </section>
 
-        {/* HEADLINE & SUBHEADLINE (EXACT REQUESTED COPY & CENTERED) */}
-        <section className="space-y-6 max-w-4xl mx-auto text-center py-2">
-          {/* Main Headline (Centered) */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight leading-[1.18] max-w-4xl mx-auto">
-            I build and manage modern outbound systems for high-ticket B2B agencies and SaaS companies.
+        {/* BESPOKE EDITORIAL HEADLINE & SUBHEADLINE */}
+        <section className="space-y-6 max-w-4xl mx-auto text-center py-4">
+          {/* Editorial Category Tracker */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ios-glass text-xs font-mono font-semibold text-zinc-700 shadow-xs mb-1">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>GTM OUTBOUND ARCHITECTURE · 2026</span>
+          </div>
+
+          {/* Elevated Editorial Headline with Instrument Serif & Gradient Highlights */}
+          <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-black text-zinc-950 tracking-tight leading-[1.14] max-w-4xl mx-auto">
+            I build and manage{' '}
+            <span className="font-serif italic font-normal text-4xl sm:text-6xl lg:text-[4.2rem] text-zinc-800 pr-1 inline-block">
+              modern
+            </span>{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-600">
+              outbound systems
+            </span>{' '}
+            for{' '}
+            <span className="font-serif italic font-normal text-4xl sm:text-6xl lg:text-[4.2rem] text-zinc-800 pr-1 inline-block">
+              high-ticket
+            </span>{' '}
+            B2B agencies & SaaS companies.
           </h2>
 
-          {/* Subheadline (Exact text requested) */}
-          <p className="text-base sm:text-lg text-zinc-700 leading-relaxed font-normal max-w-3xl mx-auto">
-            End-to-end outbound operations: secondary domain authentication, inbox deliverability management, enriched lead sourcing, and tested copy. Fully integrated with your CRM to deliver predictable deal flow on auto-pilot.
+          {/* Subheadline (Clean, punchy, editorial weight) */}
+          <p className="text-base sm:text-lg md:text-xl text-zinc-700 leading-relaxed font-normal max-w-3xl mx-auto pt-1">
+            <strong className="text-zinc-950 font-semibold">End-to-end outbound operations:</strong> secondary domain authentication, inbox deliverability management, enriched lead sourcing, and tested copy. Fully integrated with your CRM to deliver predictable deal flow on auto-pilot.
           </p>
 
           {/* Open-To Card (Apple iOS Transparent Frosted Glass) */}

@@ -3,6 +3,7 @@
 @layer base {
   :root {
     --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Instrument Serif', Georgia, serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   }
 
@@ -19,6 +20,10 @@
   pre,
   .font-mono {
     font-family: var(--font-mono);
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
   }
 }
 
