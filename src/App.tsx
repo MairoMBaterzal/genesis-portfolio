@@ -121,7 +121,7 @@ export function App() {
               className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-semibold tracking-wide transition shadow-md shadow-indigo-950 flex items-center gap-1.5 cursor-pointer"
             >
               <Mail className="w-3.5 h-3.5" />
-              <span>Hire Genesis</span>
+              <span>Hire me</span>
             </a>
           </div>
 
