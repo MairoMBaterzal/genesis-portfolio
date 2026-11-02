@@ -94,47 +94,50 @@ export function App() {
       </div>
 
       {/* Floating Top Navigation */}
-      <header className="sticky top-4 z-40 max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="rounded-full bg-[#212b44]/90 backdrop-blur-xl border border-white/12 px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-2xl shadow-black/40">
+      <header className="sticky top-4 z-40 max-w-5xl mx-auto px-3 sm:px-6">
+        <div className="rounded-full bg-[#212b44]/90 backdrop-blur-xl border border-white/12 px-4 sm:px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/40">
 
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-8 h-8 rounded-full overflow-hidden ring-1 ring-white/20 group-hover:ring-indigo-400 transition">
+          {/* Left: Avatar & Name & Status Pill (Separated & Enlarged) */}
+          <a href="#" className="flex items-center gap-3.5 sm:gap-4 group">
+            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden ring-2 ring-white/20 group-hover:ring-indigo-400 transition shadow-md shrink-0">
               <img
                 src={profileData.headshotUrl}
                 alt={profileData.name}
                 className="w-full h-full object-cover object-top"
               />
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-xs sm:text-sm font-bold text-white tracking-tight">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <span className="text-sm sm:text-base lg:text-lg font-bold text-white tracking-tight">
                 Genesis Auza
               </span>
-              <span className="hidden md:inline-flex items-center gap-1.5 text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="hidden md:inline-flex items-center gap-2 text-xs font-mono font-medium px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/25">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 Available for Outbound Roles
               </span>
             </div>
           </a>
 
-          <nav className="hidden sm:flex items-center gap-6 text-xs font-medium text-slate-300">
+          {/* Center: Main Nav Links (Slightly Bigger & Spaced Out) */}
+          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-200">
             <a href="#about" className="hover:text-white transition">About</a>
             <a href="#pillars" className="hover:text-white transition">The Engine</a>
             <a href="#proof" className="hover:text-white transition">Proof & Wins</a>
             <a href="#stack" className="hover:text-white transition">Stack</a>
           </nav>
 
-          <div className="flex items-center gap-2">
+          {/* Right: Actions (Slightly Bigger) */}
+          <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={() => setShowResumeModal(true)}
-              className="text-xs font-mono text-slate-400 hover:text-white transition px-2 py-1"
+              className="text-xs sm:text-sm font-mono text-slate-300 hover:text-white transition px-2.5 py-1.5"
             >
               Resume ↗
             </button>
             <a
               href={`mailto:${profileData.email}`}
-              className="px-3.5 py-1.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold tracking-wide transition shadow-md shadow-indigo-950 flex items-center gap-1.5"
+              className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-semibold tracking-wide transition shadow-md shadow-indigo-950 flex items-center gap-2"
             >
-              <Mail className="w-3.5 h-3.5" />
+              <Mail className="w-4 h-4" />
               <span>Hire Genesis</span>
             </a>
           </div>
