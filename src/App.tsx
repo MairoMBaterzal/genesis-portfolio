@@ -95,47 +95,27 @@ export function App() {
 
       {/* Floating Top Navigation */}
       <header className="sticky top-4 z-40 max-w-5xl mx-auto px-3 sm:px-6">
-        <div className="rounded-full bg-[#212b44]/90 backdrop-blur-xl border border-white/12 px-4 sm:px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/40">
+        <div className="rounded-full bg-[#212b44]/90 backdrop-blur-xl border border-white/12 px-5 sm:px-8 py-3 flex items-center justify-between shadow-2xl shadow-black/40">
 
-          {/* Left: Avatar & Name & Status Pill (Separated & Enlarged) */}
-          <a href="#" className="flex items-center gap-3.5 sm:gap-4 group">
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden ring-2 ring-white/20 group-hover:ring-indigo-400 transition shadow-md shrink-0">
-              <img
-                src={profileData.headshotUrl}
-                alt={profileData.name}
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div className="flex items-center gap-3 sm:gap-4">
-              <span className="text-sm sm:text-base lg:text-lg font-bold text-white tracking-tight">
-                Genesis Auza
-              </span>
-              <span className="hidden md:inline-flex items-center gap-2 text-xs font-mono font-medium px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/25">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                Available for Outbound Roles
-              </span>
-            </div>
-          </a>
-
-          {/* Center: Main Nav Links (Slightly Bigger & Spaced Out) */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-200">
+          {/* Navigation Links */}
+          <nav className="flex items-center gap-5 sm:gap-8 text-xs sm:text-sm font-medium text-slate-200">
             <a href="#about" className="hover:text-white transition">About</a>
             <a href="#pillars" className="hover:text-white transition">The Engine</a>
             <a href="#proof" className="hover:text-white transition">Proof & Wins</a>
             <a href="#stack" className="hover:text-white transition">Stack</a>
           </nav>
 
-          {/* Right: Actions (Slightly Bigger) */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          {/* Right Actions */}
+          <div className="flex items-center gap-3 sm:gap-4">
             <button
               onClick={() => setShowResumeModal(true)}
-              className="text-xs sm:text-sm font-mono text-slate-300 hover:text-white transition px-2.5 py-1.5"
+              className="text-xs sm:text-sm font-mono text-slate-300 hover:text-white transition px-2 py-1 cursor-pointer"
             >
               Resume ↗
             </button>
             <a
               href={`mailto:${profileData.email}`}
-              className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-semibold tracking-wide transition shadow-md shadow-indigo-950 flex items-center gap-2"
+              className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-semibold tracking-wide transition shadow-md shadow-indigo-950 flex items-center gap-2 cursor-pointer"
             >
               <Mail className="w-4 h-4" />
               <span>Hire Genesis</span>
@@ -146,14 +126,41 @@ export function App() {
       </header>
 
       {/* Main Content Container */}
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-20 space-y-20">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-20 space-y-20">
 
         {/* HERO SECTION */}
         <section className="space-y-8 text-center sm:text-left">
 
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-slate-300 text-xs font-mono">
-            <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
-            <span>B2B Cold Outbound · GTM Email Engines · AI-Verified Data</span>
+          {/* Profile Identity Bar (Genesis Auza + Picture + Available Badge) */}
+          <div className="flex flex-col sm:flex-row items-center sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-5 text-center sm:text-left">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden ring-4 ring-indigo-500/30 shadow-2xl shrink-0 bg-[#212b44]">
+                <img
+                  src={profileData.headshotUrl}
+                  alt={profileData.name}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="space-y-1.5">
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+                    Genesis Auza
+                  </h2>
+                  <span className="inline-flex items-center gap-2 text-xs font-mono font-medium px-3.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/25">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    Available for Outbound Roles
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-slate-300 font-mono">
+                  Co-Founder @ StylSensei · B2B Cold Outbound & GTM Email Specialist
+                </p>
+              </div>
+            </div>
+
+            <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-slate-300 text-xs font-mono">
+              <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+              <span>GTM Outbound Infrastructure</span>
+            </div>
           </div>
 
           <div className="space-y-4 max-w-3xl">
