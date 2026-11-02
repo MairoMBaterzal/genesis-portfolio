@@ -36,7 +36,7 @@ export interface ProfileData {
 export const profileData: ProfileData = {
   name: "Genesis L. Auza",
   title: "B2B Cold Outbound & GTM Email Specialist",
-  subtitle: "Co-Founder of StylSensei. I build and operate cold outbound infrastructure (6,000+ mailboxes, 645k+ emails sent) delivering qualified C-suite meetings with a 22.4% positive reply rate and 1% bounce rate.",
+  subtitle: "Co-Founder of StylSensei. I build and operate cold outbound infrastructure (6,000+ mailboxes, 500,000+ monthly sends) delivering qualified C-suite meetings with a 22.4% positive reply rate and 1% bounce rate.",
   location: "Remote (Philippines · US Eastern / Pacific Overlap)",
   email: "genesisauza9@gmail.com",
   phone: "+63 991 502 5407",
@@ -44,24 +44,24 @@ export const profileData: ProfileData = {
   headshotUrl: "/genesis-headshot.jpg",
   highlights: [
     {
-      label: "Total Emails Dispatched",
-      value: "645,355",
-      detail: "Verified Instantly/Smartlead client outbound fleet",
+      label: "Monthly Send Capacity",
+      value: "500,000+",
+      detail: "Verified Instantly/Smartlead secondary domain fleet",
     },
     {
-      label: "Positive Replies Generated",
+      label: "Active Mailbox Fleet",
+      value: "6,000+",
+      detail: "Secondary inboxes warmed & rotated across isolated DNS pools",
+    },
+    {
+      label: "Positive Replies (Cluster)",
       value: "7,090",
-      detail: "22.4% positive response rate from B2B decision-makers",
-    },
-    {
-      label: "Total Replies Handled",
-      value: "31,652",
-      detail: "4.9% reply rate across 451k+ leads contacted",
+      detail: "22.4% positive response rate in verified campaign batch",
     },
     {
       label: "Verified Bounce Rate",
       value: "1.0%",
-      detail: "Strict sub-5% SLA held across 6,000+ secondary mailboxes",
+      detail: "Strict sub-5% SLA held across all client dispatches",
     },
   ],
   education: {

@@ -38,9 +38,9 @@ export function App() {
 
   const proofAssets = [
     {
-      title: "645,355 Sends · 7,090 Positive Replies",
-      badge: "VERIFIED SENDING FLEET",
-      caption: "Live Instantly campaign metrics across 451,749 leads: 22.4% positive reply rate and 1.0% bounce rate with 0% unsubscribe rate.",
+      title: "Single Campaign Cluster: 645,355 Dispatches · 7,090 Positive Replies",
+      badge: "CAMPAIGN CLUSTER SNAPSHOT",
+      caption: "Live Instantly campaign metrics across 451,749 leads: 22.4% positive reply rate (7,090 positive leads) and a 1.0% bounce rate. Sequences prioritized high-converting Step 1 permission asks with automatic reply-stops preserving domain reputation.",
       url: "/proof/instantly-645k-stats.png"
     },
     {
@@ -116,10 +116,10 @@ export function App() {
           </a>
 
           <nav className="hidden sm:flex items-center gap-6 text-xs font-medium text-slate-300">
-            <a href="#pillars" className="hover:text-white transition">The Engine</a>
-            <a href="#proof" className="hover:text-white transition">Proof & Assets</a>
-            <a href="#stack" className="hover:text-white transition">Stack</a>
             <a href="#about" className="hover:text-white transition">About</a>
+            <a href="#pillars" className="hover:text-white transition">The Engine</a>
+            <a href="#proof" className="hover:text-white transition">Proof & Wins</a>
+            <a href="#stack" className="hover:text-white transition">Stack</a>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -142,7 +142,7 @@ export function App() {
       </header>
 
       {/* Main Content Container */}
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-20 space-y-24">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-20 space-y-20">
 
         {/* HERO SECTION */}
         <section className="space-y-8 text-center sm:text-left">
@@ -162,8 +162,31 @@ export function App() {
             </p>
           </div>
 
+          {/* Specialized Niche Bar */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#12151E] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
+            <div className="space-y-1">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-indigo-400 font-semibold block">
+                SPECIALIZED NICHE & VERTICAL FOCUS
+              </span>
+              <p className="text-sm font-semibold text-white">
+                High-Ticket B2B & Agency Cold Outbound Infrastructure
+              </p>
+              <p className="text-xs text-slate-400 font-light">
+                Zero-burn secondary domain fleets · Signal-based list enrichment · Sub-15 min CRM reply triage for B2B Agencies, SaaS, and High-Ticket Services.
+              </p>
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300">
+                Instantly / Smartlead
+              </span>
+              <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300">
+                GoHighLevel / HubSpot
+              </span>
+            </div>
+          </div>
+
           {/* Quick CTA Actions */}
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-2">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-1">
             <a
               href={`mailto:${profileData.email}`}
               className="px-5 py-2.5 rounded-xl bg-white text-slate-950 font-semibold text-xs tracking-wide hover:bg-slate-200 transition shadow-lg shadow-white/5 flex items-center gap-2"
@@ -191,23 +214,47 @@ export function App() {
           </div>
 
           {/* Stat Bento Grid (Mobbin-style metric cards) */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 pt-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 pt-2">
 
-            <div className="glow-card p-5 rounded-2xl">
+            <div className="glow-card p-5 rounded-2xl text-left">
               <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
-                TOTAL EMAILS SENT
+                MONTHLY SEND SCALE
               </span>
               <div className="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">
-                645,355
+                500,000+
               </div>
               <span className="text-xs text-indigo-300 mt-1 block font-light">
-                451k+ verified leads reached
+                Emails dispatched monthly
               </span>
             </div>
 
-            <div className="glow-card p-5 rounded-2xl">
+            <div className="glow-card p-5 rounded-2xl text-left">
               <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
-                POSITIVE REPLIES
+                ACTIVE INBOX FLEET
+              </span>
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">
+                6,000+
+              </div>
+              <span className="text-xs text-indigo-300 mt-1 block font-light">
+                Secondary inboxes warmed
+              </span>
+            </div>
+
+            <div className="glow-card p-5 rounded-2xl text-left">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
+                HARD BOUNCE RATE
+              </span>
+              <div className="text-2xl sm:text-3xl font-bold font-mono text-emerald-400 tracking-tight">
+                1.0%
+              </div>
+              <span className="text-xs text-slate-400 mt-1 block font-light">
+                Strict sub-5% deliverability SLA
+              </span>
+            </div>
+
+            <div className="glow-card p-5 rounded-2xl text-left">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
+                CAMPAIGN SNAPSHOT
               </span>
               <div className="text-2xl sm:text-3xl font-bold font-mono text-indigo-300 tracking-tight">
                 7,090
@@ -217,37 +264,41 @@ export function App() {
               </span>
             </div>
 
-            <div className="glow-card p-5 rounded-2xl">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
-                HARD BOUNCE RATE
-              </span>
-              <div className="text-2xl sm:text-3xl font-bold font-mono text-emerald-400 tracking-tight">
-                1.0%
-              </div>
-              <span className="text-xs text-slate-400 mt-1 block font-light">
-                6,454 / 645k dispatches
-              </span>
-            </div>
-
-            <div className="glow-card p-5 rounded-2xl">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
-                SECONDARY MAILBOXES
-              </span>
-              <div className="text-2xl sm:text-3xl font-bold font-mono text-white tracking-tight">
-                6,000+
-              </div>
-              <span className="text-xs text-indigo-300 mt-1 block font-light">
-                Warmed & rotated pools
-              </span>
-            </div>
-
           </div>
 
         </section>
 
+        {/* SECTION 1: ABOUT GENESIS & TECHNICAL PEDIGREE (Elevated Above) */}
+        <section id="about" className="glow-card rounded-2xl p-6 sm:p-8 space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-white/10 pb-3">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-indigo-400" />
+              <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400">
+                ABOUT GENESIS · TECHNICAL RIGOR & BACKGROUND
+              </span>
+            </div>
+            <span className="text-xs font-mono text-slate-400">
+              Enterprise Data Analytics ➔ Outbound Engineering
+            </span>
+          </div>
+
+          <div className="max-w-4xl space-y-3.5 text-sm sm:text-base text-slate-300 font-light leading-relaxed">
+            <p>
+              I studied <strong className="text-white font-medium">Business & Data Analytics</strong> at Bulacan State University and was selected as a <strong className="text-white font-medium">Data Associate Scholar</strong> by Project Sparta (Development Academy of the Philippines).
+            </p>
+
+            <p>
+              I spent years working with enterprise databases and analytics pipelines at <strong className="text-white font-medium">IQVIA</strong> on HUE Impala and MySQL—earning two consecutive <strong className="text-white font-medium">Impact Award nominations (Q4 & Q5)</strong> for workflow optimization and stakeholder enablement.
+            </p>
+
+            <p>
+              Today, I channel that technical rigor into building and scaling outbound B2B email engines (managing <strong className="text-white font-medium">6,000+ secondary mailboxes</strong> and <strong className="text-white font-medium">500k+ monthly dispatches</strong> at <strong className="text-white font-medium">StylSensei</strong>). I make sure the domain infrastructure, scrapers, and copy work in unison so your sales team opens their calendars to qualified decision-makers.
+            </p>
+          </div>
+        </section>
+
         {/* SECTION 2: THE 4 OUTBOUND PILLARS (Interactive Bento Tabs) */}
         <section id="pillars" className="space-y-6">
-
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
             <div>
               <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 block mb-1">
@@ -676,28 +727,6 @@ export function App() {
 
         </section>
 
-        {/* SECTION 5: ABOUT GENESIS */}
-        <section id="about" className="space-y-6 pt-6 border-t border-white/10">
-
-          <span className="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400 block">
-            ABOUT GENESIS
-          </span>
-
-          <div className="max-w-3xl space-y-4 text-sm sm:text-base text-slate-300 font-light leading-relaxed">
-            <p>
-              I studied <strong className="text-white font-medium">Business & Data Analytics</strong> at Bulacan State University and was selected as a <strong className="text-white font-medium">Data Associate Scholar</strong> by Project Sparta (Development Academy of the Philippines).
-            </p>
-
-            <p>
-              I spent years working with enterprise databases and analytics pipelines at <strong className="text-white font-medium">IQVIA</strong> on HUE Impala and MySQL—earning two consecutive <strong className="text-white font-medium">Impact Award nominations (Q4 & Q5)</strong> for workflow optimization and stakeholder enablement.
-            </p>
-
-            <p>
-              Today, I channel that technical rigor into building and scaling outbound B2B email engines (managing 6,000+ mailboxes and 500k monthly volume at <strong className="text-white font-medium">StylSensei</strong>). I make sure the domain infrastructure, scrapers, and copy work in unison so your sales team opens their calendars to qualified decision-makers.
-            </p>
-          </div>
-
-        </section>
 
         {/* SECTION 6: CLOSING CTA */}
         <section className="glow-card rounded-3xl p-8 sm:p-12 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8">
