@@ -8,8 +8,6 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: #08090c;
-    color: #e2e8f0;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,21 +21,52 @@
   }
 }
 
-/* Linear & Cursor style surface cards */
-.surface-card {
-  position: relative;
-  background-color: #0e1117;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+/* Biosites Dreamy Pastel Mesh Gradient Canvas */
+.biosites-canvas {
+  background-color: #f7eef0;
+  background-image: 
+    radial-gradient(at 0% 0%, #e3c1d1 0px, transparent 55%),
+    radial-gradient(at 50% 0%, #fee7b1 0px, transparent 50%),
+    radial-gradient(at 100% 0%, #c7d1dd 0px, transparent 55%),
+    radial-gradient(at 0% 45%, #e7c6c1 0px, transparent 50%),
+    radial-gradient(at 0% 85%, #fbd975 0px, transparent 55%),
+    radial-gradient(at 100% 85%, #e9dccc 0px, transparent 50%),
+    radial-gradient(at 50% 50%, #fdf2f4 0px, transparent 65%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
-.surface-card:hover {
-  border-color: rgba(255, 255, 255, 0.16);
-  background-color: #12151d;
+/* Subtle Organic Noise Texture */
+.bg-subtle-noise {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
 }
 
-/* Infinite Marquee moving to the left */
+/* Biosites Frosted Glass Surface Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px -5px rgba(40, 20, 60, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 15px 35px -5px rgba(40, 20, 60, 0.1), 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* High-Contrast Obsidian Glass (for Navbar & Accent Cards) */
+.obsidian-card {
+  background: rgba(13, 14, 18, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.35);
+}
+
+/* Infinite Marquee moving smoothly to the left */
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -64,14 +93,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #08090c;
+  background: #f7eef0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #cbd5e1;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #94a3b8;
 }

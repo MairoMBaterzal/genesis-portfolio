@@ -46,14 +46,14 @@ export function App() {
     { name: "Instantly.ai", role: "Sending & Warmup", icon: Send, color: "text-blue-500" },
     { name: "Smartlead", role: "Fleet Engine", icon: Radio, color: "text-indigo-500" },
     { name: "HubSpot CRM", role: "Pipeline & Deals", icon: Layers, color: "text-orange-500" },
-    { name: "GoHighLevel", role: "CRM Automations", icon: Workflow, color: "text-emerald-500" },
-    { name: "Apollo.io", role: "B2B Lead Data", icon: Search, color: "text-cyan-500" },
-    { name: "Clay.com", role: "Enrichment", icon: Database, color: "text-purple-500" },
-    { name: "MillionVerifier", role: "Deliverability", icon: ShieldCheck, color: "text-green-500" },
+    { name: "GoHighLevel", role: "CRM Automations", icon: Workflow, color: "text-emerald-600" },
+    { name: "Apollo.io", role: "B2B Lead Data", icon: Search, color: "text-cyan-600" },
+    { name: "Clay.com", role: "Enrichment", icon: Database, color: "text-purple-600" },
+    { name: "MillionVerifier", role: "Deliverability", icon: ShieldCheck, color: "text-green-600" },
     { name: "Cloudflare DNS", role: "SPF / DKIM / DMARC", icon: Globe, color: "text-amber-600" },
-    { name: "n8n Workflow", role: "Logic Automations", icon: Cpu, color: "text-pink-500" },
-    { name: "Python & SQL", role: "Data Scraping", icon: Terminal, color: "text-yellow-500" },
-    { name: "OpenAI Whisper", role: "Voice Transcribe", icon: Sparkles, color: "text-teal-400" }
+    { name: "n8n Workflow", role: "Logic Automations", icon: Cpu, color: "text-pink-600" },
+    { name: "Python & SQL", role: "Data Scraping", icon: Terminal, color: "text-yellow-600" },
+    { name: "OpenAI Whisper", role: "Voice Transcribe", icon: Sparkles, color: "text-teal-600" }
   ];
 
   // OFF+BRAND & Linear style Case Studies / Our Work
@@ -111,15 +111,15 @@ export function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#07080b] text-[#EDEDED] font-sans selection:bg-white selection:text-black relative">
+    <div className="min-h-screen biosites-canvas bg-subtle-noise text-zinc-900 font-sans selection:bg-zinc-900 selection:text-white relative">
 
-      {/* FLOATING NAVBAR PILL (IMAGE 1 SPEC) */}
-      <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 sm:gap-6 px-5 sm:px-7 py-2.5 rounded-full bg-[#0d0e12]/90 backdrop-blur-xl border border-white/10 shadow-2xl text-xs sm:text-sm font-medium text-zinc-300">
+      {/* FLOATING NAVBAR PILL (IMAGE 1 SPEC - OBSIDIAN GLASS) */}
+      <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 sm:gap-6 px-5 sm:px-7 py-2.5 rounded-full obsidian-card text-xs sm:text-sm font-medium text-zinc-200">
         <a href="#work" className="hover:text-white transition">Proof & Wins</a>
         <a href="#stack" className="hover:text-white transition">Stack</a>
         <a href="#engine" className="hover:text-white transition">The Engine</a>
         <a href="#about" className="hover:text-white transition">About</a>
-        <span className="text-zinc-700 select-none">|</span>
+        <span className="text-zinc-600 select-none">|</span>
         <button
           onClick={() => setShowResumeModal(true)}
           className="hover:text-white transition flex items-center gap-1 cursor-pointer"
@@ -128,100 +128,124 @@ export function App() {
         </button>
         <a
           href={`mailto:${profileData.email}`}
-          className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white text-black font-bold text-xs sm:text-sm hover:bg-zinc-200 transition shadow-md cursor-pointer ml-1"
+          className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white text-zinc-950 font-bold text-xs sm:text-sm hover:bg-zinc-200 transition shadow-md cursor-pointer ml-1"
         >
-          <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black" />
+          <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-950" />
           <span>Let's talk</span>
         </a>
       </nav>
 
       {/* Main Container */}
-      <main className="max-w-6xl mx-auto px-6 sm:px-12 pt-28 sm:pt-32 pb-32 space-y-20">
+      <main className="max-w-6xl mx-auto px-6 sm:px-12 pt-28 sm:pt-36 pb-32 space-y-20">
 
-        {/* HERO HEADER ROW (IMAGE 1 SPEC) */}
+        {/* HERO HEADER ROW (IMAGE 1 SPEC WITH BIOSITES ORGANIC AURA) */}
         <section className="space-y-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            <div className="flex items-center gap-4 sm:gap-6">
-              {/* Profile Avatar Squircle */}
-              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-zinc-900 shrink-0">
-                <img
-                  src={profileData.headshotUrl}
-                  alt={profileData.name}
-                  className="w-full h-full object-cover object-top"
-                />
+            <div className="flex items-center gap-5 sm:gap-7">
+
+              {/* Profile Avatar with Biosites Organic Floating Aura Behind It */}
+              <div className="relative shrink-0">
+                {/* Organic Biosites Floating Fluid Blobs & Pebbles */}
+                <div className="absolute -inset-4 sm:-inset-5 pointer-events-none select-none -z-10">
+                  {/* Large Primary Fluid Drop (Blue to Violet to Pink Gradient) */}
+                  <div
+                    className="absolute -bottom-2 -left-3 w-28 h-20 sm:w-32 sm:h-24 rounded-[45%_55%_65%_35%] bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f472b6] opacity-80 blur-[2px] transform -rotate-12"
+                  />
+                  {/* Floating Pebble 1: Coral Peach (Top-Left) */}
+                  <div className="absolute -top-3 left-2 w-5 h-4 sm:w-6 sm:h-5 rounded-full bg-[#fccaa7] opacity-90 shadow-sm" />
+                  {/* Floating Pebble 2: Butter Yellow (Top-Center) */}
+                  <div className="absolute -top-4 left-10 sm:left-12 w-4 h-3 sm:w-5 sm:h-4 rounded-full bg-[#fde7ae] opacity-95 shadow-sm" />
+                  {/* Floating Pebble 3: Orchid Pink (Top-Right) */}
+                  <div className="absolute -top-2 right-1 sm:right-0 w-5 h-4 rounded-full bg-[#e0bed9] opacity-90 shadow-sm" />
+                  {/* Floating Pebble 4: Mint Cyan (Right) */}
+                  <div className="absolute top-8 -right-3 w-6 h-5 rounded-[50%_60%_40%_50%] bg-[#98d4dc] opacity-85 shadow-sm" />
+                  {/* Floating Pebble 5: Electric Sky Blue (Bottom-Right) */}
+                  <div className="absolute -bottom-1 -right-2 w-5 h-5 rounded-full bg-[#38bdf8] opacity-90 shadow-sm" />
+                  {/* Floating Pebble 6: Lavender (Mid-Left) */}
+                  <div className="absolute top-6 -left-3 w-4 h-5 rounded-[60%_40%_50%_50%] bg-[#afa4cc] opacity-85 shadow-sm" />
+                </div>
+
+                {/* Headshot Squircle */}
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-white/90 shadow-2xl bg-zinc-900 relative z-10">
+                  <img
+                    src={profileData.headshotUrl}
+                    alt={profileData.name}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
               </div>
 
-              {/* Title & Role Info */}
+              {/* Title & Role Info (High Contrast Dark Slate) */}
               <div className="space-y-1.5 text-left">
                 <div className="flex flex-wrap items-center gap-3">
-                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+                  <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight">
                     Genesis Auza
                   </h1>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-medium">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/85 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-medium shadow-sm">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                     Available for Outbound Roles
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm md:text-base text-zinc-400 font-medium">
+                <p className="text-sm sm:text-base md:text-lg text-zinc-700 font-medium tracking-tight">
                   Former Co-Founder @ StylSensei • B2B Cold Outbound & GTM Email Systems
                 </p>
               </div>
             </div>
 
             {/* Right Side Pill Badge */}
-            <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900/80 border border-white/10 text-zinc-300 text-xs sm:text-sm font-mono shrink-0 shadow-sm">
-              <Sparkles className="w-4 h-4 text-zinc-400" />
+            <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl obsidian-card text-zinc-200 text-xs sm:text-sm font-mono shrink-0 shadow-md">
+              <Sparkles className="w-4 h-4 text-emerald-400" />
               <span>GTM Outbound Infrastructure</span>
             </div>
           </div>
 
           {/* Clean Horizontal Divider */}
-          <div className="w-full border-b border-zinc-800/80 pt-2" />
+          <div className="w-full border-b border-zinc-900/15 pt-2" />
         </section>
 
         {/* AUTHORITATIVE HUMAN COPY SECTION (IMAGE 3 SPEC) */}
         <section className="space-y-6 max-w-4xl text-left">
-          <p className="text-xl sm:text-2xl md:text-3xl font-medium sm:font-semibold text-zinc-100 leading-snug tracking-tight">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-zinc-950 leading-snug tracking-tight">
             Former Co-Founder at StylSensei. Managed 6,000+ warmed secondary mailboxes and 500k+ monthly dispatches, generating 7,090+ positive C-suite replies with a sub-3% bounce rate.
           </p>
 
-          <div className="p-4 sm:p-5 rounded-2xl bg-zinc-900/60 border border-white/[0.08] text-sm sm:text-base text-zinc-300 leading-relaxed">
-            <span className="font-bold text-white">I'm open to: </span>
-            full-time or contract <strong className="text-white">B2B Outbound Specialist</strong> roles, dedicated secondary domain fleet builds, cold email deliverability auditing, and CRM lead triage workflows.
+          <div className="p-5 sm:p-6 rounded-2xl glass-card text-base sm:text-lg text-zinc-800 leading-relaxed shadow-sm">
+            <span className="font-extrabold text-zinc-950">I'm open to: </span>
+            full-time or contract <strong className="text-zinc-950 font-bold">B2B Outbound Specialist</strong> roles, dedicated secondary domain fleet builds, cold email deliverability auditing, and CRM lead triage workflows.
           </div>
 
           {/* Contact Action CTAs (Email Kept on Headline) */}
           <div className="flex flex-wrap items-center gap-3.5 pt-2">
             <a
               href={`mailto:${profileData.email}`}
-              className="px-6 py-3.5 rounded-full bg-white text-black font-extrabold text-sm hover:bg-zinc-200 transition shadow-xl shadow-white/10 flex items-center gap-2.5 cursor-pointer"
+              className="px-6 py-3.5 rounded-full bg-zinc-950 text-white font-extrabold text-sm sm:text-base hover:bg-zinc-800 transition shadow-xl shadow-zinc-950/20 flex items-center gap-2.5 cursor-pointer"
             >
-              <Mail className="w-4 h-4 text-black" />
+              <Mail className="w-4 h-4 text-white" />
               <span>Email: {profileData.email}</span>
-              <ArrowRight className="w-4 h-4 text-black" />
+              <ArrowRight className="w-4 h-4 text-white" />
             </a>
 
             <button
               onClick={handleCopyEmail}
-              className="px-5 py-3.5 rounded-full bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-200 font-mono text-sm transition flex items-center gap-2 cursor-pointer"
+              className="px-5 py-3.5 rounded-full glass-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm"
             >
-              {copiedEmail ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-zinc-400" />}
-              <span>{copiedEmail ? 'Copied genesisauza9@gmail.com' : 'Copy Email'}</span>
+              {copiedEmail ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-zinc-600" />}
+              <span className="font-semibold">{copiedEmail ? 'Copied genesisauza9@gmail.com' : 'Copy Email'}</span>
             </button>
 
             <button
               onClick={() => setShowResumeModal(true)}
-              className="px-5 py-3.5 rounded-full bg-transparent hover:bg-zinc-900 border border-zinc-700 text-zinc-300 hover:text-white font-mono text-sm transition flex items-center gap-2 cursor-pointer"
+              className="px-5 py-3.5 rounded-full glass-card hover:bg-white text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm"
             >
-              <Terminal className="w-4 h-4 text-emerald-400" />
-              <span>View Resume</span>
+              <Terminal className="w-4 h-4 text-emerald-600" />
+              <span className="font-semibold">View Resume</span>
             </button>
           </div>
         </section>
 
-        {/* TRUSTED BY OUR GROWING PARTNERS (IMAGE 2 SPEC) */}
-        <section className="rounded-3xl bg-[#04150e] border border-emerald-950/80 py-8 px-6 sm:px-10 text-center space-y-6">
-          <span className="text-xs font-mono font-bold tracking-[0.25em] text-emerald-400/90 uppercase block">
+        {/* TRUSTED BY OUR GROWING PARTNERS (IMAGE 2 SPEC - ANCHOR OF AUTHORITY) */}
+        <section className="rounded-3xl bg-[#04150e] border border-emerald-950/90 py-10 px-6 sm:px-10 text-center space-y-7 shadow-2xl shadow-emerald-950/20">
+          <span className="text-xs font-mono font-bold tracking-[0.25em] text-emerald-400 uppercase block">
             TRUSTED BY OUR GROWING PARTNERS
           </span>
 
@@ -260,26 +284,26 @@ export function App() {
           </div>
         </section>
 
-        {/* 1. TECH STACKS SECTION (ABOVE WORK - 1-LINE MOVING MARQUEE WITH LARGE READABLE LOGOS) */}
-        <section id="stack" className="space-y-4 pt-4 border-t border-white/[0.08]">
+        {/* 1. TECH STACKS SECTION (ABOVE PROOFS - 1-LINE MOVING MARQUEE ON BIOSITES CANVAS) */}
+        <section id="stack" className="space-y-4 pt-4 border-t border-zinc-900/10">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 block mb-1">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
                 PRODUCTION TOOLING
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-zinc-950 tracking-tight">
                 Operating Engines & Tech Stack
               </h2>
             </div>
-            <span className="text-xs font-mono text-zinc-400 font-medium">
+            <span className="text-xs font-mono text-zinc-700 font-semibold">
               1-Line Continuous Fleet Engine · 500k+ Monthly Dispatches
             </span>
           </div>
 
           {/* 1-Line Infinite Marquee Moving Left */}
           <div className="relative w-full overflow-hidden py-4">
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#07080b] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#07080b] to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#f7eef0] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#e9dccc] to-transparent z-10 pointer-events-none" />
 
             <div className="animate-marquee flex items-center gap-4">
               {[...techStack, ...techStack].map((tool, idx) => {
@@ -287,7 +311,7 @@ export function App() {
                 return (
                   <div
                     key={idx}
-                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl bg-[#e4e9f0] hover:bg-white text-zinc-950 shadow-md transition shrink-0 cursor-default"
+                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl glass-card hover:bg-white text-zinc-950 shadow-md transition shrink-0 cursor-default"
                   >
                     <Icon className="w-6 h-6 text-zinc-900 shrink-0" />
                     <div className="text-left">
@@ -305,68 +329,68 @@ export function App() {
           </div>
         </section>
 
-        {/* 2. PROOFS & TELEMETRY SECTION (OFF+BRAND & LINEAR SHOWCASE) */}
-        <section id="work" className="space-y-12 pt-6 border-t border-white/[0.08]">
+        {/* 2. PROOFS & TELEMETRY SECTION (OFF+BRAND & LINEAR CARDS) */}
+        <section id="work" className="space-y-12 pt-6 border-t border-zinc-900/10">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 block mb-1">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
                 OUR WORK & PROOFS
               </span>
-              <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-                Selected Work & Campaign Telemetry<span className="text-emerald-400">.</span>
+              <h2 className="text-3xl sm:text-5xl font-black text-zinc-950 tracking-tight">
+                Selected Work & Campaign Telemetry<span className="text-emerald-600">.</span>
               </h2>
             </div>
-            <p className="text-sm font-mono text-zinc-400">
+            <p className="text-sm font-mono text-zinc-700 font-medium">
               Verified client campaign data & meeting deliveries
             </p>
           </div>
 
           {/* Top 4 Performance Numbers */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="p-6 rounded-2xl bg-zinc-900/60 border border-white/[0.08] text-left">
-              <span className="text-xs font-mono uppercase tracking-wider text-zinc-400 block mb-1 font-semibold">
+            <div className="p-6 rounded-2xl glass-card text-left">
+              <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 MONTHLY SEND SCALE
               </span>
-              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-white tracking-tight">
+              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-zinc-950 tracking-tight">
                 500K+
               </div>
-              <span className="text-xs sm:text-sm text-zinc-400 mt-2 block">
+              <span className="text-xs sm:text-sm text-zinc-600 mt-2 block font-medium">
                 Dispatched monthly with 0 domain burn
               </span>
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-900/60 border border-white/[0.08] text-left">
-              <span className="text-xs font-mono uppercase tracking-wider text-zinc-400 block mb-1 font-semibold">
+            <div className="p-6 rounded-2xl glass-card text-left">
+              <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 POSITIVE REPLIES
               </span>
-              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-emerald-400 tracking-tight">
+              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-emerald-600 tracking-tight">
                 7,090+
               </div>
-              <span className="text-xs sm:text-sm text-zinc-400 mt-2 block font-mono">
+              <span className="text-xs sm:text-sm text-zinc-600 mt-2 block font-mono font-medium">
                 Single cluster positive response
               </span>
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-900/60 border border-white/[0.08] text-left">
-              <span className="text-xs font-mono uppercase tracking-wider text-zinc-400 block mb-1 font-semibold">
+            <div className="p-6 rounded-2xl glass-card text-left">
+              <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 RESPONSE RATE
               </span>
-              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-white tracking-tight">
+              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-zinc-950 tracking-tight">
                 22.4%
               </div>
-              <span className="text-xs sm:text-sm text-zinc-400 mt-2 block">
+              <span className="text-xs sm:text-sm text-zinc-600 mt-2 block font-medium">
                 Across 451,749 targeted B2B leads
               </span>
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-900/60 border border-white/[0.08] text-left">
-              <span className="text-xs font-mono uppercase tracking-wider text-zinc-400 block mb-1 font-semibold">
+            <div className="p-6 rounded-2xl glass-card text-left">
+              <span className="text-xs font-mono uppercase tracking-wider text-zinc-600 block mb-1 font-bold">
                 HARD BOUNCE SLA
               </span>
-              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-emerald-400 tracking-tight">
+              <div className="text-4xl sm:text-5xl font-extrabold font-mono text-emerald-600 tracking-tight">
                 &lt; 3.0%
               </div>
-              <span className="text-xs sm:text-sm text-zinc-400 mt-2 block">
+              <span className="text-xs sm:text-sm text-zinc-600 mt-2 block font-medium">
                 Strict deliverability preservation
               </span>
             </div>
@@ -378,16 +402,16 @@ export function App() {
               <div
                 key={idx}
                 onClick={() => setActiveLightbox({ url: proj.image, title: proj.title, caption: proj.summary })}
-                className="group cursor-pointer rounded-3xl overflow-hidden bg-zinc-900/40 border border-white/[0.08] hover:border-white/20 transition duration-300"
+                className="group cursor-pointer rounded-3xl overflow-hidden glass-card hover:shadow-2xl transition duration-300"
               >
-                {/* Visual Showcase (Big cinematic preview) */}
+                {/* Visual Showcase (Big cinematic preview with dark backdrop) */}
                 <div className="aspect-[16/9] sm:aspect-[21/9] bg-black overflow-hidden relative">
                   <img
                     src={proj.image}
                     alt={proj.title}
                     className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-50 group-hover:opacity-30 transition" />
                   
                   {/* Top inspect pill */}
                   <div className="absolute top-4 right-4 px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-xs font-mono text-white">
@@ -397,34 +421,34 @@ export function App() {
 
                 {/* Metadata Bar */}
                 <div className="p-6 sm:p-8 space-y-4 text-left">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/[0.08]">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-zinc-900/10">
                     <div className="space-y-1">
-                      <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest font-bold">
+                      <span className="text-xs font-mono text-emerald-700 uppercase tracking-widest font-black">
                         {proj.client}
                       </span>
-                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight group-hover:text-emerald-400 transition">
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-zinc-950 tracking-tight group-hover:text-emerald-700 transition">
                         {proj.title}
                       </h3>
                     </div>
 
                     <div className="text-left sm:text-right shrink-0">
-                      <div className="text-2xl font-bold font-mono text-white">
+                      <div className="text-2xl font-black font-mono text-zinc-950">
                         {proj.statValue}
                       </div>
-                      <div className="text-xs font-mono text-zinc-400">
+                      <div className="text-xs font-mono text-zinc-600 font-semibold">
                         {proj.statLabel}
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed">
+                  <p className="text-base sm:text-lg text-zinc-700 font-normal leading-relaxed">
                     {proj.summary}
                   </p>
 
                   {/* Dot/triangle/asterisk tags */}
-                  <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono text-zinc-400">
+                  <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono">
                     {proj.tags.map((tag, tIdx) => (
-                      <span key={tIdx} className="px-3 py-1 rounded-full bg-zinc-800/80 border border-zinc-700/60 text-zinc-300">
+                      <span key={tIdx} className="px-3.5 py-1.5 rounded-full bg-white/90 border border-zinc-200 text-zinc-800 font-semibold shadow-xs">
                         {tag}
                       </span>
                     ))}
@@ -436,54 +460,54 @@ export function App() {
         </section>
 
         {/* 3. THE ENGINE / ARCHITECTURAL PILLARS */}
-        <section id="engine" className="space-y-8 pt-6 border-t border-white/[0.08] text-left">
+        <section id="engine" className="space-y-8 pt-6 border-t border-zinc-900/10 text-left">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 block mb-1">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
                 SYSTEM ARCHITECTURE
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                The GTM Outbound Engine<span className="text-emerald-400">.</span>
+              <h2 className="text-3xl sm:text-4xl font-black text-zinc-950 tracking-tight">
+                The GTM Outbound Engine<span className="text-emerald-600">.</span>
               </h2>
             </div>
-            <span className="text-xs font-mono text-zinc-400 font-medium">
+            <span className="text-xs font-mono text-zinc-700 font-semibold">
               Zero Primary Domain Burn · Instant Lead Triage
             </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-white/[0.08] space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                <Globe className="w-5 h-5" />
+            <div className="p-6 sm:p-7 rounded-2xl glass-card space-y-4">
+              <div className="w-12 h-12 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-800 shadow-xs">
+                <Globe className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white tracking-tight">
+              <h3 className="text-xl font-extrabold text-zinc-950 tracking-tight">
                 1. Secondary Fleet & DNS Isolation
               </h3>
-              <p className="text-sm text-zinc-300 leading-relaxed">
+              <p className="text-base text-zinc-700 leading-relaxed">
                 Complete isolation of client core root domains. Multi-inbox distribution with strictly calibrated SPF, DKIM, DMARC, and custom tracking domains across rotating IP pools.
               </p>
             </div>
 
-            <div className="p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-white/[0.08] space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                <Send className="w-5 h-5" />
+            <div className="p-6 sm:p-7 rounded-2xl glass-card space-y-4">
+              <div className="w-12 h-12 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-800 shadow-xs">
+                <Send className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white tracking-tight">
+              <h3 className="text-xl font-extrabold text-zinc-950 tracking-tight">
                 2. Step-1 Permission Sequences
               </h3>
-              <p className="text-sm text-zinc-300 leading-relaxed">
+              <p className="text-base text-zinc-700 leading-relaxed">
                 Short, hyper-relevant conversational opening hooks. Eliminating sales fluff and friction to prompt immediate C-suite reply momentum, driving positive response rates to 22.4%.
               </p>
             </div>
 
-            <div className="p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-white/[0.08] space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                <Zap className="w-5 h-5" />
+            <div className="p-6 sm:p-7 rounded-2xl glass-card space-y-4">
+              <div className="w-12 h-12 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-800 shadow-xs">
+                <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white tracking-tight">
+              <h3 className="text-xl font-extrabold text-zinc-950 tracking-tight">
                 3. Sub-15 Min Lead Triage & Slack Feed
               </h3>
-              <p className="text-sm text-zinc-300 leading-relaxed">
+              <p className="text-base text-zinc-700 leading-relaxed">
                 Real-time webhook notifications routing qualified positive prospects directly into client Slack channels and CRMs (HubSpot / GoHighLevel) for immediate sales closing.
               </p>
             </div>
@@ -491,19 +515,19 @@ export function App() {
         </section>
 
         {/* 4. RESUME TIMELINE (POLYWORK STYLE) */}
-        <section id="about" className="space-y-8 pt-6 border-t border-white/[0.08] text-left">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-4 border-b border-white/10">
+        <section id="about" className="space-y-8 pt-6 border-t border-zinc-900/10 text-left">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-4 border-b border-zinc-900/10">
             <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 block mb-1">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
                 CAREER TIMELINE
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                Experience & Track Record<span className="text-emerald-400">.</span>
+              <h2 className="text-3xl sm:text-4xl font-black text-zinc-950 tracking-tight">
+                Experience & Track Record<span className="text-emerald-600">.</span>
               </h2>
             </div>
             <button
               onClick={() => setShowResumeModal(true)}
-              className="text-sm font-mono text-emerald-400 hover:text-emerald-300 transition cursor-pointer"
+              className="text-sm font-mono text-emerald-800 hover:text-emerald-950 font-bold transition cursor-pointer"
             >
               Open Full Resume Modal ↗
             </button>
@@ -511,62 +535,62 @@ export function App() {
 
           {/* Polywork-style timeline items */}
           <div className="space-y-6">
-            <div className="p-6 rounded-2xl bg-zinc-900/40 border border-white/[0.08] space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-emerald-400 font-semibold">
+            <div className="p-6 rounded-2xl glass-card space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-emerald-800 font-bold">
                 <span>08/2024 – Present · 1 yr 4 mos</span>
-                <span className="text-zinc-500">Full-Time</span>
+                <span className="text-zinc-500 font-medium">Full-Time</span>
               </div>
-              <h3 className="text-xl font-bold text-white">
+              <h3 className="text-xl font-black text-zinc-950">
                 Co-Founder & GTM Outbound Lead · StylSensei
               </h3>
-              <p className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed">
+              <p className="text-base text-zinc-700 font-normal leading-relaxed">
                 Managed scalable cold email operations across 6,000+ warmed secondary mailboxes and 500k+ monthly dispatches. Owned end-to-end reply triage, objection handling, and prospect qualification, booking high-intent C-suite discovery calls directly into client calendars.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-900/40 border border-white/[0.08] space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-400 font-semibold">
+            <div className="p-6 rounded-2xl glass-card space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>10/2023 – 08/2024 · 10 mos</span>
-                <span className="text-zinc-500">Contract</span>
+                <span className="text-zinc-500 font-medium">Contract</span>
               </div>
-              <h3 className="text-xl font-bold text-white">
+              <h3 className="text-xl font-black text-zinc-950">
                 AI & Outbound Automation Developer · Premier Fitness
               </h3>
-              <p className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed">
+              <p className="text-base text-zinc-700 font-normal leading-relaxed">
                 Engineered N8N workflows connecting OpenAI, Google Sheets, and CRM lead capture pipelines. Reduced manual lead handling time by 40% and cut lead response time to &lt;15 seconds.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-900/40 border border-white/[0.08] space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-400 font-semibold">
+            <div className="p-6 rounded-2xl glass-card space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>08/2022 – 10/2023 · 1 yr 2 mos</span>
-                <span className="text-zinc-500">Enterprise</span>
+                <span className="text-zinc-500 font-medium">Enterprise</span>
               </div>
-              <h3 className="text-xl font-bold text-white">
+              <h3 className="text-xl font-black text-zinc-950">
                 Database & Analytics Associate · IQVIA
               </h3>
-              <p className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed">
-                Administered healthcare data pipelines on HUE Impala and MySQL. Automated ETL and web scraping routines with Python & SQL, cutting manual data prep by 40%. Twice nominated for <strong className="text-white">IQVIA Impact Awards (Q4 & Q5)</strong>.
+              <p className="text-base text-zinc-700 font-normal leading-relaxed">
+                Administered healthcare data pipelines on HUE Impala and MySQL. Automated ETL and web scraping routines with Python & SQL, cutting manual data prep by 40%. Twice nominated for <strong className="text-zinc-950">IQVIA Impact Awards (Q4 & Q5)</strong>.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-zinc-900/40 border border-white/[0.08] space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-400 font-semibold">
+            <div className="p-6 rounded-2xl glass-card space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
                 <span>08/2018 – 07/2022 · 4 yrs</span>
-                <span className="text-zinc-500">Education</span>
+                <span className="text-zinc-500 font-medium">Education</span>
               </div>
-              <h3 className="text-xl font-bold text-white">
+              <h3 className="text-xl font-black text-zinc-950">
                 BS in Information Technology (Business & Data Analytics) · Bulacan State University
               </h3>
-              <p className="text-sm sm:text-base text-zinc-300 font-normal leading-relaxed">
-                Selected as a <strong className="text-white">Data Associate Scholar</strong> by Project Sparta (Development Academy of the Philippines).
+              <p className="text-base text-zinc-700 font-normal leading-relaxed">
+                Selected as a <strong className="text-zinc-950">Data Associate Scholar</strong> by Project Sparta (Development Academy of the Philippines).
               </p>
             </div>
           </div>
         </section>
 
-        {/* 5. CLOSING CTA (Seated Photo + Direct Contact) */}
-        <section className="rounded-3xl p-8 sm:p-12 bg-zinc-900/60 border border-white/[0.08] flex flex-col md:flex-row items-center gap-8 lg:gap-12 text-left">
+        {/* 5. CLOSING CTA (Seated Photo + High-Contrast Obsidian Container) */}
+        <section className="rounded-3xl p-8 sm:p-12 obsidian-card text-white flex flex-col md:flex-row items-center gap-8 lg:gap-12 text-left shadow-2xl">
           <div className="w-48 sm:w-56 md:w-60 lg:w-64 shrink-0 aspect-square rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-black">
             <img
               src="/genesis-full-seated.jpg"
@@ -582,18 +606,18 @@ export function App() {
             <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
               Ready to launch or scale your outbound pipeline?
             </h3>
-            <p className="text-base text-zinc-300 font-normal">
+            <p className="text-base text-zinc-300 font-normal leading-relaxed">
               Whether you need 6,000 secondary mailboxes provisioned, step-1 reply campaigns deployed, or real-time Slack triage routing, let's talk.
             </p>
 
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <a
                 href={`mailto:${profileData.email}`}
-                className="px-6 py-3.5 rounded-full bg-white text-black font-extrabold text-sm hover:bg-zinc-200 transition shadow-xl shadow-white/10 flex items-center gap-2 cursor-pointer"
+                className="px-6 py-3.5 rounded-full bg-white text-zinc-950 font-extrabold text-sm hover:bg-zinc-200 transition shadow-xl shadow-white/10 flex items-center gap-2 cursor-pointer"
               >
-                <Mail className="w-4 h-4 text-black" />
+                <Mail className="w-4 h-4 text-zinc-950" />
                 <span>Email Genesis: {profileData.email}</span>
-                <ArrowRight className="w-4 h-4 text-black" />
+                <ArrowRight className="w-4 h-4 text-zinc-950" />
               </a>
 
               <a
@@ -612,7 +636,7 @@ export function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-white/[0.08] py-8 text-center text-xs font-mono text-zinc-500">
+      <footer className="border-t border-zinc-900/10 py-8 text-center text-xs font-mono text-zinc-600 font-medium">
         Genesis Auza · GTM Outbound Infrastructure & B2B Cold Email Specialist · {profileData.email}
       </footer>
 
