@@ -244,16 +244,10 @@ export function App() {
                     Former Co-Founder @ StylSensei
                   </p>
                   <p className="text-xs sm:text-sm font-mono text-zinc-600 font-medium">
-                    B2B Cold Outbound & GTM Email Systems
+                    B2B Cold Outbound & Email Systems
                   </p>
                 </div>
               </div>
-            </div>
-
-            {/* Right Side Pill Badge */}
-            <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl obsidian-card text-zinc-200 text-xs sm:text-sm font-mono shrink-0 shadow-md">
-              <Sparkles className="w-4 h-4 text-emerald-400" />
-              <span>GTM Outbound Infrastructure</span>
             </div>
           </div>
 
@@ -266,7 +260,7 @@ export function App() {
           {/* Editorial Category Tracker */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ios-glass text-xs font-mono font-semibold text-zinc-700 shadow-xs mb-1">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>GTM OUTBOUND ARCHITECTURE · 2026</span>
+            <span>OUTBOUND ARCHITECTURE · 2026</span>
           </div>
 
           {/* Elevated Editorial Headline with Instrument Serif & Gradient Highlights */}
@@ -517,7 +511,7 @@ export function App() {
                 SYSTEM ARCHITECTURE
               </span>
               <h2 className="text-3xl sm:text-4xl font-black text-zinc-950 tracking-tight">
-                The GTM Outbound Engine<span className="text-emerald-600">.</span>
+                The Outbound Engine<span className="text-emerald-600">.</span>
               </h2>
             </div>
             <span className="text-xs font-mono text-zinc-700 font-semibold">
@@ -591,7 +585,7 @@ export function App() {
                 <span className="text-zinc-500 font-medium">Full-Time</span>
               </div>
               <h3 className="text-xl font-black text-zinc-950">
-                Co-Founder & GTM Outbound Lead · StylSensei
+                Co-Founder & Outbound Lead · StylSensei
               </h3>
               <p className="text-base text-zinc-700 font-normal leading-relaxed">
                 Managed scalable cold email operations across 6,000+ warmed secondary mailboxes and 500k+ monthly dispatches. Owned end-to-end reply triage, objection handling, and prospect qualification, booking high-intent C-suite discovery calls directly into client calendars.
@@ -687,7 +681,7 @@ export function App() {
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-zinc-900/10 py-8 text-center text-xs font-mono text-zinc-600 font-medium">
-        Genesis Auza · GTM Outbound Infrastructure & B2B Cold Email Specialist · {profileData.email}
+        Genesis Auza · Outbound Infrastructure & B2B Cold Email Specialist · {profileData.email}
       </footer>
 
       {/* LIGHTBOX MODAL */}
