@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   CheckCircle2,
   Terminal,
+  FileText,
   Send,
   Layers,
   Sparkles,
@@ -311,10 +312,10 @@ export function App() {
 
             <button
               onClick={() => setShowResumeModal(true)}
-              className="px-5 py-3.5 rounded-full ios-glass hover:bg-white/50 text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
+              className="px-5 py-3.5 rounded-full ios-glass hover:bg-white/50 text-zinc-900 text-sm font-bold transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
             >
-              <Terminal className="w-4 h-4 text-emerald-600" />
-              <span className="font-semibold">View Resume</span>
+              <FileText className="w-4 h-4 text-emerald-600" />
+              <span>View Resume</span>
             </button>
           </div>
         </section>
@@ -571,9 +572,10 @@ export function App() {
             </div>
             <button
               onClick={() => setShowResumeModal(true)}
-              className="text-sm font-mono text-emerald-800 hover:text-emerald-950 font-bold transition cursor-pointer interactive-button"
+              className="text-sm text-emerald-800 hover:text-emerald-950 font-bold transition cursor-pointer interactive-button flex items-center gap-1.5"
             >
-              Open Full Resume Modal ↗
+              <FileText className="w-4 h-4" />
+              <span>View Full Resume ↗</span>
             </button>
           </div>
 
