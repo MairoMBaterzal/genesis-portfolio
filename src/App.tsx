@@ -583,7 +583,7 @@ export function App() {
           <div className="space-y-6">
             <div className="p-6 rounded-2xl ios-glass space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-emerald-800 font-bold">
-                <span>08/2024 – Present · 1 yr 4 mos</span>
+                <span>08/2024 – 09/2026 · 2 yrs 2 mos</span>
                 <span className="text-zinc-500 font-medium">Full-Time</span>
               </div>
               <h3 className="text-xl font-black text-zinc-950">

@@ -55,7 +55,7 @@ HONORS & RECOGNITION:
 • Project Sparta Data Associate Scholar — Development Academy of the Philippines
 
 PROFESSIONAL EXPERIENCE:
-1. StylSensei — Former Co-Founder & Outbound Lead (08/2024 – Present · 1 yr 4 mos)
+1. StylSensei — Former Co-Founder & Outbound Lead (08/2024 – 09/2026 · 2 yrs 2 mos)
 • Managed outbound infrastructure across 6,000+ secondary mailboxes sending 500k+ emails monthly.
 • Maintained a sub-3% hard bounce rate SLA, SPF/DKIM/DMARC alignment, AI reply triage, and closed high-ticket B2B retainer clients.
 • Booked qualified discovery calls directly into client sales pipelines and CRMs.
@@ -226,7 +226,7 @@ CORE SKILLS & TOOLS:
                     StylSensei — Former Co-Founder & Outbound Lead
                   </h3>
                   <span className="text-xs font-mono text-zinc-500 font-semibold">
-                    08/2024 – Present · 1 yr 4 mos
+                    08/2024 – 09/2026 · 2 yrs 2 mos
                   </span>
                 </div>
                 <p className="text-sm text-zinc-700 leading-relaxed font-normal">
