@@ -603,7 +603,7 @@ export function App() {
           <div className="space-y-6">
             <div className="p-6 rounded-2xl ios-glass space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-emerald-800 font-bold">
-                <span>08/2024 – 09/2026 · 2 yrs 2 mos</span>
+                <span>05/2025 – 09/2026 · 1 yr 5 mos</span>
                 <span className="text-zinc-500 font-medium">Full-Time</span>
               </div>
               <h3 className="text-xl font-black text-zinc-950">
@@ -616,11 +616,11 @@ export function App() {
 
             <div className="p-6 rounded-2xl ios-glass space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
-                <span>10/2023 – 08/2024 · 10 mos</span>
-                <span className="text-zinc-500 font-medium">Contract</span>
+                <span>07/2024 – 05/2025 · 11 mos</span>
+                <span className="text-zinc-500 font-medium">Full-Time</span>
               </div>
               <h3 className="text-xl font-black text-zinc-950">
-                AI & Outbound Automation Developer · Premier Fitness
+                n8n Developer · Premier Fitness
               </h3>
               <p className="text-base text-zinc-700 font-normal leading-relaxed">
                 Engineered N8N workflows connecting OpenAI, Google Sheets, and CRM lead capture pipelines. Reduced manual lead handling time by 40% and cut lead response time to &lt;15 seconds.
@@ -629,11 +629,11 @@ export function App() {
 
             <div className="p-6 rounded-2xl ios-glass space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
-                <span>08/2022 – 10/2023 · 1 yr 2 mos</span>
-                <span className="text-zinc-500 font-medium">Enterprise</span>
+                <span>08/2022 – 07/2024 · 2 yrs</span>
+                <span className="text-zinc-500 font-medium">Full-Time</span>
               </div>
               <h3 className="text-xl font-black text-zinc-950">
-                Database & Analytics Associate · IQVIA
+                Sr. Database Support Associate · IQVIA
               </h3>
               <p className="text-base text-zinc-700 font-normal leading-relaxed">
                 Administered healthcare data pipelines on HUE Impala and MySQL. Automated ETL and web scraping routines with Python & SQL, cutting manual data prep by 40%. Twice nominated for <strong className="text-zinc-950">IQVIA Impact Awards (Q4 & Q5)</strong>.

@@ -55,17 +55,17 @@ HONORS & RECOGNITION:
 • Project Sparta Data Associate Scholar — Development Academy of the Philippines
 
 PROFESSIONAL EXPERIENCE:
-1. StylSensei — Former Co-Founder & Outbound Lead (08/2024 – 09/2026 · 2 yrs 2 mos)
+1. StylSensei — Former Co-Founder & Outbound Lead (05/2025 – 09/2026 · 1 yr 5 mos)
 • Managed outbound infrastructure across 6,000+ secondary mailboxes sending 500k+ emails monthly.
 • Maintained a sub-3% hard bounce rate SLA, SPF/DKIM/DMARC alignment, AI reply triage, and closed high-ticket B2B retainer clients.
 • Booked qualified discovery calls directly into client sales pipelines and CRMs.
 
-2. Premier Fitness — AI & Outbound Automation Developer (10/2023 – 08/2024 · 10 mos)
+2. Premier Fitness — n8n Developer (07/2024 – 05/2025 · 11 mos)
 • Engineered N8N workflows connecting OpenAI, Google Sheets, and CRM lead capture pipelines.
 • Reduced manual effort by 40% and cut lead response time to <15 seconds.
 • Automated weekly data hygiene and email verification to protect sender reputations.
 
-3. IQVIA — Database & Analytics Associate (08/2022 – 10/2023 · 1 yr 2 mos)
+3. IQVIA — Sr. Database Support Associate (08/2022 – 07/2024 · 2 yrs)
 • Administered enterprise databases on HUE Impala and MySQL.
 • Automated web scraping and SQL/Python data pipelines, cutting manual preparation by 40%.
 • Earned two consecutive Impact Award nominations (Q4 & Q5) for workflow optimization.
@@ -227,7 +227,7 @@ CORE SKILLS & TOOLS:
                     StylSensei — Former Co-Founder & Outbound Lead
                   </h3>
                   <span className="text-xs font-mono text-zinc-500 font-semibold">
-                    08/2024 – 09/2026 · 2 yrs 2 mos
+                    05/2025 – 09/2026 · 1 yr 5 mos
                   </span>
                 </div>
                 <p className="text-sm text-zinc-700 leading-relaxed font-normal">
@@ -239,10 +239,10 @@ CORE SKILLS & TOOLS:
               <div className="p-5 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <h3 className="text-base font-bold text-zinc-950">
-                    Premier Fitness — AI & Outbound Automation Developer
+                    Premier Fitness — n8n Developer
                   </h3>
                   <span className="text-xs font-mono text-zinc-500 font-semibold">
-                    10/2023 – 08/2024 · 10 mos
+                    07/2024 – 05/2025 · 11 mos
                   </span>
                 </div>
                 <p className="text-sm text-zinc-700 leading-relaxed font-normal">
@@ -254,10 +254,10 @@ CORE SKILLS & TOOLS:
               <div className="p-5 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <h3 className="text-base font-bold text-zinc-950">
-                    IQVIA — Database & Analytics Associate
+                    IQVIA — Sr. Database Support Associate
                   </h3>
                   <span className="text-xs font-mono text-zinc-500 font-semibold">
-                    08/2022 – 10/2023 · 1 yr 2 mos
+                    08/2022 – 07/2024 · 2 yrs
                   </span>
                 </div>
                 <p className="text-sm text-zinc-700 leading-relaxed font-normal">
