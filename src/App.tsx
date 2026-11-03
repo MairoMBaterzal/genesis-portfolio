@@ -368,12 +368,6 @@ export function App() {
 
         {/* EDITORIAL HEADLINE & SUBHEADLINE (2 CLEAN LINES, CRO-OPTIMIZED, NO REDUNDANT CARDS) */}
         <section className="mt-6 sm:mt-8 space-y-4 max-w-4xl mx-auto text-center">
-          {/* Category Tracker */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ios-glass text-xs font-mono font-semibold text-zinc-700 shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>OUTBOUND SYSTEMS · 2026</span>
-          </div>
-
           {/* Clean 2-Line Headline (Restored gradient on outbound systems) */}
           <h2 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-black text-zinc-950 tracking-tight leading-[1.15] max-w-3xl mx-auto">
             I build and operate modern{' '}
@@ -473,8 +467,8 @@ export function App() {
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
                 WORK & PROOFS
               </span>
-              <h2 className="text-3xl sm:text-5xl font-black text-zinc-950 tracking-tight">
-                Selected Work & Campaign Proof<span className="text-emerald-600">.</span>
+              <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight sm:whitespace-nowrap">
+                Past Campaign Results<span className="text-emerald-600">.</span>
               </h2>
             </div>
             <p className="text-sm font-mono text-zinc-700 font-medium">
