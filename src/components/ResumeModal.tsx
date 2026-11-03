@@ -51,27 +51,27 @@ Email: ${profileData.email} | Phone: ${profileData.phone}
 LinkedIn: ${profileData.linkedin} | Location: ${profileData.location}
 
 HONORS & RECOGNITION:
-• Impact Award Nominee (Q4 & Q5) — IQVIA Enterprise Analytics
-• Project Sparta Data Associate Scholar — Development Academy of the Philippines
+• Impact Award Nominee (Q4 & Q5) | IQVIA Enterprise Analytics
+• Project Sparta Data Associate Scholar | Development Academy of the Philippines
 
 PROFESSIONAL EXPERIENCE:
-1. StylSensei — Former Co-Founder & Outbound Lead (05/2025 – 09/2026 · 1 yr 5 mos)
+1. StylSensei | Former Co-Founder & Outbound Lead (05/2025 – 09/2026 · 1 yr 5 mos)
 • Managed outbound infrastructure across 6,000+ secondary mailboxes sending 500k+ emails monthly.
 • Maintained a sub-3% hard bounce rate SLA, SPF/DKIM/DMARC alignment, AI reply triage, and closed high-ticket B2B retainer clients.
 • Booked qualified discovery calls directly into client sales pipelines and CRMs.
 
-2. Premier Fitness — n8n Developer (07/2024 – 05/2025 · 11 mos)
+2. Premier Fitness | n8n Developer (07/2024 – 05/2025 · 11 mos)
 • Engineered N8N workflows connecting OpenAI, Google Sheets, and CRM lead capture pipelines.
 • Reduced manual effort by 40% and cut lead response time to <15 seconds.
 • Automated weekly data hygiene and email verification to protect sender reputations.
 
-3. IQVIA — Sr. Database Support Associate (08/2022 – 07/2024 · 2 yrs)
+3. IQVIA | Sr. Database Support Associate (08/2022 – 07/2024 · 2 yrs)
 • Administered enterprise databases on HUE Impala and MySQL.
 • Automated web scraping and SQL/Python data pipelines, cutting manual preparation by 40%.
 • Earned two consecutive Impact Award nominations (Q4 & Q5) for workflow optimization.
 
 EDUCATION:
-• BS in Information and Technology (Major in Business & Data Analytics) — Bulacan State University (2018 – 2022)
+• BS in Information and Technology (Major in Business & Data Analytics) | Bulacan State University (2018 – 2022)
 
 CORE SKILLS & TOOLS:
 • Cold Email & Sending Fleets: Plusvibe, Instantly, Smartlead, Cloudflare DNS, SPF/DKIM/DMARC
@@ -204,10 +204,10 @@ CORE SKILLS & TOOLS:
             </div>
             <div className="text-sm text-zinc-700 space-y-1.5 pl-5 list-disc">
               <p>
-                • <strong className="text-zinc-950 font-semibold">Impact Award Nominee (Q4 & Q5)</strong> — IQVIA Enterprise Analytics
+                • <strong className="text-zinc-950 font-semibold">Impact Award Nominee (Q4 & Q5)</strong> | IQVIA Enterprise Analytics
               </p>
               <p>
-                • <strong className="text-zinc-950 font-semibold">Project Sparta Data Associate Scholar</strong> — Development Academy of the Philippines
+                • <strong className="text-zinc-950 font-semibold">Project Sparta Data Associate Scholar</strong> | Development Academy of the Philippines
               </p>
             </div>
           </div>
@@ -224,7 +224,7 @@ CORE SKILLS & TOOLS:
               <div className="p-5 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <h3 className="text-base font-bold text-zinc-950">
-                    StylSensei — Former Co-Founder & Outbound Lead
+                    StylSensei | Former Co-Founder & Outbound Lead
                   </h3>
                   <span className="text-xs font-mono text-zinc-500 font-semibold">
                     05/2025 – 09/2026 · 1 yr 5 mos
@@ -239,7 +239,7 @@ CORE SKILLS & TOOLS:
               <div className="p-5 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <h3 className="text-base font-bold text-zinc-950">
-                    Premier Fitness — n8n Developer
+                    Premier Fitness | n8n Developer
                   </h3>
                   <span className="text-xs font-mono text-zinc-500 font-semibold">
                     07/2024 – 05/2025 · 11 mos
@@ -254,7 +254,7 @@ CORE SKILLS & TOOLS:
               <div className="p-5 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <h3 className="text-base font-bold text-zinc-950">
-                    IQVIA — Sr. Database Support Associate
+                    IQVIA | Sr. Database Support Associate
                   </h3>
                   <span className="text-xs font-mono text-zinc-500 font-semibold">
                     08/2022 – 07/2024 · 2 yrs
