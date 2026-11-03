@@ -51,24 +51,30 @@ export function App() {
   }, []);
 
   const handleCopyEmail = (e?: React.MouseEvent) => {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(profileData.email).catch(() => {});
-    }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(profileData.email).catch(() => {});
+      }
+    } catch (_) {}
     setCopiedEmail(true);
 
-    // Interactive confetti burst
-    if (e) {
-      const rect = (e.target as HTMLElement).getBoundingClientRect();
-      const x = (rect.left + rect.width / 2) / window.innerWidth;
-      const y = (rect.top + rect.height / 2) / window.innerHeight;
-      confetti({
-        particleCount: 35,
-        spread: 60,
-        origin: { x, y },
-        colors: ['#10b981', '#38bdf8', '#f472b6', '#facc15', '#818cf8'],
-        disableForReducedMotion: true
-      });
-    }
+    try {
+      if (e) {
+        const el = (e.currentTarget || e.target) as HTMLElement;
+        if (el && typeof el.getBoundingClientRect === 'function') {
+          const rect = el.getBoundingClientRect();
+          const x = (rect.left + rect.width / 2) / window.innerWidth;
+          const y = (rect.top + rect.height / 2) / window.innerHeight;
+          confetti({
+            particleCount: 35,
+            spread: 60,
+            origin: { x, y },
+            colors: ['#10b981', '#38bdf8', '#f472b6', '#facc15', '#818cf8'],
+            disableForReducedMotion: true
+          });
+        }
+      }
+    } catch (_) {}
 
     setTimeout(() => setCopiedEmail(false), 2500);
   };
