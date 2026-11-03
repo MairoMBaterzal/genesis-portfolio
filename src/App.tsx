@@ -187,8 +187,8 @@ export function App() {
         <div className="hidden md:flex items-center gap-3 sm:gap-6 px-4 sm:px-7 py-2 sm:py-2.5 rounded-full obsidian-card text-xs sm:text-sm font-medium text-zinc-200 relative overflow-hidden whitespace-nowrap shadow-xl">
           <a href="#stack" className="hover:text-white transition whitespace-nowrap">Stack</a>
           <a href="#work" className="hover:text-white transition whitespace-nowrap">Work & Proofs</a>
-          <a href="#about" className="hover:text-white transition whitespace-nowrap">About</a>
           <a href="#workflow" className="hover:text-white transition whitespace-nowrap">Workflow</a>
+          <a href="#about" className="hover:text-white transition whitespace-nowrap">About</a>
           <span className="text-zinc-600 select-none">|</span>
           <button
             onClick={() => setShowResumeModal(true)}
@@ -269,20 +269,20 @@ export function App() {
                 <span className="text-[10px] font-mono text-zinc-500">645k+ sends</span>
               </a>
               <a
-                href="#about"
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-xl hover:bg-white/10 text-xs font-bold text-zinc-200 hover:text-white transition flex items-center justify-between"
-              >
-                <span>Experience & Track Record</span>
-                <span className="text-[10px] font-mono text-zinc-500">StylSensei</span>
-              </a>
-              <a
                 href="#workflow"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-3 py-2 rounded-xl hover:bg-white/10 text-xs font-bold text-zinc-200 hover:text-white transition flex items-center justify-between"
               >
                 <span>Outbound Workflow</span>
                 <span className="text-[10px] font-mono text-zinc-500">Pipeline Spec</span>
+              </a>
+              <a
+                href="#about"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-2 rounded-xl hover:bg-white/10 text-xs font-bold text-zinc-200 hover:text-white transition flex items-center justify-between"
+              >
+                <span>Experience & Track Record</span>
+                <span className="text-[10px] font-mono text-zinc-500">StylSensei</span>
               </a>
             </div>
 
@@ -585,83 +585,7 @@ export function App() {
           </div>
         </section>
 
-        {/* 3. RESUME TIMELINE (POLYWORK STYLE WITH APPLE IOS GLASS) */}
-        <section id="about" className="scroll-mt-24 mt-12 sm:mt-16 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-4 border-b border-zinc-900/10">
-            <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
-                CAREER TIMELINE
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-zinc-950 tracking-tight">
-                Experience & Track Record<span className="text-emerald-600">.</span>
-              </h2>
-            </div>
-            <button
-              onClick={() => setShowResumeModal(true)}
-              className="text-sm text-emerald-800 hover:text-emerald-950 font-bold transition cursor-pointer interactive-button flex items-center gap-1.5"
-            >
-              <FileText className="w-4 h-4" />
-              <span>View Full Resume ↗</span>
-            </button>
-          </div>
-
-          {/* Polywork-style timeline items with iOS glass */}
-          <div className="space-y-6">
-            <div className="p-6 rounded-2xl ios-glass space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-emerald-800 font-bold">
-                <span>05/2025 – 09/2026 · 1 yr 5 mos</span>
-                <span className="text-zinc-500 font-medium">Full-Time</span>
-              </div>
-              <h3 className="text-xl font-black text-zinc-950">
-                Co-Founder & Outbound Lead · StylSensei
-              </h3>
-              <p className="text-base text-zinc-700 font-normal leading-relaxed">
-                Managed scalable cold email operations across 6,000+ warmed secondary mailboxes and 500k+ monthly sends. Owned end-to-end reply triage, objection handling, and prospect qualification, booking high-intent C-suite discovery calls directly into client calendars.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl ios-glass space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
-                <span>07/2024 – 05/2025 · 11 mos</span>
-                <span className="text-zinc-500 font-medium">Full-Time</span>
-              </div>
-              <h3 className="text-xl font-black text-zinc-950">
-                n8n Developer · Premier Fitness
-              </h3>
-              <p className="text-base text-zinc-700 font-normal leading-relaxed">
-                Engineered N8N workflows connecting OpenAI, Google Sheets, and CRM lead capture pipelines. Reduced manual lead handling time by 40% and cut lead response time to &lt;15 seconds.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl ios-glass space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
-                <span>08/2022 – 07/2024 · 2 yrs</span>
-                <span className="text-zinc-500 font-medium">Full-Time</span>
-              </div>
-              <h3 className="text-xl font-black text-zinc-950">
-                Sr. Database Support Associate · IQVIA
-              </h3>
-              <p className="text-base text-zinc-700 font-normal leading-relaxed">
-                Administered healthcare data pipelines on HUE Impala and MySQL. Automated ETL and web scraping routines with Python & SQL, cutting manual data prep by 40%. Twice nominated for <strong className="text-zinc-950">IQVIA Impact Awards (Q4 & Q5)</strong>.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl ios-glass space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
-                <span>08/2018 – 07/2022 · 4 yrs</span>
-                <span className="text-zinc-500 font-medium">Education</span>
-              </div>
-              <h3 className="text-xl font-black text-zinc-950">
-                BS in Information Technology (Business & Data Analytics) · Bulacan State University
-              </h3>
-              <p className="text-base text-zinc-700 font-normal leading-relaxed">
-                Selected as a <strong className="text-zinc-950">Data Associate Scholar</strong> by Project Sparta (Development Academy of the Philippines).
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* 5. WORKFLOW ARCHITECTURE (SIMPLE INTEGRATED OUTBOUND ENGINE SPEC) */}
+        {/* 3. WORKFLOW ARCHITECTURE (INTEGRATED OUTBOUND ENGINE SPEC) */}
         <section id="workflow" className="scroll-mt-24 mt-14 sm:mt-20 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
           {/* Header */}
           <div className="space-y-2">
@@ -921,6 +845,82 @@ export function App() {
 
               </div>
 
+            </div>
+          </div>
+        </section>
+
+        {/* 4. CAREER TIMELINE / EXPERIENCE & TRACK RECORD */}
+        <section id="about" className="scroll-mt-24 mt-14 sm:mt-20 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-4 border-b border-zinc-900/10">
+            <div>
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
+                CAREER TIMELINE
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-black text-zinc-950 tracking-tight">
+                Experience & Track Record<span className="text-emerald-600">.</span>
+              </h2>
+            </div>
+            <button
+              onClick={() => setShowResumeModal(true)}
+              className="text-sm text-emerald-800 hover:text-emerald-950 font-bold transition cursor-pointer interactive-button flex items-center gap-1.5"
+            >
+              <FileText className="w-4 h-4" />
+              <span>View Full Resume ↗</span>
+            </button>
+          </div>
+
+          {/* Polywork-style timeline items with iOS glass */}
+          <div className="space-y-6">
+            <div className="p-6 rounded-2xl ios-glass space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-emerald-800 font-bold">
+                <span>05/2025 – 09/2026 · 1 yr 5 mos</span>
+                <span className="text-zinc-500 font-medium">Full-Time</span>
+              </div>
+              <h3 className="text-xl font-black text-zinc-950">
+                Co-Founder & Outbound Lead · StylSensei
+              </h3>
+              <p className="text-base text-zinc-700 font-normal leading-relaxed">
+                Managed scalable cold email operations across 6,000+ warmed secondary mailboxes and 500k+ monthly sends. Owned end-to-end reply triage, objection handling, and prospect qualification, booking high-intent C-suite discovery calls directly into client calendars.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl ios-glass space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
+                <span>07/2024 – 05/2025 · 11 mos</span>
+                <span className="text-zinc-500 font-medium">Full-Time</span>
+              </div>
+              <h3 className="text-xl font-black text-zinc-950">
+                n8n Developer · Premier Fitness
+              </h3>
+              <p className="text-base text-zinc-700 font-normal leading-relaxed">
+                Engineered N8N workflows connecting OpenAI, Google Sheets, and CRM lead capture pipelines. Reduced manual lead handling time by 40% and cut lead response time to &lt;15 seconds.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl ios-glass space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
+                <span>08/2022 – 07/2024 · 2 yrs</span>
+                <span className="text-zinc-500 font-medium">Full-Time</span>
+              </div>
+              <h3 className="text-xl font-black text-zinc-950">
+                Sr. Database Support Associate · IQVIA
+              </h3>
+              <p className="text-base text-zinc-700 font-normal leading-relaxed">
+                Administered healthcare data pipelines on HUE Impala and MySQL. Automated ETL and web scraping routines with Python & SQL, cutting manual data prep by 40%. Twice nominated for <strong className="text-zinc-950">IQVIA Impact Awards (Q4 & Q5)</strong>.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl ios-glass space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-zinc-600 font-bold">
+                <span>08/2018 – 07/2022 · 4 yrs</span>
+                <span className="text-zinc-500 font-medium">Education</span>
+              </div>
+              <h3 className="text-xl font-black text-zinc-950">
+                BS in Information Technology (Business & Data Analytics) · Bulacan State University
+              </h3>
+              <p className="text-base text-zinc-700 font-normal leading-relaxed">
+                Selected as a <strong className="text-zinc-950">Data Associate Scholar</strong> by Project Sparta (Development Academy of the Philippines).
+              </p>
             </div>
           </div>
         </section>
