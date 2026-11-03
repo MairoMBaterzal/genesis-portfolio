@@ -757,17 +757,17 @@ export function App() {
                 {/* STEP 01: INFRASTRUCTURE HUB */}
                 <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400 whitespace-nowrap shrink-0">
                       HUB · STEP 01
                     </span>
                     <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/cloudflare.svg" alt="Cloudflare" className="w-3.5 h-3.5 object-contain" />
-                        <span>Cloudflare</span>
+                        <img src="/logos/google-workspace.svg" alt="Google Workspace" className="w-3.5 h-3.5 object-contain" />
+                        <span>Google Workspace</span>
                       </span>
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/plusvibe.svg" alt="PlusVibe" className="w-3.5 h-3.5 object-contain" />
-                        <span>PlusVibe</span>
+                        <img src="/logos/microsoft.svg" alt="Microsoft 365" className="w-3.5 h-3.5 object-contain" />
+                        <span>Microsoft 365</span>
                       </span>
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
                         <img src="/logos/smartlead.png" alt="Smartlead" className="w-3.5 h-3.5 object-contain" />
@@ -777,13 +777,17 @@ export function App() {
                         <img src="/logos/instantly.png" alt="Instantly" className="w-3.5 h-3.5 object-contain" />
                         <span>Instantly</span>
                       </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/plusvibe.svg" alt="PlusVibe" className="w-3.5 h-3.5 object-contain" />
+                        <span>PlusVibe</span>
+                      </span>
                     </div>
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                    Secondary Domains & Mailbox Infrastructure
+                    Inbox Provisioning & Sending Infrastructure
                   </h3>
                   <p className="text-xs sm:text-sm text-zinc-400 mt-1 font-normal leading-relaxed">
-                    Secondary domain setup, isolated DNS records (SPF, DKIM, DMARC), and automated warmup rotation across 6,000+ active inboxes.
+                    Secondary domain setup with verified DNS (SPF, DKIM, DMARC). Provisioning Google Workspace, Microsoft 365, and Zapmail accounts rotated across Smartlead, Instantly, and PlusVibe warmup pools.
                   </p>
                 </div>
 
@@ -795,7 +799,7 @@ export function App() {
                 {/* STEP 02: LEAD EXTRACTION & WATERFALL ENRICHMENT */}
                 <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-sky-400">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-sky-400 whitespace-nowrap shrink-0">
                       DATA LAYER · STEP 02
                     </span>
                     <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
@@ -829,7 +833,7 @@ export function App() {
                 {/* STEP 03: PERMISSION SEQUENCES & AI REPLY TRIAGE */}
                 <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-purple-400">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-purple-400 whitespace-nowrap shrink-0">
                       EXECUTION · STEP 03
                     </span>
                     <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
@@ -859,7 +863,7 @@ export function App() {
                 {/* STEP 04: REAL-TIME CRM & SLACK TRIAGE */}
                 <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400 whitespace-nowrap shrink-0">
                       PIPELINE & DEALS · STEP 04
                     </span>
                     <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
