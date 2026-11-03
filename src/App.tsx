@@ -81,20 +81,26 @@ export function App() {
     setTimeout(() => setCopiedEmail(false), 2500);
   };
 
-  // Tech stack items for infinite marquee (1 line moving to the left)
+  // Tech stack items for sleek infinite marquee (Exact matches from reference image + outbound stack)
   const techStack = [
-    { name: "Plusvibe.ai", role: "Outbound Tooling", icon: Flame, color: "text-amber-500" },
-    { name: "Instantly.ai", role: "Sending & Warmup", icon: Send, color: "text-blue-500" },
-    { name: "Smartlead", role: "Inbox Warmup & Sends", icon: Radio, color: "text-indigo-500" },
-    { name: "HubSpot CRM", role: "Pipeline & Deals", icon: Layers, color: "text-orange-500" },
-    { name: "GoHighLevel", role: "CRM Automations", icon: Workflow, color: "text-emerald-600" },
-    { name: "Apollo.io", role: "B2B Lead Data", icon: Search, color: "text-cyan-600" },
-    { name: "Clay.com", role: "Enrichment", icon: Database, color: "text-purple-600" },
-    { name: "MillionVerifier", role: "Deliverability", icon: ShieldCheck, color: "text-green-600" },
-    { name: "Cloudflare DNS", role: "SPF / DKIM / DMARC", icon: Globe, color: "text-amber-600" },
-    { name: "n8n Workflow", role: "Logic Automations", icon: Cpu, color: "text-pink-600" },
-    { name: "Python & SQL", role: "Data Scraping", icon: Terminal, color: "text-yellow-600" },
-    { name: "OpenAI Whisper", role: "Voice Transcribe", icon: Sparkles, color: "text-teal-600" }
+    { name: "SENDPILOT", logo: "/logos/sendpilot.svg" },
+    { name: "CLAUDE", logo: "/logos/claude.svg" },
+    { name: "INSTANTLY", logo: "/logos/instantly.png" },
+    { name: "SMARTLEAD", logo: "/logos/smartlead.png" },
+    { name: "MILLIONVERIFIER", logo: "/logos/millionverifier-badge.svg" },
+    { name: "APOLLO", logo: "/logos/apollo.svg" },
+    { name: "APIFY", logo: "/logos/apify.svg" },
+    { name: "PROSPEO", logo: "/logos/prospeo.png" },
+    { name: "LEAD MAGIC", logo: "/logos/leadmagic.svg" },
+    { name: "GHL", logo: "/logos/gohighlevel.png" },
+    { name: "MAKE.COM", logo: "/logos/make.svg" },
+    { name: "CHATGPT", logo: "/logos/chatgpt.svg" },
+    { name: "SALES NAVIGATOR", logo: "/logos/sales-navigator.svg" },
+    { name: "CLAY", logo: "/logos/clay.png" },
+    { name: "HUBSPOT", logo: "/logos/hubspot.svg" },
+    { name: "N8N", logo: "/logos/n8n.svg" },
+    { name: "CLOUDFLARE", logo: "/logos/cloudflare.svg" },
+    { name: "HEYREACH", logo: "/logos/heyreach.svg" }
   ];
 
   // AWS AI Agents style 3-column aligned Case Study Cards
@@ -415,47 +421,37 @@ export function App() {
           </div>
         </section>
 
-        {/* 1. TECH STACKS SECTION (ABOVE PROOFS - 1-LINE MARQUEE WITH APPLE IOS GLASS) */}
-        <section id="stack" className="mt-8 sm:mt-10 space-y-4 pt-6 border-t border-zinc-900/10">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-            <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
-                PRODUCTION TOOLING
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-zinc-950 tracking-tight">
-                Production Tech Stack & Tools
-              </h2>
-            </div>
-            <span className="text-xs font-mono text-zinc-700 font-semibold">
-              Production Infrastructure · 500k+ Monthly Volume
+        {/* 1. TECH STACKS SECTION (MINIMALIST PILLS - STACK I RUN SPEC) */}
+        <section id="stack" className="mt-8 sm:mt-10 pt-4 border-t border-zinc-900/10 text-center">
+          {/* Centered Minimal Tracking Header (Matching Reference Image) */}
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <span className="text-[11px] font-mono font-bold tracking-widest text-sky-700/80 uppercase">
+              STACK I RUN
             </span>
           </div>
 
-          {/* 1-Line Infinite Marquee Moving Left (iOS Glass Pills) */}
-          <div className="relative w-full overflow-hidden py-4">
-            <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#faeef2]/80 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#faeef2]/80 to-transparent z-10 pointer-events-none" />
+          {/* 1-Line Infinite Marquee Moving Left (Compact Dark Obsidian Pills with Official Logos) */}
+          <div className="relative w-full overflow-hidden py-2">
+            <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-[#faeef2] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-[#faeef2] to-transparent z-10 pointer-events-none" />
 
-            <div className="animate-marquee flex items-center gap-4">
-              {[...techStack, ...techStack].map((tool, idx) => {
-                const Icon = tool.icon;
-                return (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-3.5 px-6 py-4 rounded-2xl ios-glass text-zinc-950 shadow-xs transition shrink-0 cursor-default"
-                  >
-                    <Icon className="w-6 h-6 text-zinc-900 shrink-0" />
-                    <div className="text-left">
-                      <div className="text-base font-extrabold tracking-tight text-zinc-950 whitespace-nowrap">
-                        {tool.name}
-                      </div>
-                      <div className="text-xs font-mono text-zinc-600 font-semibold whitespace-nowrap">
-                        {tool.role}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="animate-marquee flex items-center gap-2.5 sm:gap-3">
+              {[...techStack, ...techStack].map((tool, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full bg-zinc-950 text-white shadow-sm hover:scale-105 transition-transform duration-200 shrink-0 cursor-default border border-zinc-800"
+                >
+                  <img
+                    src={tool.logo}
+                    alt={tool.name}
+                    className="w-4 h-4 sm:w-4.5 sm:h-4.5 rounded-full object-contain shrink-0"
+                    loading="lazy"
+                  />
+                  <span className="text-[11px] sm:text-xs font-mono font-bold tracking-wider uppercase text-zinc-200 whitespace-nowrap">
+                    {tool.name}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </section>
