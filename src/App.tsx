@@ -188,6 +188,7 @@ export function App() {
           <a href="#stack" className="hover:text-white transition whitespace-nowrap">Stack</a>
           <a href="#engine" className="hover:text-white transition whitespace-nowrap">The Engine</a>
           <a href="#about" className="hover:text-white transition whitespace-nowrap">About</a>
+          <a href="#workflow" className="hover:text-white transition whitespace-nowrap">Workflow</a>
           <span className="text-zinc-600 select-none">|</span>
           <button
             onClick={() => setShowResumeModal(true)}
@@ -282,6 +283,14 @@ export function App() {
               >
                 <span>Experience & Track Record</span>
                 <span className="text-[10px] font-mono text-zinc-500">StylSensei</span>
+              </a>
+              <a
+                href="#workflow"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-2 rounded-xl hover:bg-white/10 text-xs font-bold text-zinc-200 hover:text-white transition flex items-center justify-between"
+              >
+                <span>Outbound Workflow</span>
+                <span className="text-[10px] font-mono text-zinc-500">Pipeline Spec</span>
               </a>
             </div>
 
@@ -422,7 +431,7 @@ export function App() {
         </section>
 
         {/* 1. TECH STACKS SECTION (MINIMALIST PILLS - STACK I RUN SPEC) */}
-        <section id="stack" className="mt-8 sm:mt-10 pt-4 border-t border-zinc-900/10 text-center">
+        <section id="stack" className="scroll-mt-24 mt-8 sm:mt-10 pt-4 border-t border-zinc-900/10 text-center">
           {/* Centered Minimal Tracking Header (Matching Reference Image) */}
           <div className="flex items-center justify-center gap-2 mb-3">
             <span className="text-[11px] font-mono font-bold tracking-widest text-sky-700/80 uppercase">
@@ -457,7 +466,7 @@ export function App() {
         </section>
 
         {/* 2. PROOFS & TELEMETRY SECTION (WORK & PROOFS - AWS 3-COLUMN ALIGNMENT WITH IOS GLASS & REFINED SANS FONT) */}
-        <section id="work" className="mt-12 sm:mt-16 space-y-10 pt-6 border-t border-zinc-900/10">
+        <section id="work" className="scroll-mt-24 mt-12 sm:mt-16 space-y-10 pt-6 border-t border-zinc-900/10">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
@@ -596,7 +605,7 @@ export function App() {
         </section>
 
         {/* 3. THE ENGINE / ARCHITECTURAL PILLARS (APPLE IOS GLASS) */}
-        <section id="engine" className="mt-12 sm:mt-16 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
+        <section id="engine" className="scroll-mt-24 mt-12 sm:mt-16 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
@@ -651,7 +660,7 @@ export function App() {
         </section>
 
         {/* 4. RESUME TIMELINE (POLYWORK STYLE WITH APPLE IOS GLASS) */}
-        <section id="about" className="mt-12 sm:mt-16 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
+        <section id="about" className="scroll-mt-24 mt-12 sm:mt-16 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-4 border-b border-zinc-900/10">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
@@ -722,6 +731,188 @@ export function App() {
               <p className="text-base text-zinc-700 font-normal leading-relaxed">
                 Selected as a <strong className="text-zinc-950">Data Associate Scholar</strong> by Project Sparta (Development Academy of the Philippines).
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. WORKFLOW ARCHITECTURE (SIMPLE INTEGRATED OUTBOUND ENGINE SPEC) */}
+        <section id="workflow" className="scroll-mt-24 mt-14 sm:mt-20 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
+          {/* Header */}
+          <div className="space-y-2">
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block">
+              GTM & OUTBOUND WORKFLOW
+            </span>
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight">
+              An integrated system behind pipeline generation<span className="text-emerald-600">.</span>
+            </h2>
+            <p className="text-sm sm:text-base text-zinc-600 max-w-2xl font-normal leading-relaxed">
+              Connecting secondary domain infrastructure, waterfall enrichment, AI intent triage, and automated CRM routing.
+            </p>
+          </div>
+
+          {/* Workflow Diagram Card (Obsidian Canvas) */}
+          <div className="rounded-3xl obsidian-card p-6 sm:p-10 lg:p-12 border border-white/10 shadow-2xl relative overflow-hidden">
+            {/* Subtle radial ambient background glow */}
+            <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
+            <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
+
+            <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+              {/* Main Vertical Linear Flow (Steps 01 -> 04) */}
+              <div className="lg:col-span-8 flex flex-col items-center space-y-0 w-full">
+
+                {/* STEP 01: INFRASTRUCTURE HUB */}
+                <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400">
+                      HUB · STEP 01
+                    </span>
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/cloudflare.svg" alt="Cloudflare" className="w-3.5 h-3.5 object-contain" />
+                        <span>Cloudflare</span>
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/smartlead.png" alt="Smartlead" className="w-3.5 h-3.5 object-contain" />
+                        <span>Smartlead</span>
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/instantly.png" alt="Instantly" className="w-3.5 h-3.5 object-contain" />
+                        <span>Instantly</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                    Outbound Domain & Mailbox Fleet
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 mt-1 font-normal leading-relaxed">
+                    Secondary domain deployment, isolated DNS (SPF, DKIM, DMARC), and automated warmup rotation across 6,000+ mailboxes.
+                  </p>
+                </div>
+
+                {/* Vertical Connector Line 1 */}
+                <div className="w-[2px] h-6 sm:h-8 bg-gradient-to-b from-emerald-500/60 to-sky-400/60 relative my-0.5">
+                  <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                </div>
+
+                {/* STEP 02: LEAD EXTRACTION & WATERFALL ENRICHMENT */}
+                <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-sky-400">
+                      DATA LAYER · STEP 02
+                    </span>
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/apollo.svg" alt="Apollo" className="w-3.5 h-3.5 object-contain" />
+                        <span>Apollo</span>
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/clay.png" alt="Clay" className="w-3.5 h-3.5 object-contain" />
+                        <span>Clay</span>
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/millionverifier-badge.svg" alt="MillionVerifier" className="w-3.5 h-3.5 object-contain" />
+                        <span>MillionVerifier</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                    Waterfall Enrichment & Verification
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 mt-1 font-normal leading-relaxed">
+                    Custom scraping pipelines sourcing verified decision-makers, validating MX records, and holding strict sub-3% bounce SLA.
+                  </p>
+                </div>
+
+                {/* Vertical Connector Line 2 */}
+                <div className="w-[2px] h-6 sm:h-8 bg-gradient-to-b from-sky-400/60 to-purple-400/60 relative my-0.5">
+                  <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
+                </div>
+
+                {/* STEP 03: PERMISSION SEQUENCES & AI REPLY TRIAGE */}
+                <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-purple-400">
+                      EXECUTION · STEP 03
+                    </span>
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/claude.svg" alt="Claude" className="w-3.5 h-3.5 object-contain" />
+                        <span>Claude</span>
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/chatgpt.svg" alt="ChatGPT" className="w-3.5 h-3.5 object-contain" />
+                        <span>ChatGPT</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                    Permission Sequences & Intent Classification
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 mt-1 font-normal leading-relaxed">
+                    Conversational opening hooks driving 22.4% reply rates. Real-time AI classification for positive interest, objections, and follow-ups.
+                  </p>
+                </div>
+
+                {/* Vertical Connector Line 3 */}
+                <div className="w-[2px] h-6 sm:h-8 bg-gradient-to-b from-purple-400/60 to-emerald-400/60 relative my-0.5">
+                  <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                </div>
+
+                {/* STEP 04: REAL-TIME CRM & SLACK TRIAGE */}
+                <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400">
+                      PIPELINE & DEALS · STEP 04
+                    </span>
+                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/n8n.svg" alt="n8n" className="w-3.5 h-3.5 object-contain" />
+                        <span>n8n</span>
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/slack.svg" alt="Slack" className="w-3.5 h-3.5 object-contain" />
+                        <span>Slack</span>
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/hubspot.svg" alt="HubSpot" className="w-3.5 h-3.5 object-contain" />
+                        <span>HubSpot</span>
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/gohighlevel.png" alt="GHL" className="w-3.5 h-3.5 object-contain" />
+                        <span>GHL</span>
+                      </span>
+                    </div>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                    Sub-15 Min Lead Routing & Deal Closing
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-400 mt-1 font-normal leading-relaxed">
+                    Automated webhook dispatch pushing booked C-suite discovery calls straight into client Slack channels and CRM deal pipelines.
+                  </p>
+                </div>
+
+              </div>
+
+              {/* Side Panel: Continuous Optimization Feedback Loop (Matching Reference Image) */}
+              <div className="lg:col-span-4 flex flex-col justify-center items-center lg:items-start text-left h-full">
+                <div className="p-6 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 space-y-3 relative w-full shadow-lg">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-mono font-bold uppercase tracking-wider">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>FEEDBACK LOOP</span>
+                  </div>
+                  <h4 className="text-base font-bold text-white tracking-tight">
+                    Continuous Deliverability & ICP Calibration
+                  </h4>
+                  <p className="text-xs sm:text-sm text-zinc-300 font-normal leading-relaxed">
+                    Closed deals and response signals automatically loop back to the infrastructure hub — adjusting sending volume, pruning fatigued copy, and protecting domain health.
+                  </p>
+                  <div className="pt-2 border-t border-emerald-500/20 text-[11px] font-mono text-emerald-400/90 font-medium flex items-center gap-2">
+                    <span>⚡ Zero primary root domain burn</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
