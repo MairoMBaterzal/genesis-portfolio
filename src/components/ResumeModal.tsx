@@ -74,7 +74,7 @@ EDUCATION:
 • BS in Information and Technology (Major in Business & Data Analytics) | Bulacan State University (2018 – 2022)
 
 CORE SKILLS & TOOLS:
-• Cold Email & Sending Fleets: Plusvibe, Instantly, Smartlead, Cloudflare DNS, SPF/DKIM/DMARC
+• Cold Email & Infrastructure: PlusVibe, Instantly, Smartlead, Cloudflare DNS, SPF/DKIM/DMARC
 • Automation & CRM: GoHighLevel, HubSpot CRM, N8N, Zapier, Webhooks
 • Scraping & Data: Clay, Apollo.io, Apify, SQL, Python, MySQL, HUE Impala
     `.trim();
@@ -305,7 +305,7 @@ CORE SKILLS & TOOLS:
                 'Instantly.ai',
                 'Smartlead',
                 'SPF / DKIM / DMARC',
-                'Secondary Domain Fleets',
+                'Secondary Domain Setup',
                 'GoHighLevel (GHL)',
                 'HubSpot CRM',
                 'N8N Automation',

@@ -83,6 +83,7 @@ export function App() {
 
   // Tech stack items for sleek infinite marquee (Exact matches from reference image + outbound stack)
   const techStack = [
+    { name: "PLUSVIBE", logo: "/logos/plusvibe.svg" },
     { name: "SENDPILOT", logo: "/logos/sendpilot.svg" },
     { name: "CLAUDE", logo: "/logos/claude.svg" },
     { name: "INSTANTLY", logo: "/logos/instantly.png" },
@@ -626,7 +627,7 @@ export function App() {
                 <Globe className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-extrabold text-zinc-950 tracking-tight">
-                1. Secondary Fleet & DNS Isolation
+                1. Secondary Domains & DNS Isolation
               </h3>
               <p className="text-base text-zinc-700 leading-relaxed">
                 Complete isolation of client core root domains. Multi-inbox distribution with strictly calibrated SPF, DKIM, DMARC, and custom tracking domains across rotating IP pools.
@@ -773,6 +774,10 @@ export function App() {
                         <span>Cloudflare</span>
                       </span>
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
+                        <img src="/logos/plusvibe.svg" alt="PlusVibe" className="w-3.5 h-3.5 object-contain" />
+                        <span>PlusVibe</span>
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
                         <img src="/logos/smartlead.png" alt="Smartlead" className="w-3.5 h-3.5 object-contain" />
                         <span>Smartlead</span>
                       </span>
@@ -783,10 +788,10 @@ export function App() {
                     </div>
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                    Outbound Domain & Mailbox Fleet
+                    Secondary Domains & Mailbox Infrastructure
                   </h3>
                   <p className="text-xs sm:text-sm text-zinc-400 mt-1 font-normal leading-relaxed">
-                    Secondary domain deployment, isolated DNS (SPF, DKIM, DMARC), and automated warmup rotation across 6,000+ mailboxes.
+                    Secondary domain setup, isolated DNS records (SPF, DKIM, DMARC), and automated warmup rotation across 6,000+ active inboxes.
                   </p>
                 </div>
 
@@ -935,7 +940,7 @@ export function App() {
               Ready to launch or scale your outbound pipeline?
             </h3>
             <p className="text-base text-zinc-300 font-normal leading-relaxed">
-              Whether you need secondary domain fleet deployment, step-1 reply campaigns, or real-time CRM triage routing, let's talk.
+              Whether you need secondary domain infrastructure, step-1 reply campaigns, or real-time CRM routing, let's talk.
             </p>
 
             <div className="flex flex-wrap items-center gap-3.5 pt-2">

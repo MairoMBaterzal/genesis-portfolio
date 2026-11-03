@@ -94,7 +94,7 @@ export const caseStudiesData: CaseStudy[] = [
     ],
     visualAssets: [
       {
-        title: "Verified 645,355 Sends Fleet Dashboard",
+        title: "Verified 645,355 Sends Campaign Dashboard",
         caption: "Instantly performance metrics: 451,749 leads contacted, 7,090 positive replies (22.4%), 1.0% bounce rate, 0% unsubscribe.",
         imageUrl: "/proof/instantly-645k-stats.png"
       },

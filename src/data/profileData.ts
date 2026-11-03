@@ -46,10 +46,10 @@ export const profileData: ProfileData = {
     {
       label: "Monthly Send Capacity",
       value: "500,000+",
-      detail: "Plusvibe, Instantly & Smartlead secondary domain fleet",
+      detail: "PlusVibe, Instantly & Smartlead secondary domains",
     },
     {
-      label: "Active Mailbox Fleet",
+      label: "Active Inboxes Managed",
       value: "6,000+",
       detail: "Secondary inboxes warmed & rotated across isolated DNS pools",
     },
