@@ -409,14 +409,6 @@ export function App() {
               <ArrowRight className="w-4 h-4 text-white" />
             </a>
 
-            <button
-              onClick={(e) => handleCopyEmail(e)}
-              className="px-5 py-3.5 rounded-full ios-glass hover:bg-white/50 text-zinc-900 text-sm font-bold transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
-            >
-              {copiedEmail ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-zinc-600" />}
-              <span>{copiedEmail ? 'Copied' : 'Copy Email'}</span>
-            </button>
-
             <a
               href={profileData.linkedin}
               target="_blank"
