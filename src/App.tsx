@@ -185,9 +185,8 @@ export function App() {
       <nav className="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center">
         {/* DESKTOP NAVBAR PILL (MD AND UP) */}
         <div className="hidden md:flex items-center gap-3 sm:gap-6 px-4 sm:px-7 py-2 sm:py-2.5 rounded-full obsidian-card text-xs sm:text-sm font-medium text-zinc-200 relative overflow-hidden whitespace-nowrap shadow-xl">
-          <a href="#work" className="hover:text-white transition whitespace-nowrap">Work & Proofs</a>
           <a href="#stack" className="hover:text-white transition whitespace-nowrap">Stack</a>
-          <a href="#engine" className="hover:text-white transition whitespace-nowrap">The Engine</a>
+          <a href="#work" className="hover:text-white transition whitespace-nowrap">Work & Proofs</a>
           <a href="#about" className="hover:text-white transition whitespace-nowrap">About</a>
           <a href="#workflow" className="hover:text-white transition whitespace-nowrap">Workflow</a>
           <span className="text-zinc-600 select-none">|</span>
@@ -254,14 +253,6 @@ export function App() {
           <div className="md:hidden mt-2 w-[calc(100vw-1.5rem)] max-w-sm rounded-2xl obsidian-card p-3 shadow-2xl border border-white/15 animate-in fade-in slide-in-from-top-2 duration-150">
             <div className="flex flex-col space-y-0.5 text-left">
               <a
-                href="#work"
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-xl hover:bg-white/10 text-xs font-bold text-zinc-200 hover:text-white transition flex items-center justify-between"
-              >
-                <span>Work & Proofs</span>
-                <span className="text-[10px] font-mono text-zinc-500">645k+ sends</span>
-              </a>
-              <a
                 href="#stack"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-3 py-2 rounded-xl hover:bg-white/10 text-xs font-bold text-zinc-200 hover:text-white transition flex items-center justify-between"
@@ -270,12 +261,12 @@ export function App() {
                 <span className="text-[10px] font-mono text-zinc-500">Tools</span>
               </a>
               <a
-                href="#engine"
+                href="#work"
                 onClick={() => setMobileMenuOpen(false)}
                 className="px-3 py-2 rounded-xl hover:bg-white/10 text-xs font-bold text-zinc-200 hover:text-white transition flex items-center justify-between"
               >
-                <span>The Outbound Engine</span>
-                <span className="text-[10px] font-mono text-zinc-500">Architecture</span>
+                <span>Work & Proofs</span>
+                <span className="text-[10px] font-mono text-zinc-500">645k+ sends</span>
               </a>
               <a
                 href="#about"
@@ -324,25 +315,29 @@ export function App() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div className="flex items-center gap-5 sm:gap-7">
 
-              {/* Profile Avatar with Biosites Organic Floating Aura Behind It */}
+              {/* Profile Avatar with Enhanced 3D Liquid Glass Floating Aura Behind It */}
               <div className="relative shrink-0 group cursor-pointer">
                 <div className="absolute -inset-4 sm:-inset-5 pointer-events-none select-none -z-10 transition-transform duration-500 group-hover:scale-110">
-                  {/* Large Primary Fluid Drop */}
+                  {/* Large Primary Luminous Fluid Halo */}
                   <div
-                    className="absolute -bottom-2 -left-3 w-28 h-20 sm:w-32 sm:h-24 rounded-[45%_55%_65%_35%] bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f472b6] opacity-80 blur-[2px] transform -rotate-12 animate-pulse"
+                    className="absolute -bottom-2.5 -left-3.5 w-28 h-22 sm:w-34 sm:h-26 rounded-[45%_55%_65%_35%] bg-gradient-to-tr from-sky-400/90 via-indigo-400/85 to-pink-400/90 blur-[6px] transform -rotate-12 animate-pulse"
                     style={{ animationDuration: '4s' }}
                   />
-                  {/* Floating Pebble Droplets */}
-                  <div className="absolute -top-3 left-2 w-5 h-4 sm:w-6 sm:h-5 rounded-full bg-[#fccaa7] opacity-90 shadow-sm" />
-                  <div className="absolute -top-4 left-10 sm:left-12 w-4 h-3 sm:w-5 sm:h-4 rounded-full bg-[#fde7ae] opacity-95 shadow-sm" />
-                  <div className="absolute -top-2 right-1 sm:right-0 w-5 h-4 rounded-full bg-[#e0bed9] opacity-90 shadow-sm" />
-                  <div className="absolute top-8 -right-3 w-6 h-5 rounded-[50%_60%_40%_50%] bg-[#98d4dc] opacity-85 shadow-sm" />
-                  <div className="absolute -bottom-1 -right-2 w-5 h-5 rounded-full bg-[#38bdf8] opacity-90 shadow-sm" />
-                  <div className="absolute top-6 -left-3 w-4 h-5 rounded-[60%_40%_50%_50%] bg-[#afa4cc] opacity-85 shadow-sm" />
+                  {/* Secondary Warm Inner Glow */}
+                  <div
+                    className="absolute -top-2 -right-2 w-20 h-20 rounded-full bg-gradient-to-bl from-amber-300/70 via-rose-300/60 to-transparent blur-[8px]"
+                  />
+                  {/* 3D Translucent Liquid Glass Droplets with Specular Highlights */}
+                  <div className="absolute -top-3.5 left-1.5 w-5 h-4 sm:w-6 sm:h-4.5 rounded-full bg-gradient-to-br from-white/90 via-[#fccaa7] to-[#f9a875] border border-white/80 shadow-[0_4px_12px_rgba(249,168,117,0.45),inset_0_1px_2px_rgba(255,255,255,0.9)] animate-float-slow" />
+                  <div className="absolute -top-4 left-10 sm:left-12 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full bg-gradient-to-br from-white/95 via-[#fde7ae] to-[#facc15] border border-white/80 shadow-[0_4px_10px_rgba(250,204,21,0.4),inset_0_1px_2px_rgba(255,255,255,0.9)] animate-float-reverse" />
+                  <div className="absolute -top-2 right-0.5 w-4.5 h-4 sm:w-5 sm:h-4.5 rounded-full bg-gradient-to-br from-white/90 via-[#e8c5e5] to-[#c084fc] border border-white/75 shadow-[0_4px_12px_rgba(192,132,252,0.4),inset_0_1px_2px_rgba(255,255,255,0.9)] animate-float-slow" />
+                  <div className="absolute top-8 -right-3.5 w-5.5 h-4.5 rounded-[50%_60%_40%_50%] bg-gradient-to-br from-white/90 via-[#98d4dc] to-[#38bdf8] border border-white/75 shadow-[0_4px_12px_rgba(56,189,248,0.4),inset_0_1px_2px_rgba(255,255,255,0.9)] animate-float-reverse" />
+                  <div className="absolute -bottom-1.5 -right-2 w-4.5 h-4.5 rounded-full bg-gradient-to-br from-white/90 via-sky-300 to-blue-500 border border-white/80 shadow-[0_4px_12px_rgba(59,130,246,0.45),inset_0_1px_2px_rgba(255,255,255,0.9)] animate-float-slow" />
+                  <div className="absolute top-6 -left-3.5 w-4 h-5 rounded-[60%_40%_50%_50%] bg-gradient-to-br from-white/90 via-[#c4b5fd] to-[#818cf8] border border-white/75 shadow-[0_4px_12px_rgba(129,140,248,0.4),inset_0_1px_2px_rgba(255,255,255,0.9)] animate-float-reverse" />
                 </div>
 
                 {/* Headshot Squircle */}
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-white/90 shadow-2xl bg-zinc-900 relative z-10 transition-transform duration-300 group-hover:rotate-1">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-white/95 shadow-[0_14px_30px_-6px_rgba(0,0,0,0.28)] bg-zinc-900 relative z-10 transition-transform duration-300 group-hover:rotate-1">
                   <img
                     src={profileData.headshotUrl}
                     alt={profileData.name}
@@ -432,11 +427,8 @@ export function App() {
             </span>
           </div>
 
-          {/* 1-Line Infinite Marquee Moving Left (Compact Dark Obsidian Pills with Official Logos) */}
-          <div className="relative w-full overflow-hidden py-2">
-            <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-[#faeef2] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-[#faeef2] to-transparent z-10 pointer-events-none" />
-
+          {/* 1-Line Infinite Marquee Moving Left (True CSS Alpha Mask - Zero Box Smudges) */}
+          <div className="relative w-full overflow-hidden py-2 marquee-mask">
             <div className="animate-marquee flex items-center gap-2.5 sm:gap-3">
               {[...techStack, ...techStack].map((tool, idx) => (
                 <div
@@ -540,32 +532,29 @@ export function App() {
                     alt={proj.title}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40 group-hover:opacity-15 transition" />
-
-                  {/* Floating Inspect Pill (Top-Right) */}
-                  <div className="absolute top-3.5 right-3.5 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-[10px] font-mono text-white opacity-0 group-hover:opacity-100 transition duration-200">
-                    Inspect ↗
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-35 group-hover:opacity-10 transition" />
                 </div>
 
-                {/* Bottom Content Area (Case Study placed directly above the metric, unobstructed, no link collision) */}
+                {/* Bottom Content Area */}
                 <div className="p-6 flex flex-col justify-between flex-1 space-y-4">
-                  <div className="space-y-3">
-                    {/* Case Study Pill & Category Tag Placed Above the Metric */}
+                  <div className="space-y-3.5">
+                    {/* 3.1 & 3.2: Green Case Study Pill & Enhanced Category Badge */}
                     <div className="flex items-center justify-between gap-2">
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-800 text-[11px] font-bold">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                         Case Study
                       </span>
-                      <span className="text-xs font-mono font-medium text-zinc-500">{proj.tag}</span>
+                      <span className="px-2.5 py-0.5 rounded-full bg-zinc-900/[0.06] border border-zinc-900/10 text-[11px] font-mono font-semibold text-zinc-700">
+                        {proj.tag}
+                      </span>
                     </div>
 
-                    {/* Metric Highlight (Placed directly below Case Study badge) */}
-                    <div className="flex items-baseline gap-2">
+                    {/* 3.3: Enhanced Frosted KPI Callout Bar */}
+                    <div className="px-3.5 py-2 rounded-xl bg-white/55 border border-white/80 shadow-2xs flex items-baseline justify-between gap-2 group-hover:bg-white/80 transition">
                       <span className="text-2xl font-black font-sans text-emerald-600 tracking-tight">
                         {proj.statValue}
                       </span>
-                      <span className="text-xs font-medium text-zinc-600 truncate max-w-[180px]">
+                      <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-zinc-600 truncate">
                         {proj.statLabel}
                       </span>
                     </div>
@@ -581,15 +570,12 @@ export function App() {
                     </p>
                   </div>
 
-                  {/* Interactive Bottom CTA Link (No collision, cleanly spaced) */}
+                  {/* 3.4: Single Clean Interactive Bottom CTA Link (Removed duplicate Inspect links) */}
                   <div className="pt-3 border-t border-zinc-900/10 mt-auto flex items-center justify-between">
                     <div className="inline-flex items-center gap-2 text-sm font-bold text-zinc-950 group-hover:text-emerald-600 transition-colors">
                       <span>View campaign proof</span>
                       <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" />
                     </div>
-                    <span className="text-xs font-mono text-zinc-400 font-semibold group-hover:text-zinc-600 transition-colors">
-                      Inspect ↗
-                    </span>
                   </div>
                 </div>
               </div>
@@ -597,62 +583,7 @@ export function App() {
           </div>
         </section>
 
-        {/* 3. THE ENGINE / ARCHITECTURAL PILLARS (APPLE IOS GLASS) */}
-        <section id="engine" className="scroll-mt-24 mt-12 sm:mt-16 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-            <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
-                SYSTEM ARCHITECTURE
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-zinc-950 tracking-tight">
-                The Outbound Engine<span className="text-emerald-600">.</span>
-              </h2>
-            </div>
-            <span className="text-xs font-mono text-zinc-700 font-semibold">
-              Zero Primary Domain Burn · Instant Lead Triage
-            </span>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 sm:p-7 rounded-2xl ios-glass space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-800 shadow-xs">
-                <Globe className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-extrabold text-zinc-950 tracking-tight">
-                1. Secondary Domains & DNS Isolation
-              </h3>
-              <p className="text-base text-zinc-700 leading-relaxed">
-                Complete isolation of client core root domains. Multi-inbox distribution with strictly calibrated SPF, DKIM, DMARC, and custom tracking domains across rotating IP pools.
-              </p>
-            </div>
-
-            <div className="p-6 sm:p-7 rounded-2xl ios-glass space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-800 shadow-xs">
-                <Send className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-extrabold text-zinc-950 tracking-tight">
-                2. Step-1 Permission Sequences
-              </h3>
-              <p className="text-base text-zinc-700 leading-relaxed">
-                Short, hyper-relevant conversational opening hooks. Eliminating sales fluff and friction to prompt immediate C-suite reply momentum, driving positive response rates to 22.4%.
-              </p>
-            </div>
-
-            <div className="p-6 sm:p-7 rounded-2xl ios-glass space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-800 shadow-xs">
-                <Zap className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-extrabold text-zinc-950 tracking-tight">
-                3. Sub-15 Min Lead Triage & Slack Feed
-              </h3>
-              <p className="text-base text-zinc-700 leading-relaxed">
-                Real-time webhook notifications routing qualified positive prospects directly into client Slack channels and CRMs (HubSpot / GoHighLevel) for immediate sales closing.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* 4. RESUME TIMELINE (POLYWORK STYLE WITH APPLE IOS GLASS) */}
+        {/* 3. RESUME TIMELINE (POLYWORK STYLE WITH APPLE IOS GLASS) */}
         <section id="about" className="scroll-mt-24 mt-12 sm:mt-16 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-4 border-b border-zinc-900/10">
             <div>
@@ -749,39 +680,20 @@ export function App() {
             <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
             <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
-            <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
               {/* Main Vertical Linear Flow (Steps 01 -> 04) */}
-              <div className="lg:col-span-8 flex flex-col items-center space-y-0 w-full">
+              <div className="lg:col-span-8 flex flex-col items-center space-y-0 w-full relative z-10">
 
                 {/* STEP 01: INFRASTRUCTURE HUB */}
                 <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400 whitespace-nowrap shrink-0">
+                  <div className="flex items-center justify-between gap-2 mb-1.5">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400">
                       HUB · STEP 01
                     </span>
-                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/google-workspace.svg" alt="Google Workspace" className="w-3.5 h-3.5 object-contain" />
-                        <span>Google Workspace</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/microsoft.svg" alt="Microsoft 365" className="w-3.5 h-3.5 object-contain" />
-                        <span>Microsoft 365</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/smartlead.png" alt="Smartlead" className="w-3.5 h-3.5 object-contain" />
-                        <span>Smartlead</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/instantly.png" alt="Instantly" className="w-3.5 h-3.5 object-contain" />
-                        <span>Instantly</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/plusvibe.svg" alt="PlusVibe" className="w-3.5 h-3.5 object-contain" />
-                        <span>PlusVibe</span>
-                      </span>
-                    </div>
+                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">
+                      Domains · Inboxes · Warmup
+                    </span>
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
                     Inbox Provisioning & Sending Infrastructure
@@ -789,33 +701,44 @@ export function App() {
                   <p className="text-xs sm:text-sm text-zinc-400 mt-1 font-normal leading-relaxed">
                     Secondary domain setup with verified DNS (SPF, DKIM, DMARC). Provisioning Google Workspace, Microsoft 365, and Zapmail accounts rotated across Smartlead, Instantly, and PlusVibe warmup pools.
                   </p>
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-3.5 pt-3 border-t border-white/[0.07]">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/google-workspace.svg" alt="Google Workspace" className="w-3.5 h-3.5 object-contain" />
+                      <span>Google Workspace</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/microsoft.svg" alt="Microsoft 365" className="w-3.5 h-3.5 object-contain" />
+                      <span>Microsoft 365</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/smartlead.png" alt="Smartlead" className="w-3.5 h-3.5 object-contain" />
+                      <span>Smartlead</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/instantly.png" alt="Instantly" className="w-3.5 h-3.5 object-contain" />
+                      <span>Instantly</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/plusvibe.svg" alt="PlusVibe" className="w-3.5 h-3.5 object-contain" />
+                      <span>PlusVibe</span>
+                    </span>
+                  </div>
                 </div>
 
                 {/* Vertical Connector Line 1 */}
-                <div className="w-[2px] h-6 sm:h-8 bg-gradient-to-b from-emerald-500/60 to-sky-400/60 relative my-0.5">
+                <div className="w-[2px] h-6 sm:h-7 bg-gradient-to-b from-emerald-500/60 to-sky-400/60 relative my-0.5">
                   <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 </div>
 
                 {/* STEP 02: LEAD EXTRACTION & WATERFALL ENRICHMENT */}
                 <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-sky-400 whitespace-nowrap shrink-0">
+                  <div className="flex items-center justify-between gap-2 mb-1.5">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-sky-400">
                       DATA LAYER · STEP 02
                     </span>
-                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/apollo.svg" alt="Apollo" className="w-3.5 h-3.5 object-contain" />
-                        <span>Apollo</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/clay.png" alt="Clay" className="w-3.5 h-3.5 object-contain" />
-                        <span>Clay</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/millionverifier-badge.svg" alt="MillionVerifier" className="w-3.5 h-3.5 object-contain" />
-                        <span>MillionVerifier</span>
-                      </span>
-                    </div>
+                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">
+                      Scraping · MX Validation
+                    </span>
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
                     Waterfall Enrichment & Verification
@@ -823,29 +746,36 @@ export function App() {
                   <p className="text-xs sm:text-sm text-zinc-400 mt-1 font-normal leading-relaxed">
                     Custom scraping pipelines sourcing verified decision-makers, validating MX records, and holding strict sub-3% bounce SLA.
                   </p>
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-3.5 pt-3 border-t border-white/[0.07]">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/apollo.svg" alt="Apollo" className="w-3.5 h-3.5 object-contain" />
+                      <span>Apollo</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/clay.png" alt="Clay" className="w-3.5 h-3.5 object-contain" />
+                      <span>Clay</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/millionverifier-badge.svg" alt="MillionVerifier" className="w-3.5 h-3.5 object-contain" />
+                      <span>MillionVerifier</span>
+                    </span>
+                  </div>
                 </div>
 
                 {/* Vertical Connector Line 2 */}
-                <div className="w-[2px] h-6 sm:h-8 bg-gradient-to-b from-sky-400/60 to-purple-400/60 relative my-0.5">
+                <div className="w-[2px] h-6 sm:h-7 bg-gradient-to-b from-sky-400/60 to-purple-400/60 relative my-0.5">
                   <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
                 </div>
 
                 {/* STEP 03: PERMISSION SEQUENCES & AI REPLY TRIAGE */}
                 <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-purple-400 whitespace-nowrap shrink-0">
+                  <div className="flex items-center justify-between gap-2 mb-1.5">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-purple-400">
                       EXECUTION · STEP 03
                     </span>
-                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/claude.svg" alt="Claude" className="w-3.5 h-3.5 object-contain" />
-                        <span>Claude</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/chatgpt.svg" alt="ChatGPT" className="w-3.5 h-3.5 object-contain" />
-                        <span>ChatGPT</span>
-                      </span>
-                    </div>
+                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">
+                      Copywriting · Reply Triage
+                    </span>
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
                     Permission Sequences & Intent Classification
@@ -853,37 +783,32 @@ export function App() {
                   <p className="text-xs sm:text-sm text-zinc-400 mt-1 font-normal leading-relaxed">
                     Conversational opening hooks driving 22.4% reply rates. Real-time AI classification for positive interest, objections, and follow-ups.
                   </p>
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-3.5 pt-3 border-t border-white/[0.07]">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/claude.svg" alt="Claude" className="w-3.5 h-3.5 object-contain" />
+                      <span>Claude</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/chatgpt.svg" alt="ChatGPT" className="w-3.5 h-3.5 object-contain" />
+                      <span>ChatGPT</span>
+                    </span>
+                  </div>
                 </div>
 
                 {/* Vertical Connector Line 3 */}
-                <div className="w-[2px] h-6 sm:h-8 bg-gradient-to-b from-purple-400/60 to-emerald-400/60 relative my-0.5">
+                <div className="w-[2px] h-6 sm:h-7 bg-gradient-to-b from-purple-400/60 to-emerald-400/60 relative my-0.5">
                   <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 </div>
 
                 {/* STEP 04: REAL-TIME CRM & SLACK TRIAGE */}
                 <div className="w-full rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-6 hover:border-emerald-500/40 transition shadow-sm text-left relative group">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400 whitespace-nowrap shrink-0">
+                  <div className="flex items-center justify-between gap-2 mb-1.5">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400">
                       PIPELINE & DEALS · STEP 04
                     </span>
-                    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/n8n.svg" alt="n8n" className="w-3.5 h-3.5 object-contain" />
-                        <span>n8n</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/slack.svg" alt="Slack" className="w-3.5 h-3.5 object-contain" />
-                        <span>Slack</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/hubspot.svg" alt="HubSpot" className="w-3.5 h-3.5 object-contain" />
-                        <span>HubSpot</span>
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-300">
-                        <img src="/logos/gohighlevel.png" alt="GHL" className="w-3.5 h-3.5 object-contain" />
-                        <span>GHL</span>
-                      </span>
-                    </div>
+                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">
+                      Webhooks · Calendar Booking
+                    </span>
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
                     Sub-15 Min Lead Routing & Deal Closing
@@ -891,16 +816,72 @@ export function App() {
                   <p className="text-xs sm:text-sm text-zinc-400 mt-1 font-normal leading-relaxed">
                     Automated webhook dispatch pushing booked C-suite discovery calls straight into client Slack channels and CRM deal pipelines.
                   </p>
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-3.5 pt-3 border-t border-white/[0.07]">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/n8n.svg" alt="n8n" className="w-3.5 h-3.5 object-contain" />
+                      <span>n8n</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/slack.svg" alt="Slack" className="w-3.5 h-3.5 object-contain" />
+                      <span>Slack</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/hubspot.svg" alt="HubSpot" className="w-3.5 h-3.5 object-contain" />
+                      <span>HubSpot</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 border border-white/10 text-[11px] font-mono text-zinc-200">
+                      <img src="/logos/gohighlevel.png" alt="GHL" className="w-3.5 h-3.5 object-contain" />
+                      <span>GHL</span>
+                    </span>
+                  </div>
                 </div>
 
               </div>
 
-              {/* Side Panel: Continuous Optimization Feedback Loop (Matching Reference Image) */}
-              <div className="lg:col-span-4 flex flex-col justify-center items-center lg:items-start text-left h-full">
-                <div className="p-6 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 space-y-3 relative w-full shadow-lg">
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-mono font-bold uppercase tracking-wider">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <span>FEEDBACK LOOP</span>
+              {/* Side Panel: Connected Continuous Optimization Feedback Loop */}
+              <div className="lg:col-span-4 flex flex-col justify-between items-center text-left relative py-2">
+                {/* Mobile Connector Line (Visible below lg) */}
+                <div className="lg:hidden w-[2px] h-6 border-l-2 border-dashed border-emerald-500/50 -mt-6 mb-2" />
+
+                {/* Top Return Loop Connector Curve (Desktop lg+): Curves from Feedback Card back into Step 01 */}
+                <div className="hidden lg:flex w-full flex-1 items-end justify-center relative pointer-events-none">
+                  <svg className="w-full h-full min-h-[140px] overflow-visible" viewBox="0 0 240 160" fill="none">
+                    <path
+                      d="M 120 160 L 120 48 Q 120 16 88 16 L -32 16"
+                      stroke="rgba(16, 185, 129, 0.22)"
+                      strokeWidth="2"
+                      vectorEffect="non-scaling-stroke"
+                      fill="none"
+                    />
+                    <path
+                      d="M 120 160 L 120 48 Q 120 16 88 16 L -32 16"
+                      stroke="#34d399"
+                      strokeWidth="2"
+                      strokeDasharray="6 6"
+                      vectorEffect="non-scaling-stroke"
+                      className="animate-dash-flow"
+                      fill="none"
+                    />
+                    {/* Arrowhead pointing left into Step 01 */}
+                    <path
+                      d="M -25 11 L -33 16 L -25 21"
+                      stroke="#34d399"
+                      strokeWidth="2"
+                      vectorEffect="non-scaling-stroke"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                {/* Feedback Loop Card */}
+                <div className="p-6 rounded-2xl bg-emerald-950/45 border border-emerald-500/35 space-y-3 relative w-full shadow-[0_0_40px_-10px_rgba(16,185,129,0.25)] z-10">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-mono font-bold uppercase tracking-wider">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      <span>FEEDBACK LOOP</span>
+                    </div>
+                    <span className="text-[10px] font-mono text-emerald-400/70">STEP 04 ↺ 01</span>
                   </div>
                   <h4 className="text-base font-bold text-white tracking-tight">
                     Continuous Deliverability & ICP Calibration
@@ -908,10 +889,34 @@ export function App() {
                   <p className="text-xs sm:text-sm text-zinc-300 font-normal leading-relaxed">
                     Closed deals and response signals automatically loop back to the infrastructure hub — adjusting sending volume, pruning fatigued copy, and protecting domain health.
                   </p>
-                  <div className="pt-2 border-t border-emerald-500/20 text-[11px] font-mono text-emerald-400/90 font-medium flex items-center gap-2">
+                  <div className="pt-2.5 border-t border-emerald-500/20 text-[11px] font-mono text-emerald-400/95 font-medium flex items-center gap-2">
                     <span>⚡ Zero primary root domain burn</span>
                   </div>
                 </div>
+
+                {/* Bottom Outbound Loop Connector Curve (Desktop lg+): Curves from Step 04 up into Feedback Card */}
+                <div className="hidden lg:flex w-full flex-1 items-start justify-center relative pointer-events-none">
+                  <svg className="w-full h-full min-h-[140px] overflow-visible" viewBox="0 0 240 160" fill="none">
+                    <path
+                      d="M -32 144 L 88 144 Q 120 144 120 112 L 120 0"
+                      stroke="rgba(16, 185, 129, 0.22)"
+                      strokeWidth="2"
+                      vectorEffect="non-scaling-stroke"
+                      fill="none"
+                    />
+                    <path
+                      d="M -32 144 L 88 144 Q 120 144 120 112 L 120 0"
+                      stroke="#34d399"
+                      strokeWidth="2"
+                      strokeDasharray="6 6"
+                      vectorEffect="non-scaling-stroke"
+                      className="animate-dash-flow"
+                      fill="none"
+                    />
+                    <circle cx="-32" cy="144" r="3.5" fill="#34d399" />
+                  </svg>
+                </div>
+
               </div>
 
             </div>

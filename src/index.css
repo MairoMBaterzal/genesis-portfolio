@@ -162,6 +162,50 @@
   animation-play-state: paused;
 }
 
+/* True Alpha Mask for Marquee Edges (eliminates solid color box smudges) */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+/* Organic 3D Liquid Droplet Floating Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) translateX(2px) rotate(4deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(4px) translateX(-3px) rotate(-5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 6s ease-in-out infinite;
+}
+
+/* Animated Marching Ants / Energy Flow for Workflow Feedback Loop SVG */
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.animate-dash-flow {
+  animation: dashFlow 1.2s linear infinite;
+}
+
 /* Clean minimal scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
