@@ -83,7 +83,7 @@ export function App() {
   const techStack = [
     { name: "Plusvibe.ai", role: "Outbound Tooling", icon: Flame, color: "text-amber-500" },
     { name: "Instantly.ai", role: "Sending & Warmup", icon: Send, color: "text-blue-500" },
-    { name: "Smartlead", role: "Fleet Engine", icon: Radio, color: "text-indigo-500" },
+    { name: "Smartlead", role: "Inbox Warmup & Sends", icon: Radio, color: "text-indigo-500" },
     { name: "HubSpot CRM", role: "Pipeline & Deals", icon: Layers, color: "text-orange-500" },
     { name: "GoHighLevel", role: "CRM Automations", icon: Workflow, color: "text-emerald-600" },
     { name: "Apollo.io", role: "B2B Lead Data", icon: Search, color: "text-cyan-600" },
@@ -99,9 +99,9 @@ export function App() {
   const projects = [
     {
       id: "01",
-      tag: "Outbound Fleet",
+      tag: "Outbound Systems",
       client: "Single Campaign Cluster",
-      title: "645,355 Dispatches · 7,090 Positive Replies",
+      title: "645,355 Emails Sent · 7,090 Positive Replies",
       summary: "Live Instantly campaign metrics across 451,749 targeted B2B decision-makers. Step-1 permission sequence architecture driving 7,090 verified positive leads with zero root-domain burn.",
       image: "/proof/instantly-645k-stats.png",
       statValue: "7,090+",
@@ -195,8 +195,8 @@ export function App() {
         </div>
       </nav>
 
-      {/* Main Container */}
-      <main className="relative z-10 max-w-6xl mx-auto px-6 sm:px-12 pt-28 sm:pt-36 pb-32 space-y-16 sm:space-y-20">
+      {/* Main Container - Expanded width for edge-to-edge breathing room */}
+      <main className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pt-28 sm:pt-36 pb-32 space-y-16 sm:space-y-20">
 
         {/* HERO HEADER ROW */}
         <section className="space-y-6">
@@ -264,40 +264,23 @@ export function App() {
           <div className="w-full border-b border-zinc-900/15 pt-2" />
         </section>
 
-        {/* BESPOKE EDITORIAL HEADLINE & SUBHEADLINE */}
-        <section className="space-y-6 max-w-4xl mx-auto text-center py-4">
-          {/* Editorial Category Tracker */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ios-glass text-xs font-mono font-semibold text-zinc-700 shadow-xs mb-1">
+        {/* EDITORIAL HEADLINE & SUBHEADLINE (2 CLEAN LINES, CRO-OPTIMIZED, NO REDUNDANT CARDS) */}
+        <section className="space-y-5 max-w-4xl mx-auto text-center py-2 sm:py-4">
+          {/* Category Tracker */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ios-glass text-xs font-mono font-semibold text-zinc-700 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>OUTBOUND ARCHITECTURE · 2026</span>
+            <span>OUTBOUND SYSTEMS · 2026</span>
           </div>
 
-          {/* Elevated Editorial Headline with Instrument Serif & Gradient Highlights */}
-          <h2 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-black text-zinc-950 tracking-tight leading-[1.14] max-w-4xl mx-auto">
-            I build and manage{' '}
-            <span className="font-serif italic font-normal text-4xl sm:text-6xl lg:text-[4.2rem] text-zinc-800 pr-1 inline-block">
-              modern
-            </span>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-600">
-              outbound systems
-            </span>{' '}
-            for{' '}
-            <span className="font-serif italic font-normal text-4xl sm:text-6xl lg:text-[4.2rem] text-zinc-800 pr-1 inline-block">
-              high-ticket
-            </span>{' '}
-            B2B agencies & SaaS companies.
+          {/* Clean 2-Line Headline (Unified font, authoritative, no disqualifying niche) */}
+          <h2 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-black text-zinc-950 tracking-tight leading-[1.15] max-w-3xl mx-auto">
+            I build and operate modern outbound systems for high-growth B2B companies.
           </h2>
 
-          {/* Subheadline (Clean, punchy, editorial weight) */}
-          <p className="text-base sm:text-lg md:text-xl text-zinc-700 leading-relaxed font-normal max-w-3xl mx-auto pt-1">
-            <strong className="text-zinc-950 font-semibold">End-to-end outbound operations:</strong> secondary domain authentication, inbox deliverability management, enriched lead sourcing, and tested copy. Fully integrated with your CRM to deliver predictable deal flow on auto-pilot.
+          {/* Clean 2-Line Subheadline */}
+          <p className="text-base sm:text-lg md:text-xl text-zinc-700 leading-relaxed font-normal max-w-2xl mx-auto">
+            End-to-end cold email infrastructure: secondary domain fleets, deliverability preservation, enriched lead sourcing, and automated CRM triage.
           </p>
-
-          {/* Open-To Card (Apple iOS Transparent Frosted Glass) */}
-          <div className="p-4 sm:p-5 rounded-2xl ios-glass text-sm sm:text-base text-zinc-800 leading-relaxed max-w-2xl mx-auto shadow-xs">
-            <span className="font-extrabold text-zinc-950">I'm open to: </span>
-            full-time or contract <strong className="text-zinc-950 font-bold">B2B Outbound Specialist</strong> roles, dedicated secondary domain fleet builds, cold email deliverability auditing, and CRM lead triage workflows.
-          </div>
 
           {/* Centered Contact Action CTAs */}
           <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
@@ -348,11 +331,11 @@ export function App() {
                 PRODUCTION TOOLING
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-zinc-950 tracking-tight">
-                Operating Engines & Tech Stack
+                Production Tech Stack & Tools
               </h2>
             </div>
             <span className="text-xs font-mono text-zinc-700 font-semibold">
-              1-Line Continuous Fleet Engine · 500k+ Monthly Dispatches
+              Production Infrastructure · 500k+ Monthly Volume
             </span>
           </div>
 
@@ -393,7 +376,7 @@ export function App() {
                 WORK & PROOFS
               </span>
               <h2 className="text-3xl sm:text-5xl font-black text-zinc-950 tracking-tight">
-                Selected Work & Campaign Telemetry<span className="text-emerald-600">.</span>
+                Selected Work & Campaign Proof<span className="text-emerald-600">.</span>
               </h2>
             </div>
             <p className="text-sm font-mono text-zinc-700 font-medium">
@@ -411,7 +394,7 @@ export function App() {
                 500K+
               </div>
               <span className="text-xs sm:text-sm text-zinc-600 mt-1.5 block font-medium">
-                Dispatched monthly with 0 domain burn
+                Sent monthly with 0 primary domain burn
               </span>
             </div>
 
@@ -511,7 +494,7 @@ export function App() {
                   {/* Interactive Bottom CTA Link (No collision, cleanly spaced) */}
                   <div className="pt-3 border-t border-zinc-900/10 mt-auto flex items-center justify-between">
                     <div className="inline-flex items-center gap-2 text-sm font-bold text-zinc-950 group-hover:text-emerald-600 transition-colors">
-                      <span>Explore telemetry</span>
+                      <span>View campaign proof</span>
                       <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" />
                     </div>
                     <span className="text-xs font-mono text-zinc-400 font-semibold group-hover:text-zinc-600 transition-colors">
@@ -610,7 +593,7 @@ export function App() {
                 Co-Founder & Outbound Lead · StylSensei
               </h3>
               <p className="text-base text-zinc-700 font-normal leading-relaxed">
-                Managed scalable cold email operations across 6,000+ warmed secondary mailboxes and 500k+ monthly dispatches. Owned end-to-end reply triage, objection handling, and prospect qualification, booking high-intent C-suite discovery calls directly into client calendars.
+                Managed scalable cold email operations across 6,000+ warmed secondary mailboxes and 500k+ monthly sends. Owned end-to-end reply triage, objection handling, and prospect qualification, booking high-intent C-suite discovery calls directly into client calendars.
               </p>
             </div>
 

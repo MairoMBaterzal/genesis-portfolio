@@ -182,22 +182,8 @@ export const InteractiveBackground: React.FC = () => {
         ctx.fill();
       });
 
-      // Interactive mouse follow halo light
-      const mouseHalo = ctx.createRadialGradient(
-        currentMouseX,
-        currentMouseY,
-        0,
-        currentMouseX,
-        currentMouseY,
-        Math.min(width, height) * 0.4
-      );
-      mouseHalo.addColorStop(0, 'rgba(255, 255, 255, 0.45)');
-      mouseHalo.addColorStop(0.5, 'rgba(254, 240, 138, 0.15)');
-      mouseHalo.addColorStop(1, 'rgba(255, 255, 255, 0)');
-      ctx.fillStyle = mouseHalo;
-      ctx.beginPath();
-      ctx.arc(currentMouseX, currentMouseY, Math.min(width, height) * 0.4, 0, Math.PI * 2);
-      ctx.fill();
+      // Organic fluid background reacts to scroll and smooth mouse velocity without distracting spotlight
+
 
       // Render subtle drifting bokeh particles
       particles.forEach((p) => {

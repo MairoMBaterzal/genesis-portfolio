@@ -61,7 +61,7 @@ export const profileData: ProfileData = {
     {
       label: "Verified Bounce Rate",
       value: "< 3.0%",
-      detail: "Strict sub-3% deliverability SLA held across all client dispatches",
+      detail: "Strict sub-3% deliverability SLA held across all client sending campaigns",
     },
   ],
   education: {
