@@ -33,40 +33,67 @@
   background-size: 24px 24px;
 }
 
-/* Apple iOS Liquid Frosted Glass (VisionOS / iOS App Box style) */
+/* Apple iOS 27 Liquid Optical Glass (Solarium / VisionOS 3D Specular Lens style) */
 .ios-glass {
-  background: rgba(255, 255, 255, 0.32);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.48);
-  box-shadow: 
-    0 8px 32px 0 rgba(31, 38, 135, 0.05),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.7),
-    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.03);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.2s ease;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.46) 0%,
+    rgba(255, 255, 255, 0.16) 52%,
+    rgba(255, 255, 255, 0.32) 100%
+  );
+  backdrop-filter: blur(36px) saturate(210%) brightness(1.03);
+  -webkit-backdrop-filter: blur(36px) saturate(210%) brightness(1.03);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow:
+    0 12px 34px -6px rgba(15, 23, 42, 0.08),
+    0 2px 6px -1px rgba(15, 23, 42, 0.04),
+    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95),
+    inset 1px 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1.5px 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 0 22px 0 rgba(255, 255, 255, 0.18);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, background 0.28s ease, border-color 0.2s ease;
 }
 
 .ios-glass:hover {
-  background: rgba(255, 255, 255, 0.48);
-  border-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 
-    0 14px 36px 0 rgba(31, 38, 135, 0.09),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.58) 0%,
+    rgba(255, 255, 255, 0.24) 52%,
+    rgba(255, 255, 255, 0.42) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 18px 40px -6px rgba(15, 23, 42, 0.11),
+    0 4px 10px -2px rgba(15, 23, 42, 0.05),
+    inset 0 2px 2px 0 rgba(255, 255, 255, 1),
+    inset 1px 0 1.5px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1.5px 2px 0 rgba(255, 255, 255, 0.5),
+    inset 0 0 26px 0 rgba(255, 255, 255, 0.26);
   transform: translateY(-3px);
 }
 
-/* AWS Glowing Card with iOS Glass Foundation */
+/* iOS 27 Liquid Glass Case Study Card with Radiant Hover Halo */
 .aws-glow-card {
   position: relative;
   border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.38);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.52);
-  box-shadow: 
-    0 8px 30px 0 rgba(31, 38, 135, 0.05),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.7);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.3s ease;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.48) 0%,
+    rgba(255, 255, 255, 0.18) 55%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  backdrop-filter: blur(36px) saturate(210%) brightness(1.03);
+  -webkit-backdrop-filter: blur(36px) saturate(210%) brightness(1.03);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  box-shadow:
+    0 14px 36px -6px rgba(15, 23, 42, 0.08),
+    0 2px 8px -1px rgba(15, 23, 42, 0.04),
+    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95),
+    inset 1px 0 1px 0 rgba(255, 255, 255, 0.72),
+    inset 0 -1.5px 2px 0 rgba(255, 255, 255, 0.42),
+    inset 0 0 24px 0 rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, border-color 0.3s ease;
   will-change: transform, box-shadow;
 }
 
@@ -103,12 +130,19 @@
 
 .aws-glow-card:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.62);
-  border-color: transparent;
-  box-shadow: 
-    0 0 30px 4px rgba(16, 185, 129, 0.28),
-    0 0 15px 2px rgba(56, 189, 248, 0.2),
-    0 18px 32px -5px rgba(0, 0, 0, 0.07);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.62) 0%,
+    rgba(255, 255, 255, 0.28) 55%,
+    rgba(255, 255, 255, 0.46) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 30px 4px rgba(16, 185, 129, 0.25),
+    0 0 15px 2px rgba(56, 189, 248, 0.18),
+    0 18px 36px -5px rgba(15, 23, 42, 0.1),
+    inset 0 2px 2px 0 rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px 0 rgba(255, 255, 255, 0.55);
 }
 
 .aws-glow-card:hover::after {

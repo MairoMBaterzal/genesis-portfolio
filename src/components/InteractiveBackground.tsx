@@ -146,30 +146,26 @@ export const InteractiveBackground: React.FC = () => {
       const normMouseX = (currentMouseX / width - 0.5) * 2;
       const normMouseY = (currentMouseY / height - 0.5) * 2;
 
-      // Draw interactive flowing gradient blobs
+      // Draw interactive flowing gradient blobs (Smooth continuous sine parallax - ZERO modulo teleportation/flicker)
       blobs.forEach((blob, idx) => {
         // Continuous organic wave oscillation
-        const waveX = Math.sin(time * blob.speedX + idx) * 0.12 * width;
-        const waveY = Math.cos(time * blob.speedY + idx * 1.5) * 0.12 * height;
+        const waveX = Math.sin(time * blob.speedX + idx) * 0.1 * width;
+        const waveY = Math.cos(time * blob.speedY + idx * 1.5) * 0.1 * height;
 
-        // Scroll displacement: as you scroll down, blobs shift dynamically across viewport
-        const scrollOffsetY = ((currentScrollY * blob.scrollFactor) % height);
+        // Smooth continuous trigonometric scroll drift (never wraps or jumps)
+        const scrollDriftX = Math.cos(currentScrollY * 0.0005 * blob.scrollFactor + idx) * width * 0.08;
+        const scrollDriftY = Math.sin(currentScrollY * 0.0007 * blob.scrollFactor + idx * 1.3) * height * 0.18;
 
-        // Mouse displacement: cursor draws or pushes the fluid
+        // Mouse displacement: cursor gently nudges the fluid
         const mouseOffsetX = normMouseX * blob.mouseFactor * width;
         const mouseOffsetY = normMouseY * blob.mouseFactor * height;
 
-        const cx = blob.baseX * width + waveX + mouseOffsetX;
-        let cy = blob.baseY * height + waveY + mouseOffsetY + scrollOffsetY;
-
-        // Wrap around smoothly if scrolled far
-        if (cy < -height * 0.5) cy += height * 2;
-        if (cy > height * 1.5) cy -= height * 2;
+        const cx = blob.baseX * width + waveX + scrollDriftX + mouseOffsetX;
+        const cy = blob.baseY * height + waveY + scrollDriftY + mouseOffsetY;
 
         const maxDim = Math.max(width, height);
-        // Dynamic breathing radius linked to time & scroll speed
-        const scrollVelocity = Math.abs(targetScrollY - currentScrollY);
-        const radius = blob.radius * maxDim * (1 + Math.sin(time * 0.015 + idx) * 0.08 + Math.min(scrollVelocity * 0.001, 0.25));
+        // Smooth organic breathing radius (no scroll-velocity flash)
+        const radius = blob.radius * maxDim * (1 + Math.sin(time * 0.01 + idx) * 0.06);
 
         const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
         grad.addColorStop(0, blob.colorStart);
@@ -182,27 +178,24 @@ export const InteractiveBackground: React.FC = () => {
         ctx.fill();
       });
 
-      // Organic fluid background reacts to scroll and smooth mouse velocity without distracting spotlight
-
-
-      // Render subtle drifting bokeh particles
+      // Render subtle drifting bokeh particles (steady velocity without scroll jitter)
       particles.forEach((p) => {
-        p.x += p.vx + normMouseX * 0.3;
-        p.y += p.vy - (currentScrollY - targetScrollY) * 0.02;
+        p.x += p.vx + normMouseX * 0.2;
+        p.y += p.vy;
 
-        if (p.y < 0) {
+        if (p.y < -10) {
           p.y = height + 10;
           p.x = Math.random() * width;
         }
         if (p.y > height + 10) {
-          p.y = 0;
+          p.y = -10;
           p.x = Math.random() * width;
         }
         if (p.x < 0) p.x = width;
         if (p.x > width) p.x = 0;
 
         ctx.fillStyle = p.color;
-        ctx.globalAlpha = p.alpha * 0.5;
+        ctx.globalAlpha = p.alpha * 0.45;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fill();

@@ -525,36 +525,38 @@ export function App() {
                 onClick={() => setActiveLightbox({ url: proj.image, title: proj.title, caption: proj.summary })}
                 className="aws-glow-card group cursor-pointer flex flex-col overflow-hidden text-left"
               >
-                {/* Top Visual Screenshot Container - 100% Unobstructed Preview */}
-                <div className="aspect-[16/10] bg-zinc-950 overflow-hidden relative">
-                  <img
-                    src={proj.image}
-                    alt={proj.title}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-35 group-hover:opacity-10 transition" />
+                {/* Top Visual Screenshot Container - Recessed iOS 27 Liquid Glass Frame */}
+                <div className="p-2.5 pb-0">
+                  <div className="aspect-[16/10] rounded-[1.1rem] bg-zinc-950 overflow-hidden relative border border-white/70 shadow-xs">
+                    <img
+                      src={proj.image}
+                      alt={proj.title}
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-30 group-hover:opacity-10 transition" />
+                  </div>
                 </div>
 
                 {/* Bottom Content Area */}
-                <div className="p-6 flex flex-col justify-between flex-1 space-y-4">
+                <div className="p-5 sm:p-6 pt-4 flex flex-col justify-between flex-1 space-y-4">
                   <div className="space-y-3.5">
                     {/* 3.1 & 3.2: Green Case Study Pill & Enhanced Category Badge */}
                     <div className="flex items-center justify-between gap-2">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-800 text-[11px] font-bold">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/35 text-emerald-900 text-[11px] font-bold shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)]">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                         Case Study
                       </span>
-                      <span className="px-2.5 py-0.5 rounded-full bg-zinc-900/[0.06] border border-zinc-900/10 text-[11px] font-mono font-semibold text-zinc-700">
+                      <span className="px-2.5 py-0.5 rounded-full bg-white/35 border border-white/70 text-[11px] font-mono font-semibold text-zinc-800 shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)]">
                         {proj.tag}
                       </span>
                     </div>
 
-                    {/* 3.3: Enhanced Frosted KPI Callout Bar */}
-                    <div className="px-3.5 py-2 rounded-xl bg-white/55 border border-white/80 shadow-2xs flex items-baseline justify-between gap-2 group-hover:bg-white/80 transition">
+                    {/* 3.3: iOS 27 Liquid Glass KPI Callout Capsule */}
+                    <div className="px-3.5 py-2 rounded-xl bg-white/38 backdrop-blur-md border border-white/85 shadow-[inset_0_1.5px_1.5px_rgba(255,255,255,0.95),0_2px_8px_rgba(15,23,42,0.04)] flex items-baseline justify-between gap-2 group-hover:bg-white/55 transition">
                       <span className="text-2xl font-black font-sans text-emerald-600 tracking-tight">
                         {proj.statValue}
                       </span>
-                      <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-zinc-600 truncate">
+                      <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-zinc-700 truncate">
                         {proj.statLabel}
                       </span>
                     </div>
