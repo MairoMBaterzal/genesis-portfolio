@@ -167,21 +167,21 @@ export function App() {
 
       {/* FLOATING NAVBAR PILL (IMAGE 1 SPEC - OBSIDIAN GLASS WITH SCROLL PROGRESS) */}
       <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center">
-        <div className="flex items-center gap-4 sm:gap-6 px-5 sm:px-7 py-2.5 rounded-full obsidian-card text-xs sm:text-sm font-medium text-zinc-200 relative overflow-hidden">
-          <a href="#work" className="hover:text-white transition">Work & Proofs</a>
-          <a href="#stack" className="hover:text-white transition">Stack</a>
-          <a href="#engine" className="hover:text-white transition">The Engine</a>
-          <a href="#about" className="hover:text-white transition">About</a>
+        <div className="flex items-center gap-3 sm:gap-6 px-4 sm:px-7 py-2 sm:py-2.5 rounded-full obsidian-card text-xs sm:text-sm font-medium text-zinc-200 relative overflow-hidden whitespace-nowrap shadow-xl">
+          <a href="#work" className="hover:text-white transition whitespace-nowrap">Work & Proofs</a>
+          <a href="#stack" className="hover:text-white transition whitespace-nowrap">Stack</a>
+          <a href="#engine" className="hover:text-white transition whitespace-nowrap">The Engine</a>
+          <a href="#about" className="hover:text-white transition whitespace-nowrap">About</a>
           <span className="text-zinc-600 select-none">|</span>
           <button
             onClick={() => setShowResumeModal(true)}
-            className="hover:text-white transition flex items-center gap-1 cursor-pointer"
+            className="hover:text-white transition flex items-center gap-1 cursor-pointer whitespace-nowrap"
           >
             Resume <span className="text-xs">↗</span>
           </button>
           <a
             href={`mailto:${profileData.email}`}
-            className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white text-zinc-950 font-bold text-xs sm:text-sm hover:bg-zinc-200 transition shadow-md cursor-pointer ml-1 interactive-button"
+            className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white text-zinc-950 font-bold text-xs sm:text-sm hover:bg-zinc-200 transition shadow-md cursor-pointer ml-1 interactive-button whitespace-nowrap"
           >
             <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-950" />
             <span>Let's talk</span>
@@ -196,10 +196,10 @@ export function App() {
       </nav>
 
       {/* Main Container - Expanded width for edge-to-edge breathing room */}
-      <main className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pt-28 sm:pt-36 pb-32 space-y-16 sm:space-y-20">
+      <main className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pt-28 sm:pt-32 pb-28">
 
         {/* HERO HEADER ROW */}
-        <section className="space-y-6">
+        <section className="pb-4 sm:pb-5 border-b border-zinc-900/15">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div className="flex items-center gap-5 sm:gap-7">
 
@@ -259,27 +259,28 @@ export function App() {
               </div>
             </div>
           </div>
-
-          {/* Clean Horizontal Divider */}
-          <div className="w-full border-b border-zinc-900/15 pt-2" />
         </section>
 
         {/* EDITORIAL HEADLINE & SUBHEADLINE (2 CLEAN LINES, CRO-OPTIMIZED, NO REDUNDANT CARDS) */}
-        <section className="space-y-5 max-w-4xl mx-auto text-center py-2 sm:py-4">
+        <section className="mt-6 sm:mt-8 space-y-4 max-w-4xl mx-auto text-center">
           {/* Category Tracker */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full ios-glass text-xs font-mono font-semibold text-zinc-700 shadow-xs">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>OUTBOUND SYSTEMS · 2026</span>
           </div>
 
-          {/* Clean 2-Line Headline (Unified font, authoritative, no disqualifying niche) */}
+          {/* Clean 2-Line Headline (Restored gradient on outbound systems) */}
           <h2 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-black text-zinc-950 tracking-tight leading-[1.15] max-w-3xl mx-auto">
-            I build and operate modern outbound systems for high-growth B2B companies.
+            I build and operate modern{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-600">
+              outbound systems
+            </span>{' '}
+            for high-growth B2B companies.
           </h2>
 
-          {/* Clean 2-Line Subheadline */}
+          {/* Subheadline (Clean, no buzzwords) */}
           <p className="text-base sm:text-lg md:text-xl text-zinc-700 leading-relaxed font-normal max-w-2xl mx-auto">
-            End-to-end cold email infrastructure: secondary domain fleets, deliverability preservation, enriched lead sourcing, and automated CRM triage.
+            Managing secondary domains, verified account sourcing, inbox deliverability, and automated CRM routing.
           </p>
 
           {/* Centered Contact Action CTAs */}
@@ -312,19 +313,11 @@ export function App() {
               </svg>
               <span>LinkedIn</span>
             </a>
-
-            <button
-              onClick={() => setShowResumeModal(true)}
-              className="px-5 py-3.5 rounded-full ios-glass hover:bg-white/50 text-zinc-900 text-sm font-bold transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
-            >
-              <FileText className="w-4 h-4 text-emerald-600" />
-              <span>View Resume</span>
-            </button>
           </div>
         </section>
 
         {/* 1. TECH STACKS SECTION (ABOVE PROOFS - 1-LINE MARQUEE WITH APPLE IOS GLASS) */}
-        <section id="stack" className="space-y-4 pt-4 border-t border-zinc-900/10">
+        <section id="stack" className="mt-8 sm:mt-10 space-y-4 pt-6 border-t border-zinc-900/10">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
@@ -369,7 +362,7 @@ export function App() {
         </section>
 
         {/* 2. PROOFS & TELEMETRY SECTION (WORK & PROOFS - AWS 3-COLUMN ALIGNMENT WITH IOS GLASS & REFINED SANS FONT) */}
-        <section id="work" className="space-y-10 pt-4 border-t border-zinc-900/10">
+        <section id="work" className="mt-12 sm:mt-16 space-y-10 pt-6 border-t border-zinc-900/10">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
@@ -508,7 +501,7 @@ export function App() {
         </section>
 
         {/* 3. THE ENGINE / ARCHITECTURAL PILLARS (APPLE IOS GLASS) */}
-        <section id="engine" className="space-y-8 pt-6 border-t border-zinc-900/10 text-left">
+        <section id="engine" className="mt-12 sm:mt-16 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
@@ -563,7 +556,7 @@ export function App() {
         </section>
 
         {/* 4. RESUME TIMELINE (POLYWORK STYLE WITH APPLE IOS GLASS) */}
-        <section id="about" className="space-y-8 pt-6 border-t border-zinc-900/10 text-left">
+        <section id="about" className="mt-12 sm:mt-16 space-y-8 pt-6 border-t border-zinc-900/10 text-left">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-4 border-b border-zinc-900/10">
             <div>
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700 block mb-1">
@@ -639,7 +632,7 @@ export function App() {
         </section>
 
         {/* 5. CLOSING CTA (Seated Photo + High-Contrast Obsidian Container) */}
-        <section className="rounded-3xl p-8 sm:p-12 obsidian-card text-white flex flex-col md:flex-row items-center gap-8 lg:gap-12 text-left shadow-2xl">
+        <section className="mt-12 sm:mt-16 rounded-3xl p-8 sm:p-12 obsidian-card text-white flex flex-col md:flex-row items-center gap-8 lg:gap-12 text-left shadow-2xl">
           <div className="w-48 sm:w-56 md:w-60 lg:w-64 shrink-0 aspect-square rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-black">
             <img
               src="/genesis-full-seated.jpg"
