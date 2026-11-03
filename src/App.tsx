@@ -51,7 +51,9 @@ export function App() {
   }, []);
 
   const handleCopyEmail = (e?: React.MouseEvent) => {
-    navigator.clipboard.writeText(profileData.email);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(profileData.email).catch(() => {});
+    }
     setCopiedEmail(true);
 
     // Interactive confetti burst
@@ -228,9 +230,9 @@ export function App() {
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight">
                     Genesis Auza
                   </h1>
-                  {/* Official Blue Verified Badge Tick */}
+                  {/* Charcoal Gray Verified Rosette Badge Tick */}
                   <span className="inline-flex items-center" title="Verified Outbound Specialist">
-                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-[#1d9bf0] shrink-0 drop-shadow-xs" viewBox="0 0 24 24" fill="currentColor">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-800 shrink-0 drop-shadow-2xs" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.33 2.33 4.99-4.99 1.42 1.42-6.41 6.4z" />
                       <path d="M10.54 16.2L6.8 12.46l1.41-1.42 2.33 2.33 4.99-4.99 1.42 1.42-6.41 6.4z" fill="#ffffff" />
                     </svg>
@@ -304,11 +306,23 @@ export function App() {
 
             <button
               onClick={(e) => handleCopyEmail(e)}
-              className="px-5 py-3.5 rounded-full ios-glass hover:bg-white/50 text-zinc-900 font-mono text-sm transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
+              className="px-5 py-3.5 rounded-full ios-glass hover:bg-white/50 text-zinc-900 text-sm font-bold transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
             >
               {copiedEmail ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-zinc-600" />}
-              <span className="font-semibold">{copiedEmail ? 'Copied genesisauza9@gmail.com!' : 'Copy Email'}</span>
+              <span>{copiedEmail ? 'Copied' : 'Copy Email'}</span>
             </button>
+
+            <a
+              href={profileData.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="px-5 py-3.5 rounded-full ios-glass hover:bg-white/50 text-zinc-900 text-sm font-bold transition flex items-center gap-2 cursor-pointer shadow-sm interactive-button"
+            >
+              <svg className="w-4 h-4 fill-[#0a66c2]" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.62 1.62 0 1 0 0-3.24 1.62 1.62 0 0 0 0 3.24M5.07 18.5h2.78v-8.37H5.07v8.37Z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
 
             <button
               onClick={() => setShowResumeModal(true)}
